@@ -1,0 +1,2477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>parse_gkg_subdevision_mdinj_semicolon (After injection)</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <size_limit_lines/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2018/02/13 10:28:04.918</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2018/02/13 10:28:04.918</modified_date>
+    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <order>
+    <hop>
+      <from>Split field to rows</from>
+      <to>select_subdata</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>select_subdata</from>
+      <to>Java Filter</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Java Filter</from>
+      <to>split subdata</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Java Filter</from>
+      <to>Dummy (do nothing)</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Data Grid</from>
+      <to>Split field to rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>split subdata</from>
+      <to>JSON Output</to>
+      <enabled>Y</enabled>
+    </hop>
+  </order>
+  <step>
+    <name>Data Grid</name>
+    <type>DataGrid</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>data</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+    <data>
+      <line>
+        <item>AFFECT#2##3#Houston, Texas, United States#US#USTX#29.7633#-95.3633#1380948#74;POVERTY#2##3#Houston, Texas, United States#US#USTX#29.7633#-95.3633#1380948#74;CRISISLEX_C05_NEED_OF_SHELTERS#2##3#Houston, Texas, United States#US#USTX#29.7633#-95.3633#1380948#74;KILL#2##3#Houston, Texas, United States#US#USTX#29.7633#-95.3633#1380948#74;CRISISLEX_T03_DEAD#2##3#Houston, Texas, United States#US#USTX#29.7633#-95.3633#1380948#74;</item>
+      </line>
+      <line>
+        <item>KILL#20##1#Iran#IR#IR#32#53#IR#779;CRISISLEX_CRISISLEXREC#20##1#Iran#IR#IR#32#53#IR#779;CRISISLEX_T02_INJURED#20##1#Iran#IR#IR#32#53#IR#779;CRISISLEX_T03_DEAD#20##1#Iran#IR#IR#32#53#IR#779;CRISISLEX_T03_DEAD#20##1#Iran#IR#IR#32#53#IR#779;ARREST#200#demonstrators#1#Iran#IR#IR#32#53#IR#2872;SOC_GENERALCRIME#200#demonstrators#1#Iran#IR#IR#32#53#IR#2872;CRISISLEX_C07_SAFETY#200#demonstrators#1#Iran#IR#IR#32#53#IR#2872;PROTEST#200##1#Iran#IR#IR#32#53#IR#2872;TAX_FNCACT_DEMONSTRATORS#200##1#Iran#IR#IR#32#53#IR#2872;KILL#20##1#Iran#IR#IR#32#53#IR#3018;CRISISLEX_CRISISLEXREC#20##1#Iran#IR#IR#32#53#IR#3018;CRISISLEX_T02_INJURED#20##1#Iran#IR#IR#32#53#IR#3018;CRISISLEX_T03_DEAD#20##1#Iran#IR#IR#32#53#IR#3018;CRISISLEX_T03_DEAD#20##1#Iran#IR#IR#32#53#IR#3018;PROTEST#20##1#Iran#IR#IR#32#53#IR#3018;</item>
+      </line>
+      <line>
+        <item>ARREST#2#women convicted#0#######26;SOC_POINTSOFINTEREST_JAIL#2#women convicted#0#######26;SEIZE#700#restitution#0#######393;SEIZE#18#goats#0#######599;</item>
+      </line>
+      <line>
+        <item>KILL#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#0;CRISISLEX_CRISISLEXREC#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#0;CRISISLEX_T02_INJURED#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#0;CRISISLEX_T03_DEAD#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#0;CRISISLEX_T03_DEAD#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#0;KILL#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#87;CRISISLEX_T03_DEAD#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#87;</item>
+      </line>
+      <line>
+        <item>KILL#4#Joshua McKinney#3#Baytown, Texas, United States#US#USTX#29.7355#-94.9774#1380966#311;CRISISLEX_T03_DEAD#4#Joshua McKinney#3#Baytown, Texas, United States#US#USTX#29.7355#-94.9774#1380966#311;</item>
+      </line>
+      <line>
+        <item>KILL#4#Joshua McKinney#3#Baytown, Texas, United States#US#USTX#29.7355#-94.9774#1380966#320;CRISISLEX_T03_DEAD#4#Joshua McKinney#3#Baytown, Texas, United States#US#USTX#29.7355#-94.9774#1380966#320;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>WOUND#5##4#Rajnagar, Madhya Pradesh, India#IN#IN35#24.7333#79.95#-2108720#54;CRISISLEX_CRISISLEXREC#5##4#Rajnagar, Madhya Pradesh, India#IN#IN35#24.7333#79.95#-2108720#54;CRISISLEX_C03_WELLBEING_HEALTH#5##4#Rajnagar, Madhya Pradesh, India#IN#IN35#24.7333#79.95#-2108720#54;CRISISLEX_T02_INJURED#5##4#Rajnagar, Madhya Pradesh, India#IN#IN35#24.7333#79.95#-2108720#54;WOUND#5##4#Rajnagar, Madhya Pradesh, India#IN#IN35#24.7333#79.95#-2108720#355;CRISISLEX_CRISISLEXREC#5##4#Rajnagar, Madhya Pradesh, India#IN#IN35#24.7333#79.95#-2108720#355;CRISISLEX_C03_WELLBEING_HEALTH#5##4#Rajnagar, Madhya Pradesh, India#IN#IN35#24.7333#79.95#-2108720#355;CRISISLEX_T02_INJURED#5##4#Rajnagar, Madhya Pradesh, India#IN#IN35#24.7333#79.95#-2108720#355;</item>
+      </line>
+      <line>
+        <item>KILL#22##4#Manchester, Manchester, United Kingdom#UK#UKI2#53.5#-2.21667#-2602512#473;CRISISLEX_T03_DEAD#22##4#Manchester, Manchester, United Kingdom#UK#UKI2#53.5#-2.21667#-2602512#473;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>ARREST#24##1#United States#US#US#39.828175#-98.5795#US#3850;SOC_GENERALCRIME#24##1#United States#US#US#39.828175#-98.5795#US#3850;CRISISLEX_C07_SAFETY#24##1#United States#US#US#39.828175#-98.5795#US#3850;KILL#2##3#Los Angeles, California, United States#US#USCA#34.0522#-118.244#1662328#4933;CRISISLEX_T03_DEAD#2##3#Los Angeles, California, United States#US#USCA#34.0522#-118.244#1662328#4933;ARREST#10##5#Oxfordshire, United Kingdom#UK#UKK2#51.7823#-1.31405#-2604914#10720;SOC_GENERALCRIME#10##5#Oxfordshire, United Kingdom#UK#UKK2#51.7823#-1.31405#-2604914#10720;CRISISLEX_C07_SAFETY#10##5#Oxfordshire, United Kingdom#UK#UKK2#51.7823#-1.31405#-2604914#10720;WOUND#3##5#Oxfordshire, United Kingdom#UK#UKK2#51.7823#-1.31405#-2604914#11342;CRISISLEX_CRISISLEXREC#3##5#Oxfordshire, United Kingdom#UK#UKK2#51.7823#-1.31405#-2604914#11342;CRISISLEX_C03_WELLBEING_HEALTH#3##5#Oxfordshire, United Kingdom#UK#UKK2#51.7823#-1.31405#-2604914#11342;CRISISLEX_T02_INJURED#3##5#Oxfordshire, United Kingdom#UK#UKK2#51.7823#-1.31405#-2604914#11342;SEIZE#2#Season#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#12273;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#staff#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#977;</item>
+      </line>
+      <line>
+        <item>PROTEST#20#citizens#4#Sofia, Sofiya-grad, Bulgaria#BU#BU42#42.6833#23.3167#-838489#3653;</item>
+      </line>
+      <line>
+        <item>KILL#19##3#Long Island, Maine, United States#US#USME#43.6842#-70.1712#570218#2563;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>KILL#40##2#California, United States#US#USCA#36.17#-119.746#CA#1130;</item>
+      </line>
+      <line>
+        <item>KILL#90#aged#2#Utah, United States#US#USUT#40.1135#-111.854#UT#113;CRISISLEX_T03_DEAD#90#aged#2#Utah, United States#US#USUT#40.1135#-111.854#UT#113;KILL#90##3#Salt Lake City, Utah, United States#US#USUT#40.7608#-111.891#1454997#851;CRISISLEX_T03_DEAD#90##3#Salt Lake City, Utah, United States#US#USUT#40.7608#-111.891#1454997#851;KILL#90##3#Salt Lake City, Utah, United States#US#USUT#40.7608#-111.891#1454997#1111;CRISISLEX_T03_DEAD#90##3#Salt Lake City, Utah, United States#US#USUT#40.7608#-111.891#1454997#1111;KILL#90##3#Salt Lake City, Utah, United States#US#USUT#40.7608#-111.891#1454997#1763;CRISISLEX_T03_DEAD#90##3#Salt Lake City, Utah, United States#US#USUT#40.7608#-111.891#1454997#1763;</item>
+      </line>
+      <line>
+        <item>KILL#20##2#California, United States#US#USCA#36.17#-119.746#CA#1365;</item>
+      </line>
+      <line>
+        <item>KILL#90##1#United States#US#US#39.828175#-98.5795#US#762;CRISISLEX_CRISISLEXREC#90##1#United States#US#US#39.828175#-98.5795#US#762;CRISISLEX_T02_INJURED#90##1#United States#US#US#39.828175#-98.5795#US#762;CRISISLEX_T03_DEAD#90##1#United States#US#US#39.828175#-98.5795#US#762;CRISISLEX_T03_DEAD#90##1#United States#US#US#39.828175#-98.5795#US#762;</item>
+      </line>
+      <line>
+        <item>KILL#5#home heating fire#2#Alabama, United States#US#USAL#32.799#-86.8073#AL#1674;</item>
+      </line>
+      <line>
+        <item>KILL#26##2#New York, United States#US#USNY#42.1497#-74.9384#NY#1190;TERROR#26##2#New York, United States#US#USNY#42.1497#-74.9384#NY#1190;ARMEDCONFLICT#26##2#New York, United States#US#USNY#42.1497#-74.9384#NY#1190;PROTEST#189850879#html Gun rights#3#Washington, District Of Columbia, United States#US#USDC#38.8951#-77.0364#531871#18840;MOVEMENT_GENERAL#189850879#html Gun rights#3#Washington, District Of Columbia, United States#US#USDC#38.8951#-77.0364#531871#18840;TAX_FNCACT_ACTIVISTS#189850879#html Gun rights#3#Washington, District Of Columbia, United States#US#USDC#38.8951#-77.0364#531871#18840;PROTEST#2##3#Washington, District Of Columbia, United States#US#USDC#38.8951#-77.0364#531871#19147;MOVEMENT_GENERAL#2##3#Washington, District Of Columbia, United States#US#USDC#38.8951#-77.0364#531871#19147;TAX_FNCACT_ACTIVISTS#2##3#Washington, District Of Columbia, United States#US#USDC#38.8951#-77.0364#531871#19147;KILL#26##2#Maryland, United States#US#USMD#39.0724#-76.7902#MD#25639;CRISISLEX_CRISISLEXREC#26##2#Maryland, United States#US#USMD#39.0724#-76.7902#MD#25639;CRISISLEX_T02_INJURED#26##2#Maryland, United States#US#USMD#39.0724#-76.7902#MD#25639;CRISISLEX_T03_DEAD#26##2#Maryland, United States#US#USMD#39.0724#-76.7902#MD#25639;CRISISLEX_T03_DEAD#26##2#Maryland, United States#US#USMD#39.0724#-76.7902#MD#25639;KILL#9##2#Maryland, United States#US#USMD#39.0724#-76.7902#MD#25765;KILL#3##3#Joppa, Texas, United States#US#USTX#30.8255#-98.0317#1380012#26177;CRISISLEX_T03_DEAD#3##3#Joppa, Texas, United States#US#USTX#30.8255#-98.0317#1380012#26177;KILL#2#Harford County deputies#2#Texas, United States#US#USTX#31.106#-97.6475#TX#26286;CRISISLEX_T03_DEAD#2#Harford County deputies#2#Texas, United States#US#USTX#31.106#-97.6475#TX#26286;KILL#2#bills#3#Washington, District Of Columbia, United States#US#USDC#38.8951#-77.0364#531871#39908;KILL#2#bills#1#United States#US#US#39.828175#-98.5795#US#46694;</item>
+      </line>
+      <line>
+        <item>KILL#5#CRPF men#5#Jammu And Kashmir, India#IN#IN12#33.9167#76.6667#-2098229#1882;CRISISLEX_T03_DEAD#5#CRPF men#5#Jammu And Kashmir, India#IN#IN12#33.9167#76.6667#-2098229#1882;</item>
+      </line>
+      <line>
+        <item>AFFECT#239#airliner#4#Durban, Kwazulu-natal, South Africa#SF#SF02#-29.85#31.0167#-1224926#8;AFFECT#3##1#Malaysia#MY#MY#2.5#112.5#MY#1531;</item>
+      </line>
+      <line>
+        <item>ARREST#11##4#Dublin, Dublin, Ireland#EI#EI07#53.3331#-6.24889#-1502554#973;SOC_GENERALCRIME#11##4#Dublin, Dublin, Ireland#EI#EI07#53.3331#-6.24889#-1502554#973;CRISISLEX_C07_SAFETY#11##4#Dublin, Dublin, Ireland#EI#EI07#53.3331#-6.24889#-1502554#973;</item>
+      </line>
+      <line>
+        <item>AFFECT#20000##1#United States#US#US#39.828175#-98.5795#US#1356;REFUGEES#20000##1#United States#US#US#39.828175#-98.5795#US#1356;</item>
+      </line>
+      <line>
+        <item>SEIZE#15##0#######210;</item>
+      </line>
+      <line>
+        <item>AFFECT#92##5#Niedersachsen, Germany#GM#GM06#52#10#-1833951#392;REFUGEES#92##5#Niedersachsen, Germany#GM#GM06#52#10#-1833951#392;EPU_CATS_MIGRATION_FEAR_MIGRATION#92##5#Niedersachsen, Germany#GM#GM06#52#10#-1833951#392;</item>
+      </line>
+      <line>
+        <item>KILL#600##2#New York, United States#US#USNY#42.1497#-74.9384#NY#2957;CRISISLEX_T03_DEAD#600##2#New York, United States#US#USNY#42.1497#-74.9384#NY#2957;</item>
+      </line>
+      <line>
+        <item>KILL#20##1#Canada#CA#CA#60#-96#CA#2461;CRISISLEX_T03_DEAD#20##1#Canada#CA#CA#60#-96#CA#2461;ARREST#450##1#Canada#CA#CA#60#-96#CA#2517;SOC_GENERALCRIME#450##1#Canada#CA#CA#60#-96#CA#2517;CRISISLEX_C07_SAFETY#450##1#Canada#CA#CA#60#-96#CA#2517;KILL#11#coldrelated#1#Pakistan#PK#PK#30#70#PK#3306;WOUND#40#stitches#1#Sweden#SW#SW#62#15#SW#4813;CRISISLEX_CRISISLEXREC#40#stitches#1#Sweden#SW#SW#62#15#SW#4813;CRISISLEX_C03_WELLBEING_HEALTH#40#stitches#1#Sweden#SW#SW#62#15#SW#4813;CRISISLEX_T02_INJURED#40#stitches#1#Sweden#SW#SW#62#15#SW#4813;</item>
+      </line>
+      <line>
+        <item>ARREST#5##0#######120;CRISISLEX_CRISISLEXREC#5##0#######120;</item>
+      </line>
+      <line>
+        <item>KILL#22##4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#127;</item>
+      </line>
+      <line>
+        <item>KILL#2##1#Japan#JA#JA#36#138#JA#103;CRISISLEX_CRISISLEXREC#2##1#Japan#JA#JA#36#138#JA#103;CRISISLEX_T02_INJURED#2##1#Japan#JA#JA#36#138#JA#103;CRISISLEX_T03_DEAD#2##1#Japan#JA#JA#36#138#JA#103;CRISISLEX_T03_DEAD#2##1#Japan#JA#JA#36#138#JA#103;</item>
+      </line>
+      <line>
+        <item>KILL#40##0#######53;CRISISLEX_T03_DEAD#40##0#######53;KILL#200##0#######143;CRISISLEX_T03_DEAD#200##0#######143;</item>
+      </line>
+      <line>
+        <item>AFFECT#55##1#United Kingdom#UK#UK#54#-4#UK#385;</item>
+      </line>
+      <line>
+        <item>KILL#2##1#Japan#JA#JA#36#138#JA#103;CRISISLEX_CRISISLEXREC#2##1#Japan#JA#JA#36#138#JA#103;CRISISLEX_T02_INJURED#2##1#Japan#JA#JA#36#138#JA#103;CRISISLEX_T03_DEAD#2##1#Japan#JA#JA#36#138#JA#103;CRISISLEX_T03_DEAD#2##1#Japan#JA#JA#36#138#JA#103;</item>
+      </line>
+      <line>
+        <item>KILL#21##2#Maryland, United States#US#USMD#39.0724#-76.7902#MD#1010;</item>
+      </line>
+      <line>
+        <item>KILL#2019##2#Texas, United States#US#USTX#31.106#-97.6475#TX#0;</item>
+      </line>
+      <line>
+        <item>KILL#3#aufgef xC#1#Guinea#GV#GV#11#-10#GV#4908;CRISISLEX_T03_DEAD#3#aufgef xC#1#Guinea#GV#GV#11#-10#GV#4908;CRISISLEX_T03_DEAD#3#aufgef xC#1#Guinea#GV#GV#11#-10#GV#4908;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#Factors considered#1#United States#US#US#39.828175#-98.5795#US#2049;</item>
+      </line>
+      <line>
+        <item>AFFECT#2000#just#3#Philadelphia, Pennsylvania, United States#US#USPA#39.9523#-75.1638#1209052#1062;</item>
+      </line>
+      <line>
+        <item>AFFECT#92##1#Germany#GM#GM#51.5#10.5#GM#429;REFUGEES#92##1#Germany#GM#GM#51.5#10.5#GM#429;EPU_CATS_MIGRATION_FEAR_MIGRATION#92##1#Germany#GM#GM#51.5#10.5#GM#429;</item>
+      </line>
+      <line>
+        <item>AFFECT#3##1#United States#US#US#39.828175#-98.5795#US#1000;</item>
+      </line>
+      <line>
+        <item>ARREST#4#fans#0#######0;</item>
+      </line>
+      <line>
+        <item>KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2081;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2081;KILL#9##1#Iran#IR#IR#32#53#IR#3818;CRISISLEX_T03_DEAD#9##1#Iran#IR#IR#32#53#IR#3818;KILL#21##1#Iran#IR#IR#32#53#IR#3953;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3953;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#staff#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#977;</item>
+      </line>
+      <line>
+        <item>AFFECT#370#Malaysia Airlines flight MH#1#Malaysia#MY#MY#2.5#112.5#MY#0;AFFECT#21#IST IANS#1#Malaysia#MY#MY#2.5#112.5#MY#260;</item>
+      </line>
+      <line>
+        <item>WOUND#4##4#Gaza, Israel (General), Israel#IS#IS00#31.4167#34.3333#-797156#901;CRISISLEX_T02_INJURED#4##4#Gaza, Israel (General), Israel#IS#IS00#31.4167#34.3333#-797156#901;</item>
+      </line>
+      <line>
+        <item>KILL#4##3#Honolulu, Hawaii, United States#US#USHI#21.3069#-157.858#366212#34;</item>
+      </line>
+      <line>
+        <item>KILL#20##1#Canada#CA#CA#60#-96#CA#2223;CRISISLEX_T03_DEAD#20##1#Canada#CA#CA#60#-96#CA#2223;ARREST#450##1#Canada#CA#CA#60#-96#CA#2279;SOC_GENERALCRIME#450##1#Canada#CA#CA#60#-96#CA#2279;CRISISLEX_C07_SAFETY#450##1#Canada#CA#CA#60#-96#CA#2279;KILL#11#coldrelated#1#Pakistan#PK#PK#30#70#PK#3068;WOUND#40#stitches#1#Sweden#SW#SW#62#15#SW#4476;CRISISLEX_CRISISLEXREC#40#stitches#1#Sweden#SW#SW#62#15#SW#4476;CRISISLEX_C03_WELLBEING_HEALTH#40#stitches#1#Sweden#SW#SW#62#15#SW#4476;CRISISLEX_T02_INJURED#40#stitches#1#Sweden#SW#SW#62#15#SW#4476;</item>
+      </line>
+      <line>
+        <item>AFFECT#2000000000#reduction#0#######475;</item>
+      </line>
+      <line>
+        <item>KILL#2#terrorists killed#1#Somalia#SO#SO#6#48#SO#0;CRISISLEX_T03_DEAD#2#terrorists killed#1#Somalia#SO#SO#6#48#SO#0;KILL#2#terrorists killed#1#Somalia#SO#SO#6#48#SO#0;CRISISLEX_T03_DEAD#2#terrorists killed#1#Somalia#SO#SO#6#48#SO#0;KILL#2#terrorists#1#Somalia#SO#SO#6#48#SO#289;CRISISLEX_T03_DEAD#2#terrorists#1#Somalia#SO#SO#6#48#SO#289;KILL#13#terrorists#1#Somalia#SO#SO#6#48#SO#931;CRISISLEX_T03_DEAD#13#terrorists#1#Somalia#SO#SO#6#48#SO#931;</item>
+      </line>
+      <line>
+        <item>KIDNAP#15#Joshua Boyle appears#4#Ottawa, Ontario, Canada#CA#CA08#45.4167#-75.7#-570760#0;AFFECT#3#children#1#United States#US#US#39.828175#-98.5795#US#1473;RELEASE_HOSTAGE#3#children#1#United States#US#US#39.828175#-98.5795#US#1473;</item>
+      </line>
+      <line>
+        <item>KILL#3407##3#Erie County, New York, United States#US#USNY#42.7667#-78.6664#974113#476;CRISISLEX_T03_DEAD#3407##3#Erie County, New York, United States#US#USNY#42.7667#-78.6664#974113#476;</item>
+      </line>
+      <line>
+        <item>PROTEST#200#Seun Opejobi Photographs#4#Makurdi, Benue, Nigeria#NI#NI26#7.7411#8.5121#-2018676#56;PROTEST#200##4#Makurdi, Benue, Nigeria#NI#NI26#7.7411#8.5121#-2018676#56;KILL#20##4#Makurdi, Benue, Nigeria#NI#NI26#7.7411#8.5121#-2018676#432;CRISISLEX_T03_DEAD#20##4#Makurdi, Benue, Nigeria#NI#NI26#7.7411#8.5121#-2018676#432;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>ARREST#46##1#Germany#GM#GM#51.5#10.5#GM#36;CRISISLEX_C07_SAFETY#46##1#Germany#GM#GM#51.5#10.5#GM#36;KILL#2#infants#1#Germany#GM#GM#51.5#10.5#GM#36;CRISISLEX_CRISISLEXREC#2#infants#1#Germany#GM#GM#51.5#10.5#GM#36;CRISISLEX_T02_INJURED#2#infants#1#Germany#GM#GM#51.5#10.5#GM#36;CRISISLEX_T03_DEAD#2#infants#1#Germany#GM#GM#51.5#10.5#GM#36;CRISISLEX_T03_DEAD#2#infants#1#Germany#GM#GM#51.5#10.5#GM#36;KILL#2#infants#1#Germany#GM#GM#51.5#10.5#GM#36;CRISISLEX_T03_DEAD#2#infants#1#Germany#GM#GM#51.5#10.5#GM#36;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>KILL#2##1#Australia#AS#AS#-25#135#AS#698;CRISISLEX_T03_DEAD#2##1#Australia#AS#AS#-25#135#AS#698;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#staff#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#977;</item>
+      </line>
+      <line>
+        <item>KILL#500##1#Japan#JA#JA#36#138#JA#407;CRISISLEX_T03_DEAD#500##1#Japan#JA#JA#36#138#JA#407;KILL#24##1#Japan#JA#JA#36#138#JA#447;</item>
+      </line>
+      <line>
+        <item>KILL#920##1#United Kingdom#UK#UK#54#-4#UK#987;CRISISLEX_T03_DEAD#920##1#United Kingdom#UK#UK#54#-4#UK#987;KILL#16##1#United Kingdom#UK#UK#54#-4#UK#1049;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#staff#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#977;</item>
+      </line>
+      <line>
+        <item>KILL#8#miners losing#2#West Virginia, United States#US#USWV#38.468#-80.9696#WV#251;KILL#2##2#Kentucky, United States#US#USKY#37.669#-84.6514#KY#333;KILL#17#miners#2#Kentucky, United States#US#USKY#37.669#-84.6514#KY#377;CRISISLEX_T03_DEAD#17#miners#2#Kentucky, United States#US#USKY#37.669#-84.6514#KY#377;KILL#15##2#West Virginia, United States#US#USWV#38.468#-80.9696#WV#546;KILL#2##2#West Virginia, United States#US#USWV#38.468#-80.9696#WV#620;KILL#6##2#Wyoming, United States#US#USWY#42.7475#-107.209#WY#763;KILL#29#miners#2#West Virginia, United States#US#USWV#38.468#-80.9696#WV#856;CRISISLEX_T03_DEAD#29#miners#2#West Virginia, United States#US#USWV#38.468#-80.9696#WV#856;KILL#8#coal mining#3#Upper Big Branch, West Virginia, United States#US#USWV#37.7393#-81.4537#1548502#1884;KILL#20##3#Upper Big Branch, West Virginia, United States#US#USWV#37.7393#-81.4537#1548502#2094;CRISISLEX_CRISISLEXREC#20##3#Upper Big Branch, West Virginia, United States#US#USWV#37.7393#-81.4537#1548502#2094;CRISISLEX_T03_DEAD#20##3#Upper Big Branch, West Virginia, United States#US#USWV#37.7393#-81.4537#1548502#2094;CRISISLEX_T03_DEAD#20##3#Upper Big Branch, West Virginia, United States#US#USWV#37.7393#-81.4537#1548502#2094;KILL#233##1#United States#US#US#39.828175#-98.5795#US#2232;KILL#13##1#United States#US#US#39.828175#-98.5795#US#2616;CRISISLEX_CRISISLEXREC#13##1#United States#US#US#39.828175#-98.5795#US#2616;CRISISLEX_T03_DEAD#13##1#United States#US#US#39.828175#-98.5795#US#2616;CRISISLEX_T03_DEAD#13##1#United States#US#US#39.828175#-98.5795#US#2616;KILL#17##2#West Virginia, United States#US#USWV#38.468#-80.9696#WV#2726;</item>
+      </line>
+      <line>
+        <item>KILL#20##4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#1158;CRISISLEX_T03_DEAD#20##4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#1158;WOUND#30##4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#1306;CRISISLEX_CRISISLEXREC#30##4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#1306;CRISISLEX_C03_WELLBEING_HEALTH#30##4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#1306;CRISISLEX_T02_INJURED#30##4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#1306;KILL#17##1#Nigeria#NI#NI#10#8#NI#1788;CRISISLEX_T03_DEAD#17##1#Nigeria#NI#NI#10#8#NI#1788;ARREST#8#herdsmen suspected#1#Nigeria#NI#NI#10#8#NI#1888;SOC_GENERALCRIME#8#herdsmen suspected#1#Nigeria#NI#NI#10#8#NI#1888;CRISISLEX_C07_SAFETY#8#herdsmen suspected#1#Nigeria#NI#NI#10#8#NI#1888;KILL#20#attacks#1#Nigeria#NI#NI#10#8#NI#1994;</item>
+      </line>
+      <line>
+        <item>KILL#21##1#Iran#IR#IR#32#53#IR#225;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#225;</item>
+      </line>
+      <line>
+        <item>ARREST#180##2#Maryland, United States#US#USMD#39.0724#-76.7902#MD#5336;SOC_GENERALCRIME#180##2#Maryland, United States#US#USMD#39.0724#-76.7902#MD#5336;CRISISLEX_C07_SAFETY#180##2#Maryland, United States#US#USMD#39.0724#-76.7902#MD#5336;ARREST#500##2#Maryland, United States#US#USMD#39.0724#-76.7902#MD#5535;SOC_GENERALCRIME#500##2#Maryland, United States#US#USMD#39.0724#-76.7902#MD#5535;CRISISLEX_C07_SAFETY#500##2#Maryland, United States#US#USMD#39.0724#-76.7902#MD#5535;</item>
+      </line>
+      <line>
+        <item>KILL#11##2#Florida, United States#US#USFL#27.8333#-81.717#FL#0;CRISISLEX_CRISISLEXREC#11##2#Florida, United States#US#USFL#27.8333#-81.717#FL#0;CRISISLEX_T02_INJURED#11##2#Florida, United States#US#USFL#27.8333#-81.717#FL#0;CRISISLEX_T03_DEAD#11##2#Florida, United States#US#USFL#27.8333#-81.717#FL#0;CRISISLEX_T03_DEAD#11##2#Florida, United States#US#USFL#27.8333#-81.717#FL#0;KILL#11##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#1523;CRISISLEX_T03_DEAD#11##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#1523;KILL#11##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#1523;KILL#5#weatherrelated#2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#1936;KILL#2##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#1995;CRISISLEX_T03_DEAD#2##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#1995;KILL#4##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#2048;CRISISLEX_T03_DEAD#4##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#2048;AFFECT#2##2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2078;POVERTY#2##2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2078;CRISISLEX_C05_NEED_OF_SHELTERS#2##2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2078;KILL#2#homeless#2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2078;CRISISLEX_T03_DEAD#2#homeless#2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2078;KILL#40##2#California, United States#US#USCA#36.17#-119.746#CA#5346;</item>
+      </line>
+      <line>
+        <item>KILL#90##3#Salt Lake, Utah, United States#US#USUT#39.1559#-112.691#1436291#90;CRISISLEX_T03_DEAD#90##3#Salt Lake, Utah, United States#US#USUT#39.1559#-112.691#1436291#90;KILL#10##3#Salt Lake, Utah, United States#US#USUT#39.1559#-112.691#1436291#143;CRISISLEX_T03_DEAD#10##3#Salt Lake, Utah, United States#US#USUT#39.1559#-112.691#1436291#143;</item>
+      </line>
+      <line>
+        <item>KILL#22##4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#127;</item>
+      </line>
+      <line>
+        <item>AFFECT#16##0#######814;</item>
+      </line>
+      <line>
+        <item>KILL#74##4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#554;CRISISLEX_T03_DEAD#74##4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#554;</item>
+      </line>
+      <line>
+        <item>KILL#2##1#United States#US#US#39.828175#-98.5795#US#1507;</item>
+      </line>
+      <line>
+        <item>KILL#22##4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#127;</item>
+      </line>
+      <line>
+        <item>ARREST#5##0#######120;CRISISLEX_CRISISLEXREC#5##0#######120;</item>
+      </line>
+      <line>
+        <item>AFFECT#12##3#Miami, Florida, United States#US#USFL#25.7743#-80.1937#295004#126;</item>
+      </line>
+      <line>
+        <item>PROTEST#2##4#Pune, Maharashtra, India#IN#IN16#18.5333#73.8667#-2108361#3000;MOVEMENT_GENERAL#2##4#Pune, Maharashtra, India#IN#IN16#18.5333#73.8667#-2108361#3000;TAX_FNCACT_ACTIVISTS#2##4#Pune, Maharashtra, India#IN#IN16#18.5333#73.8667#-2108361#3000;AFFECT#2000000##1#India#IN#IN#20#77#IN#3834;CRISISLEX_C04_LOGISTICS_TRANSPORT#2000000##1#India#IN#IN#20#77#IN#3834;</item>
+      </line>
+      <line>
+        <item>AFFECT#92##5#Niedersachsen, Germany#GM#GM06#52#10#-1833951#391;REFUGEES#92##5#Niedersachsen, Germany#GM#GM06#52#10#-1833951#391;EPU_CATS_MIGRATION_FEAR_MIGRATION#92##5#Niedersachsen, Germany#GM#GM06#52#10#-1833951#391;</item>
+      </line>
+      <line>
+        <item>ARREST#5##0#######130;CRISISLEX_CRISISLEXREC#5##0#######130;</item>
+      </line>
+      <line>
+        <item>KILL#2##1#Nigeria#NI#NI#10#8#NI#1429;</item>
+      </line>
+      <line>
+        <item>KILL#200##1#Ethiopia#ET#ET#8#38#ET#2084;ARREST#20000##1#Ethiopia#ET#ET#8#38#ET#2113;CRISISLEX_C07_SAFETY#20000##1#Ethiopia#ET#ET#8#38#ET#2113;</item>
+      </line>
+      <line>
+        <item>KILL#20##1#Iran#IR#IR#32#53#IR#271;CRISISLEX_T03_DEAD#20##1#Iran#IR#IR#32#53#IR#271;ARREST#200##1#Iran#IR#IR#32#53#IR#319;SOC_GENERALCRIME#200##1#Iran#IR#IR#32#53#IR#319;CRISISLEX_C07_SAFETY#200##1#Iran#IR#IR#32#53#IR#319;</item>
+      </line>
+      <line>
+        <item>ARREST#100##3#Bentonville, Arkansas, United States#US#USAR#36.3729#-94.2088#76305#313;SOC_POINTSOFINTEREST_JAIL#100##3#Bentonville, Arkansas, United States#US#USAR#36.3729#-94.2088#76305#313;</item>
+      </line>
+      <line>
+        <item>ARREST#2018#Muslim men#4#Koregaon-bhima, Maharashtra, India#IN#IN16#18.65#74.0833#-2101448#906;SOC_POINTSOFINTEREST_JAIL#2018#Muslim men#4#Koregaon-bhima, Maharashtra, India#IN#IN16#18.65#74.0833#-2101448#906;PROTEST#2019#Derek#4#Tulsi, Chhattisgarh, India#IN#IN37#23.2667#83.1#-2113513#2657;</item>
+      </line>
+      <line>
+        <item>KILL#6##1#France#FR#FR#46#2#FR#9;CRISISLEX_T03_DEAD#6##1#France#FR#FR#46#2#FR#9;</item>
+      </line>
+      <line>
+        <item>AFFECT#2000#just#3#Philadelphia, Pennsylvania, United States#US#USPA#39.9523#-75.1638#1209052#1062;</item>
+      </line>
+      <line>
+        <item>ARREST#2#Offers Drug Treatment xC#2#Iowa, United States#US#USIA#42.0046#-93.214#IA#267;SOC_POINTSOFINTEREST_JAIL#2#Offers Drug Treatment xC#2#Iowa, United States#US#USIA#42.0046#-93.214#IA#267;</item>
+      </line>
+      <line>
+        <item>ARREST#2#deputies following#2#New Mexico, United States#US#USNM#34.8375#-106.237#NM#27;CRISISLEX_C07_SAFETY#2#deputies following#2#New Mexico, United States#US#USNM#34.8375#-106.237#NM#27;ARREST#2##2#New Mexico, United States#US#USNM#34.8375#-106.237#NM#271;SOC_GENERALCRIME#2##2#New Mexico, United States#US#USNM#34.8375#-106.237#NM#271;CRISISLEX_C07_SAFETY#2##2#New Mexico, United States#US#USNM#34.8375#-106.237#NM#271;</item>
+      </line>
+      <line>
+        <item>AFFECT#4#quarter results#2#New York, United States#US#USNY#42.1497#-74.9384#NY#1715;</item>
+      </line>
+      <line>
+        <item>PROTEST#3##1#Iran#IR#IR#32#53#IR#296;KILL#21##1#Iran#IR#IR#32#53#IR#695;CRISISLEX_CRISISLEXREC#21##1#Iran#IR#IR#32#53#IR#695;CRISISLEX_T02_INJURED#21##1#Iran#IR#IR#32#53#IR#695;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#695;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#695;KILL#24##4#Hamadan, Hamadan, Iran#IR#IR09#34.7992#48.5146#-3065706#1677;PROTEST#24##4#Hamadan, Hamadan, Iran#IR#IR09#34.7992#48.5146#-3065706#1677;KILL#20##4#Geneva, Genè, Switzerland#SZ#SZ07#46.1956#6.14811#-2552151#4100;CRISISLEX_T03_DEAD#20##4#Geneva, Genè, Switzerland#SZ#SZ07#46.1956#6.14811#-2552151#4100;ARREST#200##4#Geneva, Genè, Switzerland#SZ#SZ07#46.1956#6.14811#-2552151#4128;SOC_GENERALCRIME#200##4#Geneva, Genè, Switzerland#SZ#SZ07#46.1956#6.14811#-2552151#4128;CRISISLEX_C07_SAFETY#200##4#Geneva, Genè, Switzerland#SZ#SZ07#46.1956#6.14811#-2552151#4128;</item>
+      </line>
+      <line>
+        <item>KILL#5##4#Mysuru, Karnataka, India#IN#IN19#12.3072#76.6497#-2105255#1571;CRISISLEX_T03_DEAD#5##4#Mysuru, Karnataka, India#IN#IN19#12.3072#76.6497#-2105255#1571;</item>
+      </line>
+      <line>
+        <item>KILL#2##1#Japan#JA#JA#36#138#JA#103;CRISISLEX_CRISISLEXREC#2##1#Japan#JA#JA#36#138#JA#103;CRISISLEX_T02_INJURED#2##1#Japan#JA#JA#36#138#JA#103;CRISISLEX_T03_DEAD#2##1#Japan#JA#JA#36#138#JA#103;CRISISLEX_T03_DEAD#2##1#Japan#JA#JA#36#138#JA#103;</item>
+      </line>
+      <line>
+        <item>PROTEST#24##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#412;KILL#21##1#Iran#IR#IR#32#53#IR#1523;CRISISLEX_CRISISLEXREC#21##1#Iran#IR#IR#32#53#IR#1523;CRISISLEX_T02_INJURED#21##1#Iran#IR#IR#32#53#IR#1523;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#1523;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#1523;ARREST#200##1#Iran#IR#IR#32#53#IR#1568;CRISISLEX_C07_SAFETY#200##1#Iran#IR#IR#32#53#IR#1568;</item>
+      </line>
+      <line>
+        <item>AFFECT#6#exArmy officer bludgeons#4#New Delhi, Delhi, India#IN#IN07#28.6#77.2#-2106102#0;WOUND#2#policemen#4#New Delhi, Delhi, India#IN#IN07#28.6#77.2#-2106102#1299;CRISISLEX_CRISISLEXREC#2#policemen#4#New Delhi, Delhi, India#IN#IN07#28.6#77.2#-2106102#1299;CRISISLEX_C03_WELLBEING_HEALTH#2#policemen#4#New Delhi, Delhi, India#IN#IN07#28.6#77.2#-2106102#1299;CRISISLEX_T02_INJURED#2#policemen#4#New Delhi, Delhi, India#IN#IN07#28.6#77.2#-2106102#1299;ARREST#2#policemen#4#New Delhi, Delhi, India#IN#IN07#28.6#77.2#-2106102#1299;CRISISLEX_CRISISLEXREC#2#policemen#4#New Delhi, Delhi, India#IN#IN07#28.6#77.2#-2106102#1299;</item>
+      </line>
+      <line>
+        <item>WOUND#13#Libyans#1#Libya#LY#LY#25#17#LY#0;CRISISLEX_T02_INJURED#13#Libyans#1#Libya#LY#LY#25#17#LY#0;KILL#2000##1#Libya#LY#LY#25#17#LY#703;CRISISLEX_CRISISLEXREC#2000##1#Libya#LY#LY#25#17#LY#703;CRISISLEX_T02_INJURED#2000##1#Libya#LY#LY#25#17#LY#703;CRISISLEX_T03_DEAD#2000##1#Libya#LY#LY#25#17#LY#703;CRISISLEX_T03_DEAD#2000##1#Libya#LY#LY#25#17#LY#703;WOUND#500##1#Libya#LY#LY#25#17#LY#2079;CRISISLEX_T02_INJURED#500##1#Libya#LY#LY#25#17#LY#2079;</item>
+      </line>
+      <line>
+        <item>PROTEST#3##0#######315;MOVEMENT_GENERAL#3##0#######315;TAX_FNCACT_ACTIVIST#3##0#######315;</item>
+      </line>
+      <line>
+        <item>KILL#489##3#Jefferson County, Alabama, United States#US#USAL#33.5834#-86.8667#161562#1740;CRISISLEX_T03_DEAD#489##3#Jefferson County, Alabama, United States#US#USAL#33.5834#-86.8667#161562#1740;KILL#824##3#Jefferson County, Alabama, United States#US#USAL#33.5834#-86.8667#161562#1895;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>ARREST#2##4#Paris, France (General), France#FR#FR00#48.8667#2.33333#-1456928#1412;CRISISLEX_C07_SAFETY#2##4#Paris, France (General), France#FR#FR00#48.8667#2.33333#-1456928#1412;PROTEST#70#supporters#4#Paris, France (General), France#FR#FR00#48.8667#2.33333#-1456928#1573;ARREST#456##1#France#FR#FR#46#2#FR#2244;CRISISLEX_C07_SAFETY#456##1#France#FR#FR#46#2#FR#2244;KILL#2#teenagers#4#Aulnay-sous-bois, France (General), France#FR#FR00#48.9381#2.49402#-1409166#3234;</item>
+      </line>
+      <line>
+        <item>KILL#2##4#Mumbai, Maharashtra, India#IN#IN16#18.975#72.8258#-2092174#1548;CRISISLEX_T03_DEAD#2##4#Mumbai, Maharashtra, India#IN#IN16#18.975#72.8258#-2092174#1548;</item>
+      </line>
+      <line>
+        <item>KILL#15##0#######460;CRISISLEX_T03_DEAD#15##0#######460;</item>
+      </line>
+      <line>
+        <item>KILL#2019#following#0#######0;CRISISLEX_T03_DEAD#2019#following#0#######0;</item>
+      </line>
+      <line>
+        <item>KILL#2014##4#Toronto, Ontario, Canada#CA#CA08#43.6667#-79.4167#-574890#2226;CRISISLEX_T03_DEAD#2014##4#Toronto, Ontario, Canada#CA#CA08#43.6667#-79.4167#-574890#2226;</item>
+      </line>
+      <line>
+        <item>KILL#90##3#Salt Lake, Utah, United States#US#USUT#39.1559#-112.691#1436291#163;CRISISLEX_T03_DEAD#90##3#Salt Lake, Utah, United States#US#USUT#39.1559#-112.691#1436291#163;KILL#10##3#Salt Lake, Utah, United States#US#USUT#39.1559#-112.691#1436291#217;CRISISLEX_T03_DEAD#10##3#Salt Lake, Utah, United States#US#USUT#39.1559#-112.691#1436291#217;</item>
+      </line>
+      <line>
+        <item>KILL#173#BSF jawan#1#Pakistan#PK#PK#30#70#PK#0;KILL#5#jawans#4#Pulwama, Jammu And Kashmir, India#IN#IN12#33.8833#74.9167#-2108339#440;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>KILL#21##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2344;CRISISLEX_T03_DEAD#21##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2344;ARREST#200##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2375;SOC_GENERALCRIME#200##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2375;CRISISLEX_C07_SAFETY#200##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2375;</item>
+      </line>
+      <line>
+        <item>PROTEST#2##1#Japan#JA#JA#36#138#JA#709;</item>
+      </line>
+      <line>
+        <item>KILL#2000##1#Libya#LY#LY#25#17#LY#589;CRISISLEX_CRISISLEXREC#2000##1#Libya#LY#LY#25#17#LY#589;CRISISLEX_T02_INJURED#2000##1#Libya#LY#LY#25#17#LY#589;CRISISLEX_T03_DEAD#2000##1#Libya#LY#LY#25#17#LY#589;CRISISLEX_T03_DEAD#2000##1#Libya#LY#LY#25#17#LY#589;WOUND#500##1#Libya#LY#LY#25#17#LY#1965;CRISISLEX_T02_INJURED#500##1#Libya#LY#LY#25#17#LY#1965;</item>
+      </line>
+      <line>
+        <item>KILL#3##4#Dundalk, Louth, Ireland#EI#EI19#54#-6.41667#-1502588#459;CRISISLEX_CRISISLEXREC#3##4#Dundalk, Louth, Ireland#EI#EI19#54#-6.41667#-1502588#459;CRISISLEX_T02_INJURED#3##4#Dundalk, Louth, Ireland#EI#EI19#54#-6.41667#-1502588#459;CRISISLEX_T03_DEAD#3##4#Dundalk, Louth, Ireland#EI#EI19#54#-6.41667#-1502588#459;CRISISLEX_T03_DEAD#3##4#Dundalk, Louth, Ireland#EI#EI19#54#-6.41667#-1502588#459;ARREST#3##1#Japan#JA#JA#36#138#JA#996;SOC_GENERALCRIME#3##1#Japan#JA#JA#36#138#JA#996;CRISISLEX_C07_SAFETY#3##1#Japan#JA#JA#36#138#JA#996;</item>
+      </line>
+      <line>
+        <item>KILL#2##1#Germany#GM#GM#51.5#10.5#GM#0;CRISISLEX_CRISISLEXREC#2##1#Germany#GM#GM#51.5#10.5#GM#0;CRISISLEX_T02_INJURED#2##1#Germany#GM#GM#51.5#10.5#GM#0;CRISISLEX_T03_DEAD#2##1#Germany#GM#GM#51.5#10.5#GM#0;CRISISLEX_T03_DEAD#2##1#Germany#GM#GM#51.5#10.5#GM#0;ARREST#46##4#Berlin, Berlin, Germany#GM#GM16#52.5167#13.4#-1746443#82;CRISISLEX_C07_SAFETY#46##4#Berlin, Berlin, Germany#GM#GM16#52.5167#13.4#-1746443#82;KILL#2##4#Berlin, Berlin, Germany#GM#GM16#52.5167#13.4#-1746443#82;CRISISLEX_CRISISLEXREC#2##4#Berlin, Berlin, Germany#GM#GM16#52.5167#13.4#-1746443#82;CRISISLEX_T02_INJURED#2##4#Berlin, Berlin, Germany#GM#GM16#52.5167#13.4#-1746443#82;CRISISLEX_T03_DEAD#2##4#Berlin, Berlin, Germany#GM#GM16#52.5167#13.4#-1746443#82;CRISISLEX_T03_DEAD#2##4#Berlin, Berlin, Germany#GM#GM16#52.5167#13.4#-1746443#82;KILL#2#infants#1#Germany#GM#GM#51.5#10.5#GM#225;CRISISLEX_T03_DEAD#2#infants#1#Germany#GM#GM#51.5#10.5#GM#225;</item>
+      </line>
+      <line>
+        <item>AFFECT#4#quarter results#1#Brazil#BR#BR#-10#-55#BR#574;</item>
+      </line>
+      <line>
+        <item>WOUND#45#firefighters#0#######34;CRISISLEX_CRISISLEXREC#45#firefighters#0#######34;CRISISLEX_C03_WELLBEING_HEALTH#45#firefighters#0#######34;CRISISLEX_T02_INJURED#45#firefighters#0#######34;WOUND#8#children#0#######247;CRISISLEX_CRISISLEXREC#8#children#0#######247;CRISISLEX_C03_WELLBEING_HEALTH#8#children#0#######247;CRISISLEX_T02_INJURED#8#children#0#######247;</item>
+      </line>
+      <line>
+        <item>ARREST#46##1#Germany#GM#GM#51.5#10.5#GM#36;CRISISLEX_C07_SAFETY#46##1#Germany#GM#GM#51.5#10.5#GM#36;KILL#2##1#Germany#GM#GM#51.5#10.5#GM#36;CRISISLEX_CRISISLEXREC#2##1#Germany#GM#GM#51.5#10.5#GM#36;CRISISLEX_T02_INJURED#2##1#Germany#GM#GM#51.5#10.5#GM#36;CRISISLEX_T03_DEAD#2##1#Germany#GM#GM#51.5#10.5#GM#36;CRISISLEX_T03_DEAD#2##1#Germany#GM#GM#51.5#10.5#GM#36;KILL#2#infants#1#Germany#GM#GM#51.5#10.5#GM#166;CRISISLEX_T03_DEAD#2#infants#1#Germany#GM#GM#51.5#10.5#GM#166;</item>
+      </line>
+      <line>
+        <item>ARREST#5##0#######120;CRISISLEX_CRISISLEXREC#5##0#######120;</item>
+      </line>
+      <line>
+        <item>KILL#11##1#United States#US#US#39.828175#-98.5795#US#1762;</item>
+      </line>
+      <line>
+        <item>KILL#2##4#Toronto, Ontario, Canada#CA#CA08#43.6667#-79.4167#-574890#0;CRISISLEX_CRISISLEXREC#2##4#Toronto, Ontario, Canada#CA#CA08#43.6667#-79.4167#-574890#0;CRISISLEX_T02_INJURED#2##4#Toronto, Ontario, Canada#CA#CA08#43.6667#-79.4167#-574890#0;CRISISLEX_T03_DEAD#2##4#Toronto, Ontario, Canada#CA#CA08#43.6667#-79.4167#-574890#0;CRISISLEX_T03_DEAD#2##4#Toronto, Ontario, Canada#CA#CA08#43.6667#-79.4167#-574890#0;KILL#2##4#Toronto, Ontario, Canada#CA#CA08#43.6667#-79.4167#-574890#304;CRISISLEX_CRISISLEXREC#2##4#Toronto, Ontario, Canada#CA#CA08#43.6667#-79.4167#-574890#304;CRISISLEX_T02_INJURED#2##4#Toronto, Ontario, Canada#CA#CA08#43.6667#-79.4167#-574890#304;CRISISLEX_T03_DEAD#2##4#Toronto, Ontario, Canada#CA#CA08#43.6667#-79.4167#-574890#304;CRISISLEX_T03_DEAD#2##4#Toronto, Ontario, Canada#CA#CA08#43.6667#-79.4167#-574890#304;</item>
+      </line>
+      <line>
+        <item>KILL#2#terrorists#1#Somalia#SO#SO#6#48#SO#192;CRISISLEX_T03_DEAD#2#terrorists#1#Somalia#SO#SO#6#48#SO#192;KILL#13#terrorists#1#Somalia#SO#SO#6#48#SO#832;CRISISLEX_T03_DEAD#13#terrorists#1#Somalia#SO#SO#6#48#SO#832;</item>
+      </line>
+      <line>
+        <item>AFFECT#200#incoming passengers#4#Dahisar, Maharashtra, India#IN#IN16#19.5167#72.85#-2093826#1649;CRISISLEX_C04_LOGISTICS_TRANSPORT#200#incoming passengers#4#Dahisar, Maharashtra, India#IN#IN16#19.5167#72.85#-2093826#1649;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>KILL#12##2#Florida, United States#US#USFL#27.8333#-81.717#FL#2737;</item>
+      </line>
+      <line>
+        <item>KILL#65##2#Maine, United States#US#USME#44.6074#-69.3977#ME#3478;</item>
+      </line>
+      <line>
+        <item>ARREST#13#loyalists terrorist#1#Afghanistan#AF#AF#33#66#AF#22;CRISISLEX_C07_SAFETY#13#loyalists terrorist#1#Afghanistan#AF#AF#33#66#AF#22;WOUND#84##1#Afghanistan#AF#AF#33#66#AF#1108;CRISISLEX_T02_INJURED#84##1#Afghanistan#AF#AF#33#66#AF#1108;</item>
+      </line>
+      <line>
+        <item>AFFECT#911#centers#3#Ohio County, West Virginia, United States#US#USWV#40.1001#-80.6165#1717163#1141;</item>
+      </line>
+      <line>
+        <item>KILL#79##4#Johannesburg, Gauteng, South Africa#SF#SF06#-26.2#28.0833#-1240261#211;CRISISLEX_T03_DEAD#79##4#Johannesburg, Gauteng, South Africa#SF#SF06#-26.2#28.0833#-1240261#211;</item>
+      </line>
+      <line>
+        <item>ARREST#2#deputies following#2#New Mexico, United States#US#USNM#34.8375#-106.237#NM#37;CRISISLEX_C07_SAFETY#2#deputies following#2#New Mexico, United States#US#USNM#34.8375#-106.237#NM#37;ARREST#2##2#New Mexico, United States#US#USNM#34.8375#-106.237#NM#281;SOC_GENERALCRIME#2##2#New Mexico, United States#US#USNM#34.8375#-106.237#NM#281;CRISISLEX_C07_SAFETY#2##2#New Mexico, United States#US#USNM#34.8375#-106.237#NM#281;ARREST#2019##2#New Mexico, United States#US#USNM#34.8375#-106.237#NM#527;SOC_POINTSOFINTEREST_JAIL#2019##2#New Mexico, United States#US#USNM#34.8375#-106.237#NM#527;</item>
+      </line>
+      <line>
+        <item>KILL#2##0#######162;CRISISLEX_CRISISLEXREC#2##0#######162;CRISISLEX_T02_INJURED#2##0#######162;CRISISLEX_T03_DEAD#2##0#######162;CRISISLEX_T03_DEAD#2##0#######162;</item>
+      </line>
+      <line>
+        <item>KILL#32##4#Rajouri, Jammu And Kashmir, India#IN#IN12#33.25#74.25#-2108702#1173;CRISISLEX_T03_DEAD#32##4#Rajouri, Jammu And Kashmir, India#IN#IN12#33.25#74.25#-2108702#1173;KILL#3#soldiers#4#Jammu, Jammu And Kashmir, India#IN#IN12#32.7333#74.8667#-2098228#1640;CRISISLEX_T03_DEAD#3#soldiers#4#Jammu, Jammu And Kashmir, India#IN#IN12#32.7333#74.8667#-2098228#1640;KILL#3#Pakistani soldiers#1#India#IN#IN#20#77#IN#1721;CRISISLEX_T03_DEAD#3#Pakistani soldiers#1#India#IN#IN#20#77#IN#1721;</item>
+      </line>
+      <line>
+        <item>KILL#3#children#3#Hollywood, California, United States#US#USCA#34.0983#-118.327#1660757#232;CRISISLEX_CRISISLEXREC#3#children#3#Hollywood, California, United States#US#USCA#34.0983#-118.327#1660757#232;CRISISLEX_T02_INJURED#3#children#3#Hollywood, California, United States#US#USCA#34.0983#-118.327#1660757#232;CRISISLEX_T03_DEAD#3#children#3#Hollywood, California, United States#US#USCA#34.0983#-118.327#1660757#232;CRISISLEX_T03_DEAD#3#children#3#Hollywood, California, United States#US#USCA#34.0983#-118.327#1660757#232;</item>
+      </line>
+      <line>
+        <item>PROTEST#2000##1#Iran#IR#IR#32#53#IR#68;KILL#21##1#Iran#IR#IR#32#53#IR#341;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#341;KILL#21##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#1296;CRISISLEX_T03_DEAD#21##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#1296;PROTEST#2019##5#Khuzestan, Iran#IR#IR15#31.5#49#-3071486#2410;</item>
+      </line>
+      <line>
+        <item>PROTEST#9419796096##1#India#IN#IN#20#77#IN#5118;MOVEMENT_GENERAL#9419796096##1#India#IN#IN#20#77#IN#5118;TAX_FNCACT_ACTIVIST#9419796096##1#India#IN#IN#20#77#IN#5118;</item>
+      </line>
+      <line>
+        <item>KILL#2##4#Toronto, Ontario, Canada#CA#CA08#43.6667#-79.4167#-574890#0;CRISISLEX_CRISISLEXREC#2##4#Toronto, Ontario, Canada#CA#CA08#43.6667#-79.4167#-574890#0;CRISISLEX_T02_INJURED#2##4#Toronto, Ontario, Canada#CA#CA08#43.6667#-79.4167#-574890#0;CRISISLEX_T03_DEAD#2##4#Toronto, Ontario, Canada#CA#CA08#43.6667#-79.4167#-574890#0;CRISISLEX_T03_DEAD#2##4#Toronto, Ontario, Canada#CA#CA08#43.6667#-79.4167#-574890#0;</item>
+      </line>
+      <line>
+        <item>KILL#5#police officers#1#Kenya#KE#KE#1#38#KE#0;KILL#5#police officers#1#Somalia#SO#SO#6#48#SO#192;CRISISLEX_T03_DEAD#5#police officers#1#Somalia#SO#SO#6#48#SO#192;KILL#3##1#Somalia#SO#SO#6#48#SO#587;KILL#147#students#1#Kenya#KE#KE#1#38#KE#1220;CRISISLEX_T03_DEAD#147#students#1#Kenya#KE#KE#1#38#KE#1220;</item>
+      </line>
+      <line>
+        <item>WOUND#4##3#Douglas County, Colorado, United States#US#USCO#39.3333#-104.951#198133#816;CRISISLEX_T02_INJURED#4##3#Douglas County, Colorado, United States#US#USCO#39.3333#-104.951#198133#816;WOUND#2##3#Denver, Colorado, United States#US#USCO#39.7392#-104.985#201738#2441;CRISISLEX_T02_INJURED#2##3#Denver, Colorado, United States#US#USCO#39.7392#-104.985#201738#2441;WOUND#2#videos#3#Denver, Colorado, United States#US#USCO#39.7392#-104.985#201738#2907;</item>
+      </line>
+      <line>
+        <item>KILL#21##1#Iran#IR#IR#32#53#IR#492;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#492;</item>
+      </line>
+      <line>
+        <item>KILL#2##2#California, United States#US#USCA#36.17#-119.746#CA#4256;</item>
+      </line>
+      <line>
+        <item>ARREST#38#heavilyarmed men#1#Cameroon#CM#CM#6#12#CM#621;SOC_GENERALCRIME#38#heavilyarmed men#1#Cameroon#CM#CM#6#12#CM#621;CRISISLEX_C07_SAFETY#38#heavilyarmed men#1#Cameroon#CM#CM#6#12#CM#621;KILL#2000000#population still#1#United Kingdom#UK#UK#54#-4#UK#1361;</item>
+      </line>
+      <line>
+        <item>ARREST#2000000#r wrongful#4#Vancouver, British Columbia, Canada#CA#CA02#49.25#-123.133#-575268#7;AFFECT#62#outages#1#United Kingdom#UK#UK#54#-4#UK#4245;KILL#2##4#Revelstoke, British Columbia, Canada#CA#CA02#51#-118.183#-572192#11911;CRISISLEX_CRISISLEXREC#2##4#Revelstoke, British Columbia, Canada#CA#CA02#51#-118.183#-572192#11911;CRISISLEX_T03_DEAD#2##4#Revelstoke, British Columbia, Canada#CA#CA02#51#-118.183#-572192#11911;CRISISLEX_T03_DEAD#2##4#Revelstoke, British Columbia, Canada#CA#CA02#51#-118.183#-572192#11911;WOUND#215199##4#Qualicum Beach, British Columbia, Canada#CA#CA02#49.35#-124.45#-571835#12989;</item>
+      </line>
+      <line>
+        <item>ARREST#12#methamphetaminerelated#4#Tripoli, Tarabulus, Libya#LY#LY61#32.8925#13.18#-3178767#424;CRISISLEX_C07_SAFETY#12#methamphetaminerelated#4#Tripoli, Tarabulus, Libya#LY#LY61#32.8925#13.18#-3178767#424;ARREST#2#Rhinelander residents#4#Tripoli, Tarabulus, Libya#LY#LY61#32.8925#13.18#-3178767#5496;SOC_GENERALCRIME#2#Rhinelander residents#4#Tripoli, Tarabulus, Libya#LY#LY61#32.8925#13.18#-3178767#5496;CRISISLEX_C07_SAFETY#2#Rhinelander residents#4#Tripoli, Tarabulus, Libya#LY#LY61#32.8925#13.18#-3178767#5496;WOUND#2##4#Tripoli, Tarabulus, Libya#LY#LY61#32.8925#13.18#-3178767#6151;ARREST#2##4#Tripoli, Tarabulus, Libya#LY#LY61#32.8925#13.18#-3178767#6151;SOC_POINTSOFINTEREST_JAIL#2##4#Tripoli, Tarabulus, Libya#LY#LY61#32.8925#13.18#-3178767#6151;</item>
+      </line>
+      <line>
+        <item>AFFECT#40#girls#4#Delhi, Delhi, India#IN#IN07#28.6667#77.2167#-2094230#180;</item>
+      </line>
+      <line>
+        <item>ARREST#2#residents#3#Saline County, Illinois, United States#US#USIL#37.7667#-88.55#424283#89;SOC_GENERALCRIME#2#residents#3#Saline County, Illinois, United States#US#USIL#37.7667#-88.55#424283#89;CRISISLEX_C07_SAFETY#2#residents#3#Saline County, Illinois, United States#US#USIL#37.7667#-88.55#424283#89;</item>
+      </line>
+      <line>
+        <item>KILL#6##0#######108;CRISISLEX_T03_DEAD#6##0#######108;KILL#6##0#######594;CRISISLEX_T03_DEAD#6##0#######594;</item>
+      </line>
+      <line>
+        <item>ARREST#5##0#######131;CRISISLEX_CRISISLEXREC#5##0#######131;</item>
+      </line>
+      <line>
+        <item>KILL#3##4#Digong, Liaoning, China#CH#CH19#42.1786#122.048#10721881#7302;CRISISLEX_T03_DEAD#3##4#Digong, Liaoning, China#CH#CH19#42.1786#122.048#10721881#7302;WOUND#200##1#United States#US#US#39.828175#-98.5795#US#7622;CRISISLEX_CRISISLEXREC#200##1#United States#US#US#39.828175#-98.5795#US#7622;CRISISLEX_C03_WELLBEING_HEALTH#200##1#United States#US#US#39.828175#-98.5795#US#7622;CRISISLEX_T02_INJURED#200##1#United States#US#US#39.828175#-98.5795#US#7622;AFFECT#16##1#Canada#CA#CA#60#-96#CA#9270;</item>
+      </line>
+      <line>
+        <item>ARREST#4#fans#0#######0;</item>
+      </line>
+      <line>
+        <item>AFFECT#2##1#Australia#AS#AS#-25#135#AS#799;</item>
+      </line>
+      <line>
+        <item>AFFECT#12##1#United States#US#US#39.828175#-98.5795#US#29;</item>
+      </line>
+      <line>
+        <item>SEIZE#2#Season#1#Ireland#EI#EI#53#-8#EI#3996;KILL#22##4#Manchester, Manchester, United Kingdom#UK#UKI2#53.5#-2.21667#-2602512#6406;CRISISLEX_CRISISLEXREC#22##4#Manchester, Manchester, United Kingdom#UK#UKI2#53.5#-2.21667#-2602512#6406;CRISISLEX_T02_INJURED#22##4#Manchester, Manchester, United Kingdom#UK#UKI2#53.5#-2.21667#-2602512#6406;CRISISLEX_T03_DEAD#22##4#Manchester, Manchester, United Kingdom#UK#UKI2#53.5#-2.21667#-2602512#6406;CRISISLEX_T03_DEAD#22##4#Manchester, Manchester, United Kingdom#UK#UKI2#53.5#-2.21667#-2602512#6406;KIDNAP#24##4#Manchester, Manchester, United Kingdom#UK#UKI2#53.5#-2.21667#-2602512#6849;</item>
+      </line>
+      <line>
+        <item>ARREST#2##4#Sopore, Jammu And Kashmir, India#IN#IN12#34.3#74.4667#-2111892#36;CRISISLEX_CRISISLEXREC#2##4#Sopore, Jammu And Kashmir, India#IN#IN12#34.3#74.4667#-2111892#36;ARREST#08##4#Sopore, Jammu And Kashmir, India#IN#IN12#34.3#74.4667#-2111892#352;SOC_GENERALCRIME#08##4#Sopore, Jammu And Kashmir, India#IN#IN12#34.3#74.4667#-2111892#352;CRISISLEX_C07_SAFETY#08##4#Sopore, Jammu And Kashmir, India#IN#IN12#34.3#74.4667#-2111892#352;</item>
+      </line>
+      <line>
+        <item>AFFECT#3#children#1#Afghanistan#AF#AF#33#66#AF#481;RELEASE_HOSTAGE#3#children#1#Afghanistan#AF#AF#33#66#AF#481;AFFECT#3#children#1#Afghanistan#AF#AF#33#66#AF#4789;RELEASE_HOSTAGE#3#children#1#Afghanistan#AF#AF#33#66#AF#4789;</item>
+      </line>
+      <line>
+        <item>SEIZE#105#grams#4#Carcar, Cebu, Philippines#RP#RP21#10.1061#123.64#-2420950#936;</item>
+      </line>
+      <line>
+        <item>KILL#7##2#Indiana, United States#US#USIN#39.8647#-86.2604#IN#1401;CRISISLEX_T03_DEAD#7##2#Indiana, United States#US#USIN#39.8647#-86.2604#IN#1401;</item>
+      </line>
+      <line>
+        <item>KILL#11##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#1773;CRISISLEX_T03_DEAD#11##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#1773;KILL#11##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#1773;KILL#5#weatherrelated#2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#2186;KILL#2##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#2245;CRISISLEX_T03_DEAD#2##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#2245;KILL#4##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#2298;CRISISLEX_T03_DEAD#4##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#2298;AFFECT#2##2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2328;POVERTY#2##2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2328;CRISISLEX_C05_NEED_OF_SHELTERS#2##2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2328;KILL#2#homeless#2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2328;CRISISLEX_T03_DEAD#2#homeless#2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2328;</item>
+      </line>
+      <line>
+        <item>WOUND#5##5#Tripura, India#IN#IN26#24#92#-2113451#37;CRISISLEX_CRISISLEXREC#5##5#Tripura, India#IN#IN26#24#92#-2113451#37;CRISISLEX_C03_WELLBEING_HEALTH#5##5#Tripura, India#IN#IN26#24#92#-2113451#37;CRISISLEX_T02_INJURED#5##5#Tripura, India#IN#IN26#24#92#-2113451#37;WOUND#5##5#Tripura, India#IN#IN26#24#92#-2113451#352;CRISISLEX_CRISISLEXREC#5##5#Tripura, India#IN#IN26#24#92#-2113451#352;CRISISLEX_C03_WELLBEING_HEALTH#5##5#Tripura, India#IN#IN26#24#92#-2113451#352;CRISISLEX_T02_INJURED#5##5#Tripura, India#IN#IN26#24#92#-2113451#352;</item>
+      </line>
+      <line>
+        <item>KILL#12##2#Florida, United States#US#USFL#27.8333#-81.717#FL#2721;</item>
+      </line>
+      <line>
+        <item>KILL#12##2#Florida, United States#US#USFL#27.8333#-81.717#FL#2759;</item>
+      </line>
+      <line>
+        <item>ARREST#450##1#Iran#IR#IR#32#53#IR#953;SOC_GENERALCRIME#450##1#Iran#IR#IR#32#53#IR#953;CRISISLEX_C07_SAFETY#450##1#Iran#IR#IR#32#53#IR#953;</item>
+      </line>
+      <line>
+        <item>KILL#2#nephews#1#Pakistan#PK#PK#30#70#PK#215;KILL#4##1#Pakistan#PK#PK#30#70#PK#776;</item>
+      </line>
+      <line>
+        <item>KILL#62##4#Brighouse, Calderdale, United Kingdom#UK#UKC2#53.7#-1.78333#-2590879#0;CRISISLEX_CRISISLEXREC#62##4#Brighouse, Calderdale, United Kingdom#UK#UKC2#53.7#-1.78333#-2590879#0;CRISISLEX_T02_INJURED#62##4#Brighouse, Calderdale, United Kingdom#UK#UKC2#53.7#-1.78333#-2590879#0;CRISISLEX_T03_DEAD#62##4#Brighouse, Calderdale, United Kingdom#UK#UKC2#53.7#-1.78333#-2590879#0;CRISISLEX_T03_DEAD#62##4#Brighouse, Calderdale, United Kingdom#UK#UKC2#53.7#-1.78333#-2590879#0;KILL#30##4#Brighouse, Calderdale, United Kingdom#UK#UKC2#53.7#-1.78333#-2590879#132;CRISISLEX_T03_DEAD#30##4#Brighouse, Calderdale, United Kingdom#UK#UKC2#53.7#-1.78333#-2590879#132;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>KILL#2##3#Houston, Texas, United States#US#USTX#29.7633#-95.3633#1380948#0;KILL#2#deaths#3#Houston, Texas, United States#US#USTX#29.7633#-95.3633#1380948#119;KILL#2#deaths#3#Houston, Texas, United States#US#USTX#29.7633#-95.3633#1380948#119;KILL#7##3#Houston, Texas, United States#US#USTX#29.7633#-95.3633#1380948#534;CRISISLEX_CRISISLEXREC#7##3#Houston, Texas, United States#US#USTX#29.7633#-95.3633#1380948#534;CRISISLEX_T02_INJURED#7##3#Houston, Texas, United States#US#USTX#29.7633#-95.3633#1380948#534;CRISISLEX_T03_DEAD#7##3#Houston, Texas, United States#US#USTX#29.7633#-95.3633#1380948#534;CRISISLEX_T03_DEAD#7##3#Houston, Texas, United States#US#USTX#29.7633#-95.3633#1380948#534;KILL#9##3#Houston, Texas, United States#US#USTX#29.7633#-95.3633#1380948#632;CRISISLEX_CRISISLEXREC#9##3#Houston, Texas, United States#US#USTX#29.7633#-95.3633#1380948#632;CRISISLEX_T02_INJURED#9##3#Houston, Texas, United States#US#USTX#29.7633#-95.3633#1380948#632;CRISISLEX_T03_DEAD#9##3#Houston, Texas, United States#US#USTX#29.7633#-95.3633#1380948#632;CRISISLEX_T03_DEAD#9##3#Houston, Texas, United States#US#USTX#29.7633#-95.3633#1380948#632;</item>
+      </line>
+      <line>
+        <item>KILL#100##1#United States#US#US#39.828175#-98.5795#US#114;CRISISLEX_T03_DEAD#100##1#United States#US#US#39.828175#-98.5795#US#114;CRISISLEX_T03_DEAD#100##1#United States#US#US#39.828175#-98.5795#US#114;KILL#12##1#United States#US#US#39.828175#-98.5795#US#1466;KILL#100##1#United States#US#US#39.828175#-98.5795#US#1572;</item>
+      </line>
+      <line>
+        <item>KILL#22##4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#127;</item>
+      </line>
+      <line>
+        <item>KILL#158##1#Ireland#EI#EI#53#-8#EI#226;KILL#186#fatal crashes#1#Ireland#EI#EI#53#-8#EI#317;KILL#15##1#Ireland#EI#EI#53#-8#EI#372;KILL#12##1#Ireland#EI#EI#53#-8#EI#569;KILL#14##4#Dublin, Dublin, Ireland#EI#EI07#53.3331#-6.24889#-1502554#864;CRISISLEX_CRISISLEXREC#14##4#Dublin, Dublin, Ireland#EI#EI07#53.3331#-6.24889#-1502554#864;CRISISLEX_T03_DEAD#14##4#Dublin, Dublin, Ireland#EI#EI07#53.3331#-6.24889#-1502554#864;CRISISLEX_T03_DEAD#14##4#Dublin, Dublin, Ireland#EI#EI07#53.3331#-6.24889#-1502554#864;KILL#14##4#Dublin, Dublin, Ireland#EI#EI07#53.3331#-6.24889#-1502554#864;KILL#23##4#Dublin, Dublin, Ireland#EI#EI07#53.3331#-6.24889#-1502554#1026;KILL#5##1#Ireland#EI#EI#53#-8#EI#1096;CRISISLEX_T03_DEAD#5##1#Ireland#EI#EI#53#-8#EI#1096;CRISISLEX_T03_DEAD#5##1#Ireland#EI#EI#53#-8#EI#1096;KILL#5#passengers#1#Ireland#EI#EI#53#-8#EI#1144;CRISISLEX_CRISISLEXREC#5#passengers#1#Ireland#EI#EI#53#-8#EI#1144;CRISISLEX_T03_DEAD#5#passengers#1#Ireland#EI#EI#53#-8#EI#1144;CRISISLEX_T03_DEAD#5#passengers#1#Ireland#EI#EI#53#-8#EI#1144;KILL#50##1#Ireland#EI#EI#53#-8#EI#2180;KILL#40##1#Ireland#EI#EI#53#-8#EI#2364;KILL#124##1#Ireland#EI#EI#53#-8#EI#3116;CRISISLEX_CRISISLEXREC#124##1#Ireland#EI#EI#53#-8#EI#3116;CRISISLEX_T03_DEAD#124##1#Ireland#EI#EI#53#-8#EI#3116;CRISISLEX_T03_DEAD#124##1#Ireland#EI#EI#53#-8#EI#3116;KILL#22##1#Ireland#EI#EI#53#-8#EI#3194;</item>
+      </line>
+      <line>
+        <item>KILL#2##2#Washington, United States#US#USWA#47.3917#-121.571#WA#632;CRISISLEX_CRISISLEXREC#2##2#Washington, United States#US#USWA#47.3917#-121.571#WA#632;CRISISLEX_T03_DEAD#2##2#Washington, United States#US#USWA#47.3917#-121.571#WA#632;CRISISLEX_T03_DEAD#2##2#Washington, United States#US#USWA#47.3917#-121.571#WA#632;</item>
+      </line>
+      <line>
+        <item>AFFECT#370#Malaysia Airlines flight MH#1#Malaysia#MY#MY#2.5#112.5#MY#98;AFFECT#3#companies offering#1#Australia#AS#AS#-25#135#AS#982;</item>
+      </line>
+      <line>
+        <item>AFFECT#43##4#Blanchisseuse, Saint George, Trinidad And Tobago#TD#TD08#10.796#-61.3048#-1359530#518;</item>
+      </line>
+      <line>
+        <item>KILL#2##4#Daveyton, Gauteng, South Africa#SF#SF06#-26.1382#28.4249#-1219864#393;CRISISLEX_T03_DEAD#2##4#Daveyton, Gauteng, South Africa#SF#SF06#-26.1382#28.4249#-1219864#393;KILL#2##4#Katlehong, Gauteng, South Africa#SF#SF06#-26.3399#28.157#-1242838#2157;CRISISLEX_T03_DEAD#2##4#Katlehong, Gauteng, South Africa#SF#SF06#-26.3399#28.157#-1242838#2157;</item>
+      </line>
+      <line>
+        <item>KILL#2#terrorists#4#Mogadishu, Banaadir, Somalia#SO#SO02#2.06667#45.3667#-3227437#245;KILL#30##1#United States#US#US#39.828175#-98.5795#US#794;CRISISLEX_T03_DEAD#30##1#United States#US#US#39.828175#-98.5795#US#794;</item>
+      </line>
+      <line>
+        <item>KILL#22##0#######430;CRISISLEX_T03_DEAD#22##0#######430;</item>
+      </line>
+      <line>
+        <item>KILL#15##2#West Virginia, United States#US#USWV#38.468#-80.9696#WV#74;KILL#2##2#West Virginia, United States#US#USWV#38.468#-80.9696#WV#192;KILL#6##2#Wyoming, United States#US#USWY#42.7475#-107.209#WY#317;KILL#6##2#Wyoming, United States#US#USWY#42.7475#-107.209#WY#317;KILL#29#miners#2#West Virginia, United States#US#USWV#38.468#-80.9696#WV#427;CRISISLEX_T03_DEAD#29#miners#2#West Virginia, United States#US#USWV#38.468#-80.9696#WV#427;KILL#8#coal mining#3#Upper Big Branch, West Virginia, United States#US#USWV#37.7393#-81.4537#1548502#1623;KILL#20##3#Upper Big Branch, West Virginia, United States#US#USWV#37.7393#-81.4537#1548502#2141;CRISISLEX_CRISISLEXREC#20##3#Upper Big Branch, West Virginia, United States#US#USWV#37.7393#-81.4537#1548502#2141;CRISISLEX_T03_DEAD#20##3#Upper Big Branch, West Virginia, United States#US#USWV#37.7393#-81.4537#1548502#2141;CRISISLEX_T03_DEAD#20##3#Upper Big Branch, West Virginia, United States#US#USWV#37.7393#-81.4537#1548502#2141;KILL#233##3#Upper Big Branch, West Virginia, United States#US#USWV#37.7393#-81.4537#1548502#2330;KILL#13##1#United States#US#US#39.828175#-98.5795#US#3006;CRISISLEX_CRISISLEXREC#13##1#United States#US#US#39.828175#-98.5795#US#3006;CRISISLEX_T03_DEAD#13##1#United States#US#US#39.828175#-98.5795#US#3006;CRISISLEX_T03_DEAD#13##1#United States#US#US#39.828175#-98.5795#US#3006;KILL#17##1#United States#US#US#39.828175#-98.5795#US#3149;</item>
+      </line>
+      <line>
+        <item>KILL#600##2#New York, United States#US#USNY#42.1497#-74.9384#NY#2957;CRISISLEX_T03_DEAD#600##2#New York, United States#US#USNY#42.1497#-74.9384#NY#2957;</item>
+      </line>
+      <line>
+        <item>KILL#22##4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#127;</item>
+      </line>
+      <line>
+        <item>KILL#3#aufgef xC#1#Canada#CA#CA#60#-96#CA#7050;CRISISLEX_T03_DEAD#3#aufgef xC#1#Canada#CA#CA#60#-96#CA#7050;CRISISLEX_T03_DEAD#3#aufgef xC#1#Canada#CA#CA#60#-96#CA#7050;</item>
+      </line>
+      <line>
+        <item>KILL#20##1#Turkey#TU#TU#39.059012#34.911546#TU#1126;KILL#20##1#Turkey#TU#TU#39.059012#34.911546#TU#1126;KILL#20##1#Turkey#TU#TU#39.059012#34.911546#TU#1126;CRISISLEX_CRISISLEXREC#20##1#Turkey#TU#TU#39.059012#34.911546#TU#1126;CRISISLEX_T01_CAUTION_ADVICE#20##1#Turkey#TU#TU#39.059012#34.911546#TU#1126;CRISISLEX_T03_DEAD#20##1#Turkey#TU#TU#39.059012#34.911546#TU#1126;CRISISLEX_T03_DEAD#20##1#Turkey#TU#TU#39.059012#34.911546#TU#1126;</item>
+      </line>
+      <line>
+        <item>KILL#21##1#Iran#IR#IR#32#53#IR#286;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#286;</item>
+      </line>
+      <line>
+        <item>KILL#2019##0#######1793;CRISISLEX_CRISISLEXREC#2019##0#######1793;CRISISLEX_T02_INJURED#2019##0#######1793;CRISISLEX_T03_DEAD#2019##0#######1793;CRISISLEX_T03_DEAD#2019##0#######1793;KILL#2026##0#######2260;</item>
+      </line>
+      <line>
+        <item>KILL#552##3#Palm Beach, Florida, United States#US#USFL#26.7056#-80.0364#288390#596;CRISISLEX_CRISISLEXREC#552##3#Palm Beach, Florida, United States#US#USFL#26.7056#-80.0364#288390#596;CRISISLEX_T03_DEAD#552##3#Palm Beach, Florida, United States#US#USFL#26.7056#-80.0364#288390#596;CRISISLEX_T03_DEAD#552##3#Palm Beach, Florida, United States#US#USFL#26.7056#-80.0364#288390#596;</item>
+      </line>
+      <line>
+        <item>KILL#3##0#######4192;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>PROTEST#12#residents#1#United Kingdom#UK#UK#54#-4#UK#63;PROTEST#3##1#United Kingdom#UK#UK#54#-4#UK#573;</item>
+      </line>
+      <line>
+        <item>ARREST#2##4#Middlesbrough, Redcar And Cleveland, United Kingdom#UK#UKK9#54.5728#-1.16278#-2603029#613;CRISISLEX_C07_SAFETY#2##4#Middlesbrough, Redcar And Cleveland, United Kingdom#UK#UKK9#54.5728#-1.16278#-2603029#613;</item>
+      </line>
+      <line>
+        <item>AFFECT#2000#LGBT#1#Iraq#IZ#IZ#33#44#IZ#172;DISPLACED#2000#LGBT#1#Iraq#IZ#IZ#33#44#IZ#172;CRISISLEX_CRISISLEXREC#2000#LGBT#1#Iraq#IZ#IZ#33#44#IZ#172;ARREST#2##1#Iraq#IZ#IZ#33#44#IZ#912;SOC_GENERALCRIME#2##1#Iraq#IZ#IZ#33#44#IZ#912;CRISISLEX_C07_SAFETY#2##1#Iraq#IZ#IZ#33#44#IZ#912;</item>
+      </line>
+      <line>
+        <item>AFFECT#2000#just#3#Philadelphia, Pennsylvania, United States#US#USPA#39.9523#-75.1638#1209052#1021;</item>
+      </line>
+      <line>
+        <item>KILL#22##4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#127;</item>
+      </line>
+      <line>
+        <item>KILL#22##4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#127;</item>
+      </line>
+      <line>
+        <item>KILL#470##3#Springdale, Washington, United States#US#USWA#48.0574#-117.741#1526423#1301;KILL#84##3#Springdale, Washington, United States#US#USWA#48.0574#-117.741#1526423#2166;</item>
+      </line>
+      <line>
+        <item>KILL#2#terrorists killed#1#Somalia#SO#SO#6#48#SO#0;CRISISLEX_T03_DEAD#2#terrorists killed#1#Somalia#SO#SO#6#48#SO#0;KILL#2#terrorists killed#1#Somalia#SO#SO#6#48#SO#0;CRISISLEX_T03_DEAD#2#terrorists killed#1#Somalia#SO#SO#6#48#SO#0;KILL#2#terrorists#1#Somalia#SO#SO#6#48#SO#299;CRISISLEX_T03_DEAD#2#terrorists#1#Somalia#SO#SO#6#48#SO#299;KILL#13#terrorists#1#Somalia#SO#SO#6#48#SO#941;CRISISLEX_T03_DEAD#13#terrorists#1#Somalia#SO#SO#6#48#SO#941;</item>
+      </line>
+      <line>
+        <item>AFFECT#8##4#Dahisar, Maharashtra, India#IN#IN16#19.5167#72.85#-2093826#1649;AFFECT#200#incoming passengers#4#Dahisar, Maharashtra, India#IN#IN16#19.5167#72.85#-2093826#1754;CRISISLEX_C04_LOGISTICS_TRANSPORT#200#incoming passengers#4#Dahisar, Maharashtra, India#IN#IN16#19.5167#72.85#-2093826#1754;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#staff#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#977;</item>
+      </line>
+      <line>
+        <item>KILL#22##4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#127;</item>
+      </line>
+      <line>
+        <item>AFFECT#47#rifle#0#######748;</item>
+      </line>
+      <line>
+        <item>KILL#24##0#######370;</item>
+      </line>
+      <line>
+        <item>KILL#85##1#United States#US#US#39.828175#-98.5795#US#3293;CRISISLEX_T03_DEAD#85##1#United States#US#US#39.828175#-98.5795#US#3293;</item>
+      </line>
+      <line>
+        <item>KILL#20##1#Iran#IR#IR#32#53#IR#360;CRISISLEX_T03_DEAD#20##1#Iran#IR#IR#32#53#IR#360;ARREST#200##1#Iran#IR#IR#32#53#IR#408;SOC_GENERALCRIME#200##1#Iran#IR#IR#32#53#IR#408;CRISISLEX_C07_SAFETY#200##1#Iran#IR#IR#32#53#IR#408;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>KILL#3##0#######4192;</item>
+      </line>
+      <line>
+        <item>AFFECT#3000000000##1#Iran#IR#IR#32#53#IR#3441;</item>
+      </line>
+      <line>
+        <item>KILL#2##1#Japan#JA#JA#36#138#JA#103;CRISISLEX_CRISISLEXREC#2##1#Japan#JA#JA#36#138#JA#103;CRISISLEX_T02_INJURED#2##1#Japan#JA#JA#36#138#JA#103;CRISISLEX_T03_DEAD#2##1#Japan#JA#JA#36#138#JA#103;CRISISLEX_T03_DEAD#2##1#Japan#JA#JA#36#138#JA#103;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#staff#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#977;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#leaders#1#Austria#AU#AU#47.333333#13.333333#AU#828;REFUGEES#2#leaders#1#Austria#AU#AU#47.333333#13.333333#AU#828;</item>
+      </line>
+      <line>
+        <item>KILL#11##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#1698;CRISISLEX_T03_DEAD#11##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#1698;KILL#11##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#1698;KILL#5#weatherrelated#2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#2111;KILL#2##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#2170;CRISISLEX_T03_DEAD#2##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#2170;KILL#4##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#2223;CRISISLEX_T03_DEAD#4##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#2223;AFFECT#2##2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2253;POVERTY#2##2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2253;CRISISLEX_C05_NEED_OF_SHELTERS#2##2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2253;KILL#2#homeless#2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2253;CRISISLEX_T03_DEAD#2#homeless#2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2253;</item>
+      </line>
+      <line>
+        <item>WOUND#38##1#Afghanistan#AF#AF#33#66#AF#1052;CRISISLEX_CRISISLEXREC#38##1#Afghanistan#AF#AF#33#66#AF#1052;CRISISLEX_C03_WELLBEING_HEALTH#38##1#Afghanistan#AF#AF#33#66#AF#1052;CRISISLEX_T02_INJURED#38##1#Afghanistan#AF#AF#33#66#AF#1052;KILL#18##5#Nangarhar, Afghanistan#AF#AF18#34.3333#70.4167#-3385101#1411;CRISISLEX_T03_DEAD#18##5#Nangarhar, Afghanistan#AF#AF18#34.3333#70.4167#-3385101#1411;KILL#150##4#Kabul, Kabol, Afghanistan#AF#AF13#34.5167#69.1833#-3378435#1658;WOUND#300##4#Kabul, Kabol, Afghanistan#AF#AF13#34.5167#69.1833#-3378435#1679;</item>
+      </line>
+      <line>
+        <item>ARREST#4#men#0#######0;SOC_GENERALCRIME#4#men#0#######0;CRISISLEX_C07_SAFETY#4#men#0#######0;ARREST#6#men#0#######172;SOC_GENERALCRIME#6#men#0#######172;CRISISLEX_C07_SAFETY#6#men#0#######172;ARREST#2##0#######503;SOC_GENERALCRIME#2##0#######503;CRISISLEX_C07_SAFETY#2##0#######503;ARREST#50##0#######736;SOC_GENERALCRIME#50##0#######736;CRISISLEX_C07_SAFETY#50##0#######736;ARREST#50##0#######1404;CRISISLEX_C07_SAFETY#50##0#######1404;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#staff#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#977;</item>
+      </line>
+      <line>
+        <item>KILL#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#0;CRISISLEX_T03_DEAD#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#0;AFFECT#6##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#804;CRISISLEX_T02_INJURED#6##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#804;KILL#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#902;CRISISLEX_CRISISLEXREC#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#902;CRISISLEX_T02_INJURED#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#902;CRISISLEX_T03_DEAD#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#902;CRISISLEX_T03_DEAD#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#902;AFFECT#3##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#902;KILL#600##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#1339;CRISISLEX_T03_DEAD#600##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#1339;KILL#12##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#1364;CRISISLEX_T03_DEAD#12##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#1364;KILL#20##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#1454;CRISISLEX_T03_DEAD#20##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#1454;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>KILL#30##4#Ironbridge, Telford And Wrekin, United Kingdom#UK#UKO2#52.6333#-2.46667#-2599587#57;CRISISLEX_T03_DEAD#30##4#Ironbridge, Telford And Wrekin, United Kingdom#UK#UKO2#52.6333#-2.46667#-2599587#57;</item>
+      </line>
+      <line>
+        <item>WOUND#3##3#Youngstown, Ohio, United States#US#USOH#41.0998#-80.6495#1058156#11;CRISISLEX_CRISISLEXREC#3##3#Youngstown, Ohio, United States#US#USOH#41.0998#-80.6495#1058156#11;CRISISLEX_C03_WELLBEING_HEALTH#3##3#Youngstown, Ohio, United States#US#USOH#41.0998#-80.6495#1058156#11;CRISISLEX_T02_INJURED#3##3#Youngstown, Ohio, United States#US#USOH#41.0998#-80.6495#1058156#11;WOUND#3##3#Youngstown, Ohio, United States#US#USOH#41.0998#-80.6495#1058156#374;</item>
+      </line>
+      <line>
+        <item>KILL#250##1#United Kingdom#UK#UK#54#-4#UK#2544;CRISISLEX_T03_DEAD#250##1#United Kingdom#UK#UK#54#-4#UK#2544;KILL#16##2#Oregon, United States#US#USOR#44.5672#-122.127#OR#3391;KILL#8##2#Oregon, United States#US#USOR#44.5672#-122.127#OR#3532;CRISISLEX_CRISISLEXREC#8##2#Oregon, United States#US#USOR#44.5672#-122.127#OR#3532;CRISISLEX_T02_INJURED#8##2#Oregon, United States#US#USOR#44.5672#-122.127#OR#3532;CRISISLEX_T03_DEAD#8##2#Oregon, United States#US#USOR#44.5672#-122.127#OR#3532;CRISISLEX_T03_DEAD#8##2#Oregon, United States#US#USOR#44.5672#-122.127#OR#3532;KIDNAP#7##1#United States#US#US#39.828175#-98.5795#US#4641;KILL#50##1#United States#US#US#39.828175#-98.5795#US#6173;KILL#250##1#United Kingdom#UK#UK#54#-4#UK#6781;CRISISLEX_T03_DEAD#250##1#United Kingdom#UK#UK#54#-4#UK#6781;</item>
+      </line>
+      <line>
+        <item>KILL#15#workplace#2#West Virginia, United States#US#USWV#38.468#-80.9696#WV#34;KILL#9##2#West Virginia, United States#US#USWV#38.468#-80.9696#WV#208;KILL#8##2#West Virginia, United States#US#USWV#38.468#-80.9696#WV#251;KILL#29#miners#2#West Virginia, United States#US#USWV#38.468#-80.9696#WV#438;CRISISLEX_T03_DEAD#29#miners#2#West Virginia, United States#US#USWV#38.468#-80.9696#WV#438;KILL#6##3#Upper Big Branch, West Virginia, United States#US#USWV#37.7393#-81.4537#1548502#490;KILL#8#coal mining#3#Upper Big Branch, West Virginia, United States#US#USWV#37.7393#-81.4537#1548502#547;</item>
+      </line>
+      <line>
+        <item>ARREST#2000000#r wrongful#1#Canada#CA#CA#60#-96#CA#1326;AFFECT#62#outages#1#United Kingdom#UK#UK#54#-4#UK#5564;KILL#2##4#Revelstoke, British Columbia, Canada#CA#CA02#51#-118.183#-572192#13230;CRISISLEX_CRISISLEXREC#2##4#Revelstoke, British Columbia, Canada#CA#CA02#51#-118.183#-572192#13230;CRISISLEX_T03_DEAD#2##4#Revelstoke, British Columbia, Canada#CA#CA02#51#-118.183#-572192#13230;CRISISLEX_T03_DEAD#2##4#Revelstoke, British Columbia, Canada#CA#CA02#51#-118.183#-572192#13230;WOUND#215199##4#Qualicum Beach, British Columbia, Canada#CA#CA02#49.35#-124.45#-571835#14308;</item>
+      </line>
+      <line>
+        <item>PROTEST#200#bluecollar workers#4#Chomedey, Quebec, Canada#CA#CA10#45.55#-73.7333#-562592#1594;PROTEST#12#quiet#4#Chomedey, Quebec, Canada#CA#CA10#45.55#-73.7333#-562592#3694;</item>
+      </line>
+      <line>
+        <item>ARREST#15##4#Ahmedabad, Gujarat, India#IN#IN09#23.0333#72.6167#-2088270#0;</item>
+      </line>
+      <line>
+        <item>KILL#22##4#Manchester, Manchester, United Kingdom#UK#UKI2#53.5#-2.21667#-2602512#286;</item>
+      </line>
+      <line>
+        <item>KILL#5#men#1#Somalia#SO#SO#6#48#SO#0;</item>
+      </line>
+      <line>
+        <item>AFFECT#2000#just#3#Philadelphia, Pennsylvania, United States#US#USPA#39.9523#-75.1638#1209052#1021;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>KILL#3#aufgef xC#1#Canada#CA#CA#60#-96#CA#6439;CRISISLEX_T03_DEAD#3#aufgef xC#1#Canada#CA#CA#60#-96#CA#6439;CRISISLEX_T03_DEAD#3#aufgef xC#1#Canada#CA#CA#60#-96#CA#6439;</item>
+      </line>
+      <line>
+        <item>KILL#4##3#Honolulu, Hawaii, United States#US#USHI#21.3069#-157.858#366212#44;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#331;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2105;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2105;KILL#9##1#Iran#IR#IR#32#53#IR#3842;CRISISLEX_T03_DEAD#9##1#Iran#IR#IR#32#53#IR#3842;KILL#21##1#Iran#IR#IR#32#53#IR#3977;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3977;</item>
+      </line>
+      <line>
+        <item>ARREST#2#women convicted#0#######26;SOC_POINTSOFINTEREST_JAIL#2#women convicted#0#######26;SEIZE#700#restitution#0#######393;SEIZE#18#goats#0#######599;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>ARREST#5##1#Zimbabwe#ZI#ZI#-19#29#ZI#48;ARREST#5##1#Zimbabwe#ZI#ZI#-19#29#ZI#48;</item>
+      </line>
+      <line>
+        <item>ARREST#5##0#######120;CRISISLEX_CRISISLEXREC#5##0#######120;</item>
+      </line>
+      <line>
+        <item>ARREST#20##4#Bailieborough, Cavan, Ireland#EI#EI02#53.9167#-6.96667#-1500323#1013;SOC_GENERALCRIME#20##4#Bailieborough, Cavan, Ireland#EI#EI02#53.9167#-6.96667#-1500323#1013;CRISISLEX_C07_SAFETY#20##4#Bailieborough, Cavan, Ireland#EI#EI02#53.9167#-6.96667#-1500323#1013;ARREST#20##4#Bailieborough, Cavan, Ireland#EI#EI02#53.9167#-6.96667#-1500323#1083;CRISISLEX_C07_SAFETY#20##4#Bailieborough, Cavan, Ireland#EI#EI02#53.9167#-6.96667#-1500323#1083;</item>
+      </line>
+      <line>
+        <item>KILL#1000000##1#United States#US#US#39.828175#-98.5795#US#1099;KILL#2000000##1#United States#US#US#39.828175#-98.5795#US#2458;</item>
+      </line>
+      <line>
+        <item>KILL#2#parties#0#######1283;CRISISLEX_CRISISLEXREC#2#parties#0#######1283;CRISISLEX_T02_INJURED#2#parties#0#######1283;CRISISLEX_T03_DEAD#2#parties#0#######1283;CRISISLEX_T03_DEAD#2#parties#0#######1283;</item>
+      </line>
+      <line>
+        <item>AFFECT#2013##0#######2886;</item>
+      </line>
+      <line>
+        <item>ARREST#4#fans#0#######0;</item>
+      </line>
+      <line>
+        <item>ARREST#11#men#4#Sibu, Sarawak, Malaysia#MY#MY11#2.3#111.817#-2402258#873;ARREST#13##4#Sibu, Sarawak, Malaysia#MY#MY11#2.3#111.817#-2402258#1109;</item>
+      </line>
+      <line>
+        <item>AFFECT#23#youth#4#Delhi, Delhi, India#IN#IN07#28.6667#77.2167#-2094230#0;CRISISLEX_C04_LOGISTICS_TRANSPORT#23#youth#4#Delhi, Delhi, India#IN#IN07#28.6667#77.2167#-2094230#0;</item>
+      </line>
+      <line>
+        <item>AFFECT#2000000000#reduction#0#######341;</item>
+      </line>
+      <line>
+        <item>KILL#24#Season#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#902;KILL#10#Nice#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#1461;CRISISLEX_T03_DEAD#10#Nice#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#1461;CRISISLEX_T03_DEAD#10#Nice#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#1461;KILL#10#Nice#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#1461;CRISISLEX_CRISISLEXREC#10#Nice#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#1461;CRISISLEX_T02_INJURED#10#Nice#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#1461;CRISISLEX_T03_DEAD#10#Nice#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#1461;CRISISLEX_T03_DEAD#10#Nice#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#1461;KILL#8#Old Dogs#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#3895;CRISISLEX_T03_DEAD#8#Old Dogs#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#3895;KILL#10#Nice#4#Polruan, Cornwall, United Kingdom#UK#UKC6#50.3167#-4.61667#-2605491#8116;CRISISLEX_T03_DEAD#10#Nice#4#Polruan, Cornwall, United Kingdom#UK#UKC6#50.3167#-4.61667#-2605491#8116;CRISISLEX_T03_DEAD#10#Nice#4#Polruan, Cornwall, United Kingdom#UK#UKC6#50.3167#-4.61667#-2605491#8116;KILL#10#Nice#4#Polruan, Cornwall, United Kingdom#UK#UKC6#50.3167#-4.61667#-2605491#8116;CRISISLEX_CRISISLEXREC#10#Nice#4#Polruan, Cornwall, United Kingdom#UK#UKC6#50.3167#-4.61667#-2605491#8116;CRISISLEX_T02_INJURED#10#Nice#4#Polruan, Cornwall, United Kingdom#UK#UKC6#50.3167#-4.61667#-2605491#8116;CRISISLEX_T03_DEAD#10#Nice#4#Polruan, Cornwall, United Kingdom#UK#UKC6#50.3167#-4.61667#-2605491#8116;CRISISLEX_T03_DEAD#10#Nice#4#Polruan, Cornwall, United Kingdom#UK#UKC6#50.3167#-4.61667#-2605491#8116;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>ARREST#2000000##1#Japan#JA#JA#36#138#JA#535;SOC_GENERALCRIME#2000000##1#Japan#JA#JA#36#138#JA#535;CRISISLEX_C07_SAFETY#2000000##1#Japan#JA#JA#36#138#JA#535;ARREST#4##1#Cuba#CU#CU#22#-79.5#CU#9983;KILL#2#cops#1#France#FR#FR#46#2#FR#12464;</item>
+      </line>
+      <line>
+        <item>AFFECT#2000000##1#Germany#GM#GM#51.5#10.5#GM#207;REFUGEES#2000000##1#Germany#GM#GM#51.5#10.5#GM#207;EPU_CATS_MIGRATION_FEAR_MIGRATION#2000000##1#Germany#GM#GM#51.5#10.5#GM#207;REFUGEES#2000000##1#Germany#GM#GM#51.5#10.5#GM#207;AFFECT#18##1#Germany#GM#GM#51.5#10.5#GM#877;REFUGEES#18##1#Germany#GM#GM#51.5#10.5#GM#877;EPU_CATS_MIGRATION_FEAR_MIGRATION#18##1#Germany#GM#GM#51.5#10.5#GM#877;</item>
+      </line>
+      <line>
+        <item>ARREST#12##4#Jerusalem, Israel (General), Israel#IS#IS00#31.7667#35.2333#-797092#110;CRISISLEX_CRISISLEXREC#12##4#Jerusalem, Israel (General), Israel#IS#IS00#31.7667#35.2333#-797092#110;</item>
+      </line>
+      <line>
+        <item>KILL#11##2#Florida, United States#US#USFL#27.8333#-81.717#FL#0;KILL#11##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#1489;CRISISLEX_T03_DEAD#11##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#1489;KILL#11##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#1489;KILL#5#weatherrelated#2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#1902;KILL#2##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#1961;CRISISLEX_T03_DEAD#2##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#1961;KILL#4##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#2014;CRISISLEX_T03_DEAD#4##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#2014;AFFECT#2##2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2044;POVERTY#2##2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2044;CRISISLEX_C05_NEED_OF_SHELTERS#2##2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2044;KILL#2#homeless#2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2044;CRISISLEX_T03_DEAD#2#homeless#2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2044;</item>
+      </line>
+      <line>
+        <item>KILL#173#BSF jawan#1#Pakistan#PK#PK#30#70#PK#0;KILL#5#jawans#4#Pulwama, Jammu And Kashmir, India#IN#IN12#33.8833#74.9167#-2108339#440;</item>
+      </line>
+      <line>
+        <item>AFFECT#92##1#Germany#GM#GM#51.5#10.5#GM#429;REFUGEES#92##1#Germany#GM#GM#51.5#10.5#GM#429;EPU_CATS_MIGRATION_FEAR_MIGRATION#92##1#Germany#GM#GM#51.5#10.5#GM#429;</item>
+      </line>
+      <line>
+        <item>WOUND#4##3#Douglas County, Colorado, United States#US#USCO#39.3333#-104.951#198133#816;CRISISLEX_T02_INJURED#4##3#Douglas County, Colorado, United States#US#USCO#39.3333#-104.951#198133#816;WOUND#2##3#Denver, Colorado, United States#US#USCO#39.7392#-104.985#201738#2441;CRISISLEX_T02_INJURED#2##3#Denver, Colorado, United States#US#USCO#39.7392#-104.985#201738#2441;WOUND#2#videos#3#Denver, Colorado, United States#US#USCO#39.7392#-104.985#201738#2907;</item>
+      </line>
+      <line>
+        <item>AFFECT#4#quarter results#1#Brazil#BR#BR#-10#-55#BR#547;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>KILL#14##4#Rome, Lazio, Italy#IT#IT07#41.9#12.4833#-126693#1535;KIDNAP#2019#drama#4#Cinquanta, Emilia-romagna, Italy#IT#IT05#44.6667#11.4#-115573#3839;</item>
+      </line>
+      <line>
+        <item>AFFECT#30##1#United States#US#US#39.828175#-98.5795#US#1626;</item>
+      </line>
+      <line>
+        <item>KILL#58#aged#1#United Kingdom#UK#UK#54#-4#UK#55;CRISISLEX_T03_DEAD#58#aged#1#United Kingdom#UK#UK#54#-4#UK#55;</item>
+      </line>
+      <line>
+        <item>KILL#2##2#New York, United States#US#USNY#42.1497#-74.9384#NY#4677;</item>
+      </line>
+      <line>
+        <item>WOUND#731#adults nationwide#3#Emory University School Of Medicine, Georgia, United States#US#USGA#33.7936#-84.3216#2546402#237;KILL#17##3#Emory University School Of Medicine, Georgia, United States#US#USGA#33.7936#-84.3216#2546402#418;CRISISLEX_T03_DEAD#17##3#Emory University School Of Medicine, Georgia, United States#US#USGA#33.7936#-84.3216#2546402#418;CRISISLEX_T03_DEAD#17##3#Emory University School Of Medicine, Georgia, United States#US#USGA#33.7936#-84.3216#2546402#418;KILL#3##2#District Of Columbia, United States#US#USDC#38.8964#-77.0262#DC#2620;CRISISLEX_T03_DEAD#3##2#District Of Columbia, United States#US#USDC#38.8964#-77.0262#DC#2620;</item>
+      </line>
+      <line>
+        <item>ARREST#911#officials#4#Davao City, Davao City, Philippines#RP#RPC3#7.07306#125.613#-2424066#2553;CRISISLEX_CRISISLEXREC#911#officials#4#Davao City, Davao City, Philippines#RP#RPC3#7.07306#125.613#-2424066#2553;</item>
+      </line>
+      <line>
+        <item>KILL#21##1#Iran#IR#IR#32#53#IR#0;CRISISLEX_CRISISLEXREC#21##1#Iran#IR#IR#32#53#IR#0;CRISISLEX_T02_INJURED#21##1#Iran#IR#IR#32#53#IR#0;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#0;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#0;PROTEST#2000#progovernment#1#Iran#IR#IR#32#53#IR#0;TAX_FNCACT_DEMONSTRATORS#2000#progovernment#1#Iran#IR#IR#32#53#IR#0;KILL#21##1#Iran#IR#IR#32#53#IR#343;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#343;PROTEST#200##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#661;MOVEMENT_GENERAL#200##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#661;TAX_FNCACT_ACTIVISTS#200##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#661;ARREST#200#activists#4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#661;SOC_GENERALCRIME#200#activists#4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#661;CRISISLEX_C07_SAFETY#200#activists#4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#661;</item>
+      </line>
+      <line>
+        <item>KILL#21##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2410;CRISISLEX_T03_DEAD#21##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2410;ARREST#200##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2441;SOC_GENERALCRIME#200##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2441;CRISISLEX_C07_SAFETY#200##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2441;</item>
+      </line>
+      <line>
+        <item>KILL#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#5;CRISISLEX_T03_DEAD#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#5;KILL#48##1#Peru#PE#PE#-10#-76#PE#331;KILL#48##1#Peru#PE#PE#-10#-76#PE#331;KILL#48##1#Peru#PE#PE#-10#-76#PE#331;CRISISLEX_CRISISLEXREC#48##1#Peru#PE#PE#-10#-76#PE#331;CRISISLEX_T01_CAUTION_ADVICE#48##1#Peru#PE#PE#-10#-76#PE#331;CRISISLEX_T03_DEAD#48##1#Peru#PE#PE#-10#-76#PE#331;CRISISLEX_T03_DEAD#48##1#Peru#PE#PE#-10#-76#PE#331;</item>
+      </line>
+      <line>
+        <item>KILL#2##1#Ireland#EI#EI#53#-8#EI#527;KILL#2#unfinished#4#Aillemore, Mayo, Ireland#EI#EI20#53.7083#-9.87083#424830#599;KILL#2##1#Malta#MT#MT#35.916667#14.433333#MT#2933;KILL#2#families#1#Australia#AS#AS#-25#135#AS#4547;</item>
+      </line>
+      <line>
+        <item>AFFECT#2000#passengers#1#Austria#AU#AU#47.333333#13.333333#AU#632;</item>
+      </line>
+      <line>
+        <item>KILL#21##1#Iran#IR#IR#32#53#IR#721;CRISISLEX_CRISISLEXREC#21##1#Iran#IR#IR#32#53#IR#721;CRISISLEX_T02_INJURED#21##1#Iran#IR#IR#32#53#IR#721;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#721;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#721;KILL#20##1#Iran#IR#IR#32#53#IR#855;CRISISLEX_CRISISLEXREC#20##1#Iran#IR#IR#32#53#IR#855;CRISISLEX_T02_INJURED#20##1#Iran#IR#IR#32#53#IR#855;CRISISLEX_T03_DEAD#20##1#Iran#IR#IR#32#53#IR#855;CRISISLEX_T03_DEAD#20##1#Iran#IR#IR#32#53#IR#855;PROTEST#20##1#Iran#IR#IR#32#53#IR#855;PROTEST#20##1#Iran#IR#IR#32#53#IR#855;PROTEST#20##1#Iran#IR#IR#32#53#IR#855;</item>
+      </line>
+      <line>
+        <item>KILL#790000000#Men#1#South Korea#KS#KS#37#127.5#KS#5775;CRISISLEX_CRISISLEXREC#790000000#Men#1#South Korea#KS#KS#37#127.5#KS#5775;CRISISLEX_T02_INJURED#790000000#Men#1#South Korea#KS#KS#37#127.5#KS#5775;CRISISLEX_T03_DEAD#790000000#Men#1#South Korea#KS#KS#37#127.5#KS#5775;CRISISLEX_T03_DEAD#790000000#Men#1#South Korea#KS#KS#37#127.5#KS#5775;</item>
+      </line>
+      <line>
+        <item>KILL#20##4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#1320;CRISISLEX_T03_DEAD#20##4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#1320;WOUND#30##4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#1395;CRISISLEX_CRISISLEXREC#30##4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#1395;CRISISLEX_C03_WELLBEING_HEALTH#30##4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#1395;CRISISLEX_T02_INJURED#30##4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#1395;KILL#17##1#Nigeria#NI#NI#10#8#NI#1917;CRISISLEX_T03_DEAD#17##1#Nigeria#NI#NI#10#8#NI#1917;ARREST#8#herdsmen suspected#1#Nigeria#NI#NI#10#8#NI#1981;SOC_GENERALCRIME#8#herdsmen suspected#1#Nigeria#NI#NI#10#8#NI#1981;CRISISLEX_C07_SAFETY#8#herdsmen suspected#1#Nigeria#NI#NI#10#8#NI#1981;KILL#20#attacks#1#Nigeria#NI#NI#10#8#NI#2088;</item>
+      </line>
+      <line>
+        <item>PROTEST#2000000#marched#1#United States#US#US#39.828175#-98.5795#US#145;PROTEST#2000000#women#1#France#FR#FR#46#2#FR#2320;PROTEST#2000000##1#France#FR#FR#46#2#FR#2525;</item>
+      </line>
+      <line>
+        <item>KILL#85##1#Nigeria#NI#NI#10#8#NI#159;CRISISLEX_T03_DEAD#85##1#Nigeria#NI#NI#10#8#NI#159;</item>
+      </line>
+      <line>
+        <item>KILL#90##3#Salt Lake, Utah, United States#US#USUT#39.1559#-112.691#1436291#196;CRISISLEX_T03_DEAD#90##3#Salt Lake, Utah, United States#US#USUT#39.1559#-112.691#1436291#196;KILL#10##3#Salt Lake, Utah, United States#US#USUT#39.1559#-112.691#1436291#250;CRISISLEX_T03_DEAD#10##3#Salt Lake, Utah, United States#US#USUT#39.1559#-112.691#1436291#250;</item>
+      </line>
+      <line>
+        <item>ARREST#200##1#Iran#IR#IR#32#53#IR#1570;SOC_GENERALCRIME#200##1#Iran#IR#IR#32#53#IR#1570;CRISISLEX_C07_SAFETY#200##1#Iran#IR#IR#32#53#IR#1570;</item>
+      </line>
+      <line>
+        <item>AFFECT#2000#just#3#Philadelphia, Pennsylvania, United States#US#USPA#39.9523#-75.1638#1209052#1021;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#staff#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#977;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>ARREST#5##1#Russia#RS#RS#60#100#RS#325;CRISISLEX_CRISISLEXREC#5##1#Russia#RS#RS#60#100#RS#325;</item>
+      </line>
+      <line>
+        <item>KILL#21##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2351;CRISISLEX_T03_DEAD#21##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2351;ARREST#200##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2382;SOC_GENERALCRIME#200##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2382;CRISISLEX_C07_SAFETY#200##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2382;</item>
+      </line>
+      <line>
+        <item>WOUND#4##3#Douglas County, Colorado, United States#US#USCO#39.3333#-104.951#198133#630;CRISISLEX_T02_INJURED#4##3#Douglas County, Colorado, United States#US#USCO#39.3333#-104.951#198133#630;WOUND#2##3#Denver, Colorado, United States#US#USCO#39.7392#-104.985#201738#2255;CRISISLEX_T02_INJURED#2##3#Denver, Colorado, United States#US#USCO#39.7392#-104.985#201738#2255;</item>
+      </line>
+      <line>
+        <item>KILL#45##3#West Rome, Georgia, United States#US#USGA#34.2793#-85.2261#353931#3425;CRISISLEX_CRISISLEXREC#45##3#West Rome, Georgia, United States#US#USGA#34.2793#-85.2261#353931#3425;CRISISLEX_T03_DEAD#45##3#West Rome, Georgia, United States#US#USGA#34.2793#-85.2261#353931#3425;CRISISLEX_T03_DEAD#45##3#West Rome, Georgia, United States#US#USGA#34.2793#-85.2261#353931#3425;</item>
+      </line>
+      <line>
+        <item>KILL#22##1#United States#US#US#39.828175#-98.5795#US#395;KILL#22##1#United States#US#US#39.828175#-98.5795#US#395;KILL#22##1#United States#US#US#39.828175#-98.5795#US#395;CRISISLEX_CRISISLEXREC#22##1#United States#US#US#39.828175#-98.5795#US#395;CRISISLEX_T01_CAUTION_ADVICE#22##1#United States#US#US#39.828175#-98.5795#US#395;CRISISLEX_T03_DEAD#22##1#United States#US#US#39.828175#-98.5795#US#395;CRISISLEX_T03_DEAD#22##1#United States#US#US#39.828175#-98.5795#US#395;PROTEST#2##1#Russia#RS#RS#60#100#RS#2248;VIOLENT_UNREST#2##1#Russia#RS#RS#60#100#RS#2248;</item>
+      </line>
+      <line>
+        <item>WOUND#15##1#France#FR#FR#46#2#FR#965;CRISISLEX_CRISISLEXREC#15##1#France#FR#FR#46#2#FR#965;CRISISLEX_C03_WELLBEING_HEALTH#15##1#France#FR#FR#46#2#FR#965;CRISISLEX_T02_INJURED#15##1#France#FR#FR#46#2#FR#965;WOUND#9##1#France#FR#FR#46#2#FR#1844;CRISISLEX_CRISISLEXREC#9##1#France#FR#FR#46#2#FR#1844;CRISISLEX_C03_WELLBEING_HEALTH#9##1#France#FR#FR#46#2#FR#1844;CRISISLEX_T02_INJURED#9##1#France#FR#FR#46#2#FR#1844;</item>
+      </line>
+      <line>
+        <item>KILL#200##1#Ethiopia#ET#ET#8#38#ET#2074;ARREST#20000##1#Ethiopia#ET#ET#8#38#ET#2103;CRISISLEX_C07_SAFETY#20000##1#Ethiopia#ET#ET#8#38#ET#2103;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#331;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2105;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2105;KILL#9##1#Iran#IR#IR#32#53#IR#3842;CRISISLEX_T03_DEAD#9##1#Iran#IR#IR#32#53#IR#3842;KILL#21##1#Iran#IR#IR#32#53#IR#3977;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3977;</item>
+      </line>
+      <line>
+        <item>KILL#2##1#Japan#JA#JA#36#138#JA#103;CRISISLEX_CRISISLEXREC#2##1#Japan#JA#JA#36#138#JA#103;CRISISLEX_T02_INJURED#2##1#Japan#JA#JA#36#138#JA#103;CRISISLEX_T03_DEAD#2##1#Japan#JA#JA#36#138#JA#103;CRISISLEX_T03_DEAD#2##1#Japan#JA#JA#36#138#JA#103;</item>
+      </line>
+      <line>
+        <item>ARREST#5##0#######120;CRISISLEX_CRISISLEXREC#5##0#######120;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>KILL#85##3#Deseret, Utah, United States#US#USUT#39.2869#-112.653#1427343#3773;CRISISLEX_T03_DEAD#85##3#Deseret, Utah, United States#US#USUT#39.2869#-112.653#1427343#3773;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#men#2#Rhode Island, United States#US#USRI#41.6772#-71.5101#RI#1123;</item>
+      </line>
+      <line>
+        <item>KILL#21##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2313;CRISISLEX_T03_DEAD#21##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2313;ARREST#200##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2344;SOC_GENERALCRIME#200##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2344;CRISISLEX_C07_SAFETY#200##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2344;</item>
+      </line>
+      <line>
+        <item>KILL#12##1#Iran#IR#IR#32#53#IR#773;</item>
+      </line>
+      <line>
+        <item>AFFECT#2019#China x#1#India#IN#IN#20#77#IN#2153;</item>
+      </line>
+      <line>
+        <item>WOUND#2#students#2#Ohio, United States#US#USOH#40.3736#-82.7755#OH#49;CRISISLEX_T02_INJURED#2#students#2#Ohio, United States#US#USOH#40.3736#-82.7755#OH#49;</item>
+      </line>
+      <line>
+        <item>ARREST#2#deputies following#2#New Mexico, United States#US#USNM#34.8375#-106.237#NM#27;CRISISLEX_C07_SAFETY#2#deputies following#2#New Mexico, United States#US#USNM#34.8375#-106.237#NM#27;ARREST#2##2#New Mexico, United States#US#USNM#34.8375#-106.237#NM#271;SOC_GENERALCRIME#2##2#New Mexico, United States#US#USNM#34.8375#-106.237#NM#271;CRISISLEX_C07_SAFETY#2##2#New Mexico, United States#US#USNM#34.8375#-106.237#NM#271;</item>
+      </line>
+      <line>
+        <item>KILL#6##4#New Delhi, Delhi, India#IN#IN07#28.6#77.2#-2106102#75;CRISISLEX_T03_DEAD#6##4#New Delhi, Delhi, India#IN#IN07#28.6#77.2#-2106102#75;KILL#6##4#New Delhi, Delhi, India#IN#IN07#28.6#77.2#-2106102#561;CRISISLEX_T03_DEAD#6##4#New Delhi, Delhi, India#IN#IN07#28.6#77.2#-2106102#561;</item>
+      </line>
+      <line>
+        <item>ARREST#4#fans#0#######0;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>AFFECT#26#Angel Riker searches#0#######2264;</item>
+      </line>
+      <line>
+        <item>AFFECT#3##1#West Bank#WE#WE#31.666667#35.25#WE#141;</item>
+      </line>
+      <line>
+        <item>KILL#21##1#Iran#IR#IR#32#53#IR#248;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#248;</item>
+      </line>
+      <line>
+        <item>ARREST#46##1#Germany#GM#GM#51.5#10.5#GM#36;CRISISLEX_C07_SAFETY#46##1#Germany#GM#GM#51.5#10.5#GM#36;KILL#2##1#Germany#GM#GM#51.5#10.5#GM#36;CRISISLEX_CRISISLEXREC#2##1#Germany#GM#GM#51.5#10.5#GM#36;CRISISLEX_T02_INJURED#2##1#Germany#GM#GM#51.5#10.5#GM#36;CRISISLEX_T03_DEAD#2##1#Germany#GM#GM#51.5#10.5#GM#36;CRISISLEX_T03_DEAD#2##1#Germany#GM#GM#51.5#10.5#GM#36;KILL#2#infants#1#Germany#GM#GM#51.5#10.5#GM#166;CRISISLEX_T03_DEAD#2#infants#1#Germany#GM#GM#51.5#10.5#GM#166;</item>
+      </line>
+      <line>
+        <item>KILL#5#IScoming onelasthoorah#3#Baylor University, Texas, United States#US#USTX#31.5449#-97.1194#1351627#1475;</item>
+      </line>
+      <line>
+        <item>WOUND#2##1#Ireland#EI#EI#53#-8#EI#130;CRISISLEX_CRISISLEXREC#2##1#Ireland#EI#EI#53#-8#EI#130;CRISISLEX_C03_WELLBEING_HEALTH#2##1#Ireland#EI#EI#53#-8#EI#130;CRISISLEX_T02_INJURED#2##1#Ireland#EI#EI#53#-8#EI#130;</item>
+      </line>
+      <line>
+        <item>KILL#20##4#Buhari, Kano, Nigeria#NI#NI29#11.4148#8.25082#-2008713#1168;CRISISLEX_T03_DEAD#20##4#Buhari, Kano, Nigeria#NI#NI29#11.4148#8.25082#-2008713#1168;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>KILL#18##1#United States#US#US#39.828175#-98.5795#US#7829;CRISISLEX_T03_DEAD#18##1#United States#US#US#39.828175#-98.5795#US#7829;CRISISLEX_T03_DEAD#18##1#United States#US#US#39.828175#-98.5795#US#7829;</item>
+      </line>
+      <line>
+        <item>ARREST#2014##1#Russia#RS#RS#60#100#RS#3845;SOC_POINTSOFINTEREST_JAIL#2014##1#Russia#RS#RS#60#100#RS#3845;PROTEST#2##1#South Korea#KS#KS#37#127.5#KS#6251;MOVEMENT_GENERAL#2##1#South Korea#KS#KS#37#127.5#KS#6251;TAX_FNCACT_ACTIVISTS#2##1#South Korea#KS#KS#37#127.5#KS#6251;</item>
+      </line>
+      <line>
+        <item>KILL#430##1#Libya#LY#LY#25#17#LY#0;CRISISLEX_CRISISLEXREC#430##1#Libya#LY#LY#25#17#LY#0;CRISISLEX_T02_INJURED#430##1#Libya#LY#LY#25#17#LY#0;CRISISLEX_T03_DEAD#430##1#Libya#LY#LY#25#17#LY#0;CRISISLEX_T03_DEAD#430##1#Libya#LY#LY#25#17#LY#0;KILL#10#women#1#Libya#LY#LY#25#17#LY#125;CRISISLEX_T03_DEAD#10#women#1#Libya#LY#LY#25#17#LY#125;KILL#10#women#1#Libya#LY#LY#25#17#LY#470;CRISISLEX_T03_DEAD#10#women#1#Libya#LY#LY#25#17#LY#470;KILL#201##1#Libya#LY#LY#25#17#LY#562;KILL#157##4#Derna, Sha`biyat Darnah, Libya#LY#LY70#32.767#22.6367#-3165331#624;CRISISLEX_T03_DEAD#157##4#Derna, Sha`biyat Darnah, Libya#LY#LY70#32.767#22.6367#-3165331#624;KILL#75##4#Sirte, Sha`biyat Surt, Libya#LY#LY76#31.2089#16.5887#-3178329#744;CRISISLEX_T03_DEAD#75##4#Sirte, Sha`biyat Surt, Libya#LY#LY76#31.2089#16.5887#-3178329#744;ARREST#143##1#Libya#LY#LY#25#17#LY#919;SOC_GENERALCRIME#143##1#Libya#LY#LY#25#17#LY#919;CRISISLEX_C07_SAFETY#143##1#Libya#LY#LY#25#17#LY#919;KIDNAP#186##1#Libya#LY#LY#25#17#LY#986;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#342;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2135;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2135;KILL#9##1#Iran#IR#IR#32#53#IR#3892;CRISISLEX_T03_DEAD#9##1#Iran#IR#IR#32#53#IR#3892;KILL#21##1#Iran#IR#IR#32#53#IR#4027;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#4027;</item>
+      </line>
+      <line>
+        <item>PROTEST#67##1#Kuwait#KU#KU#29.5#47.75#KU#350;</item>
+      </line>
+      <line>
+        <item>KILL#87##1#Finland#FI#FI#64#26#FI#3108;CRISISLEX_T03_DEAD#87##1#Finland#FI#FI#64#26#FI#3108;</item>
+      </line>
+      <line>
+        <item>ARREST#30#armed men#1#Equatorial Guinea#EK#EK#2#10#EK#150;SOC_GENERALCRIME#30#armed men#1#Equatorial Guinea#EK#EK#2#10#EK#150;CRISISLEX_C07_SAFETY#30#armed men#1#Equatorial Guinea#EK#EK#2#10#EK#150;</item>
+      </line>
+      <line>
+        <item>KILL#11##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#1139;CRISISLEX_T03_DEAD#11##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#1139;KILL#11##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#1139;KILL#2019##3#Fond Du Lac, Wisconsin, United States#US#USWI#43.773#-88.4471#1565098#1240;CRISISLEX_CRISISLEXREC#2019##3#Fond Du Lac, Wisconsin, United States#US#USWI#43.773#-88.4471#1565098#1240;CRISISLEX_T02_INJURED#2019##3#Fond Du Lac, Wisconsin, United States#US#USWI#43.773#-88.4471#1565098#1240;CRISISLEX_T03_DEAD#2019##3#Fond Du Lac, Wisconsin, United States#US#USWI#43.773#-88.4471#1565098#1240;CRISISLEX_T03_DEAD#2019##3#Fond Du Lac, Wisconsin, United States#US#USWI#43.773#-88.4471#1565098#1240;KILL#5#weatherrelated#2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#1576;KILL#2##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#1631;CRISISLEX_T03_DEAD#2##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#1631;KILL#4##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#1684;CRISISLEX_T03_DEAD#4##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#1684;AFFECT#2##2#North Dakota, United States#US#USND#47.5362#-99.793#ND#1714;POVERTY#2##2#North Dakota, United States#US#USND#47.5362#-99.793#ND#1714;CRISISLEX_C05_NEED_OF_SHELTERS#2##2#North Dakota, United States#US#USND#47.5362#-99.793#ND#1714;KILL#2#homeless#2#North Dakota, United States#US#USND#47.5362#-99.793#ND#1714;CRISISLEX_T03_DEAD#2#homeless#2#North Dakota, United States#US#USND#47.5362#-99.793#ND#1714;</item>
+      </line>
+      <line>
+        <item>KILL#1000000##1#United States#US#US#39.828175#-98.5795#US#122;KILL#1000000##1#United States#US#US#39.828175#-98.5795#US#1362;KILL#2000000##1#United States#US#US#39.828175#-98.5795#US#2721;</item>
+      </line>
+      <line>
+        <item>KILL#3##0#######4192;</item>
+      </line>
+      <line>
+        <item>KILL#600##1#Yemen#YM#YM#15.5#47.5#YM#2843;CRISISLEX_T03_DEAD#600##1#Yemen#YM#YM#15.5#47.5#YM#2843;</item>
+      </line>
+      <line>
+        <item>ARREST#2000#Israel said#1#Israel#IS#IS#31.5#34.75#IS#91;ARREST#3##1#Israel#IS#IS#31.5#34.75#IS#216;SOC_POINTSOFINTEREST_JAIL#3##1#Israel#IS#IS#31.5#34.75#IS#216;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#leaders#1#Austria#AU#AU#47.333333#13.333333#AU#828;REFUGEES#2#leaders#1#Austria#AU#AU#47.333333#13.333333#AU#828;</item>
+      </line>
+      <line>
+        <item>ARREST#4#mugshots#4#Melbourne, Victoria, Australia#AS#AS07#-37.8167#144.967#-1586844#52;CRISISLEX_CRISISLEXREC#4#mugshots#4#Melbourne, Victoria, Australia#AS#AS07#-37.8167#144.967#-1586844#52;</item>
+      </line>
+      <line>
+        <item>SEIZE#7##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#257;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#staff#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#977;</item>
+      </line>
+      <line>
+        <item>ARREST#1#Comment#1#United States#US#US#39.828175#-98.5795#US#2557;SOC_POINTSOFINTEREST_JAIL#1#Comment#1#United States#US#US#39.828175#-98.5795#US#2557;</item>
+      </line>
+      <line>
+        <item>AFFECT#2##0#######305;</item>
+      </line>
+      <line>
+        <item>AFFECT#857##4#Philippine, Benguet, Philippines#RP#RP10#16.45#120.55#-2445611#2053;</item>
+      </line>
+      <line>
+        <item>KILL#2##1#Germany#GM#GM#51.5#10.5#GM#0;CRISISLEX_CRISISLEXREC#2##1#Germany#GM#GM#51.5#10.5#GM#0;CRISISLEX_T02_INJURED#2##1#Germany#GM#GM#51.5#10.5#GM#0;CRISISLEX_T03_DEAD#2##1#Germany#GM#GM#51.5#10.5#GM#0;CRISISLEX_T03_DEAD#2##1#Germany#GM#GM#51.5#10.5#GM#0;ARREST#46##1#Germany#GM#GM#51.5#10.5#GM#114;CRISISLEX_C07_SAFETY#46##1#Germany#GM#GM#51.5#10.5#GM#114;KILL#2##1#Germany#GM#GM#51.5#10.5#GM#114;CRISISLEX_CRISISLEXREC#2##1#Germany#GM#GM#51.5#10.5#GM#114;CRISISLEX_T02_INJURED#2##1#Germany#GM#GM#51.5#10.5#GM#114;CRISISLEX_T03_DEAD#2##1#Germany#GM#GM#51.5#10.5#GM#114;CRISISLEX_T03_DEAD#2##1#Germany#GM#GM#51.5#10.5#GM#114;KILL#2#infants#1#Germany#GM#GM#51.5#10.5#GM#244;CRISISLEX_T03_DEAD#2#infants#1#Germany#GM#GM#51.5#10.5#GM#244;</item>
+      </line>
+      <line>
+        <item>WOUND#20##4#Nagpur, Maharashtra, India#IN#IN16#21.15#79.1#-2105396#414;</item>
+      </line>
+      <line>
+        <item>KILL#3#aufgef xC#1#Ecuador#EC#EC#-2#-77.5#EC#6735;CRISISLEX_T03_DEAD#3#aufgef xC#1#Ecuador#EC#EC#-2#-77.5#EC#6735;CRISISLEX_T03_DEAD#3#aufgef xC#1#Ecuador#EC#EC#-2#-77.5#EC#6735;</item>
+      </line>
+      <line>
+        <item>AFFECT#370#Malaysia Airlines flight MH#1#Malaysia#MY#MY#2.5#112.5#MY#92;AFFECT#3##1#Malaysia#MY#MY#2.5#112.5#MY#1781;</item>
+      </line>
+      <line>
+        <item>AFFECT#200#fewer#0#######2046;</item>
+      </line>
+      <line>
+        <item>PROTEST#67##1#Kuwait#KU#KU#29.5#47.75#KU#317;</item>
+      </line>
+      <line>
+        <item>KIDNAP#15#Joshua Boyle arrested#1#Pakistan#PK#PK#30#70#PK#874;ARREST#15##1#Pakistan#PK#PK#30#70#PK#874;SOC_GENERALCRIME#15##1#Pakistan#PK#PK#30#70#PK#874;CRISISLEX_C07_SAFETY#15##1#Pakistan#PK#PK#30#70#PK#874;</item>
+      </line>
+      <line>
+        <item>KILL#6##4#New Delhi, Delhi, India#IN#IN07#28.6#77.2#-2106102#80;CRISISLEX_T03_DEAD#6##4#New Delhi, Delhi, India#IN#IN07#28.6#77.2#-2106102#80;KILL#6##4#Palwal, Haryana, India#IN#IN10#28.15#77.3333#-2106947#620;CRISISLEX_T03_DEAD#6##4#Palwal, Haryana, India#IN#IN10#28.15#77.3333#-2106947#620;</item>
+      </line>
+      <line>
+        <item>KILL#85##3#Deseret, Utah, United States#US#USUT#39.2869#-112.653#1427343#2884;CRISISLEX_T03_DEAD#85##3#Deseret, Utah, United States#US#USUT#39.2869#-112.653#1427343#2884;</item>
+      </line>
+      <line>
+        <item>KILL#2000##1#Libya#LY#LY#25#17#LY#653;CRISISLEX_CRISISLEXREC#2000##1#Libya#LY#LY#25#17#LY#653;CRISISLEX_T02_INJURED#2000##1#Libya#LY#LY#25#17#LY#653;CRISISLEX_T03_DEAD#2000##1#Libya#LY#LY#25#17#LY#653;CRISISLEX_T03_DEAD#2000##1#Libya#LY#LY#25#17#LY#653;WOUND#500##1#Libya#LY#LY#25#17#LY#2029;CRISISLEX_T02_INJURED#500##1#Libya#LY#LY#25#17#LY#2029;</item>
+      </line>
+      <line>
+        <item>KILL#5#CRPF men#1#Nepal#NP#NP#28#84#NP#2015;CRISISLEX_T03_DEAD#5#CRPF men#1#Nepal#NP#NP#28#84#NP#2015;PROTEST#5#CRPF men#1#Nepal#NP#NP#28#84#NP#2015;</item>
+      </line>
+      <line>
+        <item>WOUND#2##4#Barangay, Pangasinan, Philippines#RP#RP51#16.17#120.78#10998159#223;CRISISLEX_T02_INJURED#2##4#Barangay, Pangasinan, Philippines#RP#RP51#16.17#120.78#10998159#223;WOUND#2#civilians#4#Barangay, Pangasinan, Philippines#RP#RP51#16.17#120.78#10998159#690;CRISISLEX_T02_INJURED#2#civilians#4#Barangay, Pangasinan, Philippines#RP#RP51#16.17#120.78#10998159#690;KILL#2#civilians#4#Barangay, Pangasinan, Philippines#RP#RP51#16.17#120.78#10998159#1904;CRISISLEX_T03_DEAD#2#civilians#4#Barangay, Pangasinan, Philippines#RP#RP51#16.17#120.78#10998159#1904;</item>
+      </line>
+      <line>
+        <item>KILL#14##2#California, United States#US#USCA#36.17#-119.746#CA#3741;CRISISLEX_CRISISLEXREC#14##2#California, United States#US#USCA#36.17#-119.746#CA#3741;CRISISLEX_T02_INJURED#14##2#California, United States#US#USCA#36.17#-119.746#CA#3741;CRISISLEX_T03_DEAD#14##2#California, United States#US#USCA#36.17#-119.746#CA#3741;CRISISLEX_T03_DEAD#14##2#California, United States#US#USCA#36.17#-119.746#CA#3741;</item>
+      </line>
+      <line>
+        <item>KILL#5##3#Baylor University, Texas, United States#US#USTX#31.5449#-97.1194#1351627#1407;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#leaders#1#Austria#AU#AU#47.333333#13.333333#AU#876;REFUGEES#2#leaders#1#Austria#AU#AU#47.333333#13.333333#AU#876;</item>
+      </line>
+      <line>
+        <item>KILL#2##1#Germany#GM#GM#51.5#10.5#GM#0;CRISISLEX_CRISISLEXREC#2##1#Germany#GM#GM#51.5#10.5#GM#0;CRISISLEX_T02_INJURED#2##1#Germany#GM#GM#51.5#10.5#GM#0;CRISISLEX_T03_DEAD#2##1#Germany#GM#GM#51.5#10.5#GM#0;CRISISLEX_T03_DEAD#2##1#Germany#GM#GM#51.5#10.5#GM#0;ARREST#46##1#Germany#GM#GM#51.5#10.5#GM#90;CRISISLEX_C07_SAFETY#46##1#Germany#GM#GM#51.5#10.5#GM#90;KILL#2##1#Germany#GM#GM#51.5#10.5#GM#90;CRISISLEX_CRISISLEXREC#2##1#Germany#GM#GM#51.5#10.5#GM#90;CRISISLEX_T02_INJURED#2##1#Germany#GM#GM#51.5#10.5#GM#90;CRISISLEX_T03_DEAD#2##1#Germany#GM#GM#51.5#10.5#GM#90;CRISISLEX_T03_DEAD#2##1#Germany#GM#GM#51.5#10.5#GM#90;KILL#2#infants#1#Germany#GM#GM#51.5#10.5#GM#220;CRISISLEX_T03_DEAD#2#infants#1#Germany#GM#GM#51.5#10.5#GM#220;</item>
+      </line>
+      <line>
+        <item>WOUND#9##1#United Kingdom#UK#UK#54#-4#UK#246;</item>
+      </line>
+      <line>
+        <item>KILL#22##0#######369;CRISISLEX_T03_DEAD#22##0#######369;WOUND#400##0#######459;CRISISLEX_CRISISLEXREC#400##0#######459;CRISISLEX_C03_WELLBEING_HEALTH#400##0#######459;CRISISLEX_T02_INJURED#400##0#######459;WOUND#2014#girl x#0#######675;CRISISLEX_CRISISLEXREC#2014#girl x#0#######675;CRISISLEX_C03_WELLBEING_HEALTH#2014#girl x#0#######675;CRISISLEX_T02_INJURED#2014#girl x#0#######675;KILL#22##0#######1729;CRISISLEX_T03_DEAD#22##0#######1729;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>KILL#35##4#Tokyo, Tokyo, Japan#JA#JA40#35.685#139.751#-246227#5419;KILL#35##4#Tokyo, Tokyo, Japan#JA#JA40#35.685#139.751#-246227#5419;KILL#50##4#Tokyo, Tokyo, Japan#JA#JA40#35.685#139.751#-246227#6380;KILL#50##4#Tokyo, Tokyo, Japan#JA#JA40#35.685#139.751#-246227#6380;</item>
+      </line>
+      <line>
+        <item>EVACUATION#9#CENTERS#3#Richmond County, Georgia, United States#US#USGA#33.3668#-82.0998#358024#588;CRISISLEX_T01_CAUTION_ADVICE#9#CENTERS#3#Richmond County, Georgia, United States#US#USGA#33.3668#-82.0998#358024#588;CRISISLEX_T09_DISPLACEDRELOCATEDEVACUATED#9#CENTERS#3#Richmond County, Georgia, United States#US#USGA#33.3668#-82.0998#358024#588;</item>
+      </line>
+      <line>
+        <item>KILL#22##4#Manchester, Manchester, United Kingdom#UK#UKI2#53.5#-2.21667#-2602512#286;</item>
+      </line>
+      <line>
+        <item>ARREST#7#suspects#4#Sajawal, North-west Frontier, Pakistan#PK#PK03#34.0651#73.2272#6136390#1369;SOC_GENERALCRIME#7#suspects#4#Sajawal, North-west Frontier, Pakistan#PK#PK03#34.0651#73.2272#6136390#1369;CRISISLEX_C07_SAFETY#7#suspects#4#Sajawal, North-west Frontier, Pakistan#PK#PK03#34.0651#73.2272#6136390#1369;</item>
+      </line>
+      <line>
+        <item>KILL#20##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#1021;CRISISLEX_CRISISLEXREC#20##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#1021;CRISISLEX_T02_INJURED#20##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#1021;CRISISLEX_T03_DEAD#20##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#1021;CRISISLEX_T03_DEAD#20##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#1021;ARREST#2000##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#1110;SOC_GENERALCRIME#2000##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#1110;CRISISLEX_C07_SAFETY#2000##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#1110;</item>
+      </line>
+      <line>
+        <item>KILL#200##1#Libya#LY#LY#25#17#LY#1890;NATURAL_DISASTER_DROWNED#200##1#Libya#LY#LY#25#17#LY#1890;</item>
+      </line>
+      <line>
+        <item>KILL#22##4#Manchester, Manchester, United Kingdom#UK#UKI2#53.5#-2.21667#-2602512#441;CRISISLEX_T03_DEAD#22##4#Manchester, Manchester, United Kingdom#UK#UKI2#53.5#-2.21667#-2602512#441;</item>
+      </line>
+      <line>
+        <item>KILL#25#Blood#3#Miami, Florida, United States#US#USFL#25.7743#-80.1937#295004#3628;CRISISLEX_T03_DEAD#25#Blood#3#Miami, Florida, United States#US#USFL#25.7743#-80.1937#295004#3628;KILL#24##2#Texas, United States#US#USTX#31.106#-97.6475#TX#5616;CRISISLEX_CRISISLEXREC#24##2#Texas, United States#US#USTX#31.106#-97.6475#TX#5616;CRISISLEX_T02_INJURED#24##2#Texas, United States#US#USTX#31.106#-97.6475#TX#5616;CRISISLEX_T03_DEAD#24##2#Texas, United States#US#USTX#31.106#-97.6475#TX#5616;CRISISLEX_T03_DEAD#24##2#Texas, United States#US#USTX#31.106#-97.6475#TX#5616;KILL#24##3#Miami, Florida, United States#US#USFL#25.7743#-80.1937#295004#7456;CRISISLEX_CRISISLEXREC#24##3#Miami, Florida, United States#US#USFL#25.7743#-80.1937#295004#7456;CRISISLEX_T02_INJURED#24##3#Miami, Florida, United States#US#USFL#25.7743#-80.1937#295004#7456;CRISISLEX_T03_DEAD#24##3#Miami, Florida, United States#US#USFL#25.7743#-80.1937#295004#7456;CRISISLEX_T03_DEAD#24##3#Miami, Florida, United States#US#USFL#25.7743#-80.1937#295004#7456;KILL#25#Blood#3#Miami, Florida, United States#US#USFL#25.7743#-80.1937#295004#7990;CRISISLEX_T03_DEAD#25#Blood#3#Miami, Florida, United States#US#USFL#25.7743#-80.1937#295004#7990;AFFECT#7#man#2#Texas, United States#US#USTX#31.106#-97.6475#TX#8492;POVERTY#7#man#2#Texas, United States#US#USTX#31.106#-97.6475#TX#8492;CRISISLEX_C05_NEED_OF_SHELTERS#7#man#2#Texas, United States#US#USTX#31.106#-97.6475#TX#8492;PROTEST#3##2#Texas, United States#US#USTX#31.106#-97.6475#TX#8631;</item>
+      </line>
+      <line>
+        <item>KILL#97##3#Salt Lake, Utah, United States#US#USUT#39.1559#-112.691#1436291#2041;CRISISLEX_T03_DEAD#97##3#Salt Lake, Utah, United States#US#USUT#39.1559#-112.691#1436291#2041;</item>
+      </line>
+      <line>
+        <item>KILL#22##4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#127;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#331;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2105;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2105;KILL#9##1#Iran#IR#IR#32#53#IR#3842;CRISISLEX_T03_DEAD#9##1#Iran#IR#IR#32#53#IR#3842;KILL#21##1#Iran#IR#IR#32#53#IR#3977;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3977;</item>
+      </line>
+      <line>
+        <item>POVERTY#2##1#Russia#RS#RS#60#100#RS#1445;</item>
+      </line>
+      <line>
+        <item>PROTEST#200#movement#4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#2456;</item>
+      </line>
+      <line>
+        <item>KILL#84##1#Egypt#EG#EG#27#30#EG#211;CRISISLEX_T03_DEAD#84##1#Egypt#EG#EG#27#30#EG#211;</item>
+      </line>
+      <line>
+        <item>KILL#10##4#Sanaa, San a', Yemen#YM#YM16#15.3547#44.2067#-3191442#978;CRISISLEX_T03_DEAD#10##4#Sanaa, San a', Yemen#YM#YM16#15.3547#44.2067#-3191442#978;AFFECT#3000000##4#Sanaa, San a', Yemen#YM#YM16#15.3547#44.2067#-3191442#1022;DISPLACED#3000000##4#Sanaa, San a', Yemen#YM#YM16#15.3547#44.2067#-3191442#1022;CRISISLEX_CRISISLEXREC#3000000##4#Sanaa, San a', Yemen#YM#YM16#15.3547#44.2067#-3191442#1022;</item>
+      </line>
+      <line>
+        <item>SEIZE#374#kgs#4#Jammu, Jammu And Kashmir, India#IN#IN12#32.7333#74.8667#-2098228#150;ARREST#213##4#Jammu, Jammu And Kashmir, India#IN#IN12#32.7333#74.8667#-2098228#194;SOC_GENERALCRIME#213##4#Jammu, Jammu And Kashmir, India#IN#IN12#32.7333#74.8667#-2098228#194;CRISISLEX_C07_SAFETY#213##4#Jammu, Jammu And Kashmir, India#IN#IN12#32.7333#74.8667#-2098228#194;ARREST#888##4#Jammu, Jammu And Kashmir, India#IN#IN12#32.7333#74.8667#-2098228#393;SOC_GENERALCRIME#888##4#Jammu, Jammu And Kashmir, India#IN#IN12#32.7333#74.8667#-2098228#393;CRISISLEX_C07_SAFETY#888##4#Jammu, Jammu And Kashmir, India#IN#IN12#32.7333#74.8667#-2098228#393;SEIZE#201#kgs#4#Jammu, Jammu And Kashmir, India#IN#IN12#32.7333#74.8667#-2098228#641;SEIZE#285#injections#4#Jammu, Jammu And Kashmir, India#IN#IN12#32.7333#74.8667#-2098228#836;</item>
+      </line>
+      <line>
+        <item>AFFECT#260#Reallife smallclaims#2#New York, United States#US#USNY#42.1497#-74.9384#NY#448;AFFECT#260#Reallife smallclaims#2#New York, United States#US#USNY#42.1497#-74.9384#NY#1766;AFFECT#260#Reallife smallclaims#2#New York, United States#US#USNY#42.1497#-74.9384#NY#2020;AFFECT#260#Reallife smallclaims#2#New York, United States#US#USNY#42.1497#-74.9384#NY#2275;KILL#3#Service#1#Australia#AS#AS#-25#135#AS#6665;CRISISLEX_CRISISLEXREC#3#Service#1#Australia#AS#AS#-25#135#AS#6665;CRISISLEX_T02_INJURED#3#Service#1#Australia#AS#AS#-25#135#AS#6665;CRISISLEX_T03_DEAD#3#Service#1#Australia#AS#AS#-25#135#AS#6665;CRISISLEX_T03_DEAD#3#Service#1#Australia#AS#AS#-25#135#AS#6665;</item>
+      </line>
+      <line>
+        <item>PROTEST#67##1#Kuwait#KU#KU#29.5#47.75#KU#350;</item>
+      </line>
+      <line>
+        <item>KILL#20##1#Turkey#TU#TU#39.059012#34.911546#TU#1126;KILL#20##1#Turkey#TU#TU#39.059012#34.911546#TU#1126;KILL#20##1#Turkey#TU#TU#39.059012#34.911546#TU#1126;CRISISLEX_CRISISLEXREC#20##1#Turkey#TU#TU#39.059012#34.911546#TU#1126;CRISISLEX_T01_CAUTION_ADVICE#20##1#Turkey#TU#TU#39.059012#34.911546#TU#1126;CRISISLEX_T03_DEAD#20##1#Turkey#TU#TU#39.059012#34.911546#TU#1126;CRISISLEX_T03_DEAD#20##1#Turkey#TU#TU#39.059012#34.911546#TU#1126;</item>
+      </line>
+      <line>
+        <item>ARREST#4#fans#0#######0;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#leaders#1#Austria#AU#AU#47.333333#13.333333#AU#828;REFUGEES#2#leaders#1#Austria#AU#AU#47.333333#13.333333#AU#828;</item>
+      </line>
+      <line>
+        <item>ARREST#4#fans#0#######0;</item>
+      </line>
+      <line>
+        <item>KILL#1000000##1#United States#US#US#39.828175#-98.5795#US#142;KILL#1000000##1#United States#US#US#39.828175#-98.5795#US#1367;KILL#2000000##1#United States#US#US#39.828175#-98.5795#US#2742;</item>
+      </line>
+      <line>
+        <item>AFFECT#7#car fanatic#1#United Kingdom#UK#UK#54#-4#UK#926;KILL#6#Mountain#1#United Kingdom#UK#UK#54#-4#UK#1628;TERROR#6#Mountain#1#United Kingdom#UK#UK#54#-4#UK#1628;ARMEDCONFLICT#6#Mountain#1#United Kingdom#UK#UK#54#-4#UK#1628;KILL#248#American soldiers#1#United States#US#US#39.828175#-98.5795#US#4513;CRISISLEX_T03_DEAD#248#American soldiers#1#United States#US#US#39.828175#-98.5795#US#4513;KILL#168##1#Canada#CA#CA#60#-96#CA#4808;</item>
+      </line>
+      <line>
+        <item>AFFECT#55##1#United Kingdom#UK#UK#54#-4#UK#385;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>KILL#12##1#Canada#CA#CA#60#-96#CA#4458;</item>
+      </line>
+      <line>
+        <item>KILL#11##2#Florida, United States#US#USFL#27.8333#-81.717#FL#0;CRISISLEX_CRISISLEXREC#11##2#Florida, United States#US#USFL#27.8333#-81.717#FL#0;CRISISLEX_T02_INJURED#11##2#Florida, United States#US#USFL#27.8333#-81.717#FL#0;CRISISLEX_T03_DEAD#11##2#Florida, United States#US#USFL#27.8333#-81.717#FL#0;CRISISLEX_T03_DEAD#11##2#Florida, United States#US#USFL#27.8333#-81.717#FL#0;KILL#11##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#1523;CRISISLEX_T03_DEAD#11##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#1523;KILL#11##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#1523;KILL#5#weatherrelated#2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#1936;KILL#2##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#1995;CRISISLEX_T03_DEAD#2##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#1995;KILL#4##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#2048;CRISISLEX_T03_DEAD#4##2#Wisconsin, United States#US#USWI#44.2563#-89.6385#WI#2048;AFFECT#2##2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2078;POVERTY#2##2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2078;CRISISLEX_C05_NEED_OF_SHELTERS#2##2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2078;KILL#2#homeless#2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2078;CRISISLEX_T03_DEAD#2#homeless#2#North Dakota, United States#US#USND#47.5362#-99.793#ND#2078;</item>
+      </line>
+      <line>
+        <item>WOUND#45#firefighters#0#######34;CRISISLEX_CRISISLEXREC#45#firefighters#0#######34;CRISISLEX_C03_WELLBEING_HEALTH#45#firefighters#0#######34;CRISISLEX_T02_INJURED#45#firefighters#0#######34;WOUND#8#children#0#######247;CRISISLEX_CRISISLEXREC#8#children#0#######247;CRISISLEX_C03_WELLBEING_HEALTH#8#children#0#######247;CRISISLEX_T02_INJURED#8#children#0#######247;</item>
+      </line>
+      <line>
+        <item>KILL#12##2#Florida, United States#US#USFL#27.8333#-81.717#FL#2811;</item>
+      </line>
+      <line>
+        <item>ARREST#3##4#Kirby Misperton, North Yorkshire, United Kingdom#UK#UKJ7#54.2#-0.8#-2600292#0;CRISISLEX_C07_SAFETY#3##4#Kirby Misperton, North Yorkshire, United Kingdom#UK#UKJ7#54.2#-0.8#-2600292#0;PROTEST#3##4#Kirby Misperton, North Yorkshire, United Kingdom#UK#UKJ7#54.2#-0.8#-2600292#32;ARREST#3##4#Kirby Misperton, North Yorkshire, United Kingdom#UK#UKJ7#54.2#-0.8#-2600292#32;</item>
+      </line>
+      <line>
+        <item>WOUND#4##0#######362;</item>
+      </line>
+      <line>
+        <item>KILL#9##1#Nepal#NP#NP#28#84#NP#3515;WOUND#2000##1#Nepal#NP#NP#28#84#NP#3542;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>AFFECT#2000#just#3#Philadelphia, Pennsylvania, United States#US#USPA#39.9523#-75.1638#1209052#1011;</item>
+      </line>
+      <line>
+        <item>WOUND#2014##3#San Antonio, Texas, United States#US#USTX#29.4241#-98.4936#1380951#3577;CRISISLEX_CRISISLEXREC#2014##3#San Antonio, Texas, United States#US#USTX#29.4241#-98.4936#1380951#3577;CRISISLEX_C03_WELLBEING_HEALTH#2014##3#San Antonio, Texas, United States#US#USTX#29.4241#-98.4936#1380951#3577;CRISISLEX_T02_INJURED#2014##3#San Antonio, Texas, United States#US#USTX#29.4241#-98.4936#1380951#3577;ARREST#60##3#Houston, Texas, United States#US#USTX#29.7633#-95.3633#1380948#5795;CRISISLEX_CRISISLEXREC#60##3#Houston, Texas, United States#US#USTX#29.7633#-95.3633#1380948#5795;</item>
+      </line>
+      <line>
+        <item>KILL#22##4#Manchester, Manchester, United Kingdom#UK#UKI2#53.5#-2.21667#-2602512#449;CRISISLEX_T03_DEAD#22##4#Manchester, Manchester, United Kingdom#UK#UKI2#53.5#-2.21667#-2602512#449;</item>
+      </line>
+      <line>
+        <item>ARREST#100##1#United States#US#US#39.828175#-98.5795#US#3846;ARREST#6#undocumented immigrants#1#Bahamas, The#BF#BF#24#-76#BF#4228;</item>
+      </line>
+      <line>
+        <item>AFFECT#90##1#Syria#SY#SY#35#38#SY#314;REFUGEES#90##1#Syria#SY#SY#35#38#SY#314;AFFECT#1#seekers#1#Germany#GM#GM#51.5#10.5#GM#1442;REFUGEES#1#seekers#1#Germany#GM#GM#51.5#10.5#GM#1442;EPU_CATS_MIGRATION_FEAR_MIGRATION#1#seekers#1#Germany#GM#GM#51.5#10.5#GM#1442;REFUGEES#1##1#Germany#GM#GM#51.5#10.5#GM#1442;AFFECT#1##1#Germany#GM#GM#51.5#10.5#GM#1442;REFUGEES#1##1#Germany#GM#GM#51.5#10.5#GM#1442;EPU_CATS_MIGRATION_FEAR_MIGRATION#1##1#Germany#GM#GM#51.5#10.5#GM#1442;</item>
+      </line>
+      <line>
+        <item>ARREST#14#cardiac#1#Ireland#EI#EI#53#-8#EI#419;CRISISLEX_C07_SAFETY#14#cardiac#1#Ireland#EI#EI#53#-8#EI#419;</item>
+      </line>
+      <line>
+        <item>ARREST#3##4#Talal, Kermanshah, Iran#IR#IR13#33.9017#47.1299#-3794381#974;CRISISLEX_CRISISLEXREC#3##4#Talal, Kermanshah, Iran#IR#IR13#33.9017#47.1299#-3794381#974;</item>
+      </line>
+      <line>
+        <item>KILL#20##1#Canada#CA#CA#60#-96#CA#2461;CRISISLEX_T03_DEAD#20##1#Canada#CA#CA#60#-96#CA#2461;ARREST#450##1#Canada#CA#CA#60#-96#CA#2517;SOC_GENERALCRIME#450##1#Canada#CA#CA#60#-96#CA#2517;CRISISLEX_C07_SAFETY#450##1#Canada#CA#CA#60#-96#CA#2517;KILL#11#coldrelated#1#Pakistan#PK#PK#30#70#PK#3306;WOUND#40#stitches#1#Sweden#SW#SW#62#15#SW#4813;CRISISLEX_CRISISLEXREC#40#stitches#1#Sweden#SW#SW#62#15#SW#4813;CRISISLEX_C03_WELLBEING_HEALTH#40#stitches#1#Sweden#SW#SW#62#15#SW#4813;CRISISLEX_T02_INJURED#40#stitches#1#Sweden#SW#SW#62#15#SW#4813;</item>
+      </line>
+      <line>
+        <item>KILL#47##0#######0;CRISISLEX_T03_DEAD#47##0#######0;KILL#6##0#######249;CRISISLEX_CRISISLEXREC#6##0#######249;CRISISLEX_T03_DEAD#6##0#######249;CRISISLEX_T03_DEAD#6##0#######249;</item>
+      </line>
+      <line>
+        <item>KILL#21##1#Iran#IR#IR#32#53#IR#246;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#246;</item>
+      </line>
+      <line>
+        <item>ARREST#15##4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#8;SOC_GENERALCRIME#15##4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#8;CRISISLEX_C07_SAFETY#15##4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#8;ARREST#5##4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#800;CRISISLEX_C07_SAFETY#5##4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#800;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>KILL#21##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#1725;CRISISLEX_T03_DEAD#21##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#1725;PROTEST#450##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#1825;ARREST#450#protesters#4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#1825;SOC_GENERALCRIME#450#protesters#4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#1825;CRISISLEX_C07_SAFETY#450#protesters#4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#1825;ARREST#200#thers#4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#1920;CRISISLEX_C07_SAFETY#200#thers#4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#1920;</item>
+      </line>
+      <line>
+        <item>ARREST#739##4#Malatya, Malatya, Turkey#TU#TU44#38.3502#38.3167#-764507#0;SOC_GENERALCRIME#739##4#Malatya, Malatya, Turkey#TU#TU44#38.3502#38.3167#-764507#0;CRISISLEX_C07_SAFETY#739##4#Malatya, Malatya, Turkey#TU#TU44#38.3502#38.3167#-764507#0;ARREST#765#arrested#4#Malatya, Malatya, Turkey#TU#TU44#38.3502#38.3167#-764507#19;CRISISLEX_C07_SAFETY#765#arrested#4#Malatya, Malatya, Turkey#TU#TU44#38.3502#38.3167#-764507#19;ARREST#739##4#Malatya, Malatya, Turkey#TU#TU44#38.3502#38.3167#-764507#19;SOC_GENERALCRIME#739##4#Malatya, Malatya, Turkey#TU#TU44#38.3502#38.3167#-764507#19;CRISISLEX_C07_SAFETY#739##4#Malatya, Malatya, Turkey#TU#TU44#38.3502#38.3167#-764507#19;ARREST#765##4#Malatya, Malatya, Turkey#TU#TU44#38.3502#38.3167#-764507#82;CRISISLEX_C07_SAFETY#765##4#Malatya, Malatya, Turkey#TU#TU44#38.3502#38.3167#-764507#82;ARREST#739##4#Anadolu, Turkey (General), Turkey#TU#TU00#39#35#-735281#155;SOC_GENERALCRIME#739##4#Anadolu, Turkey (General), Turkey#TU#TU00#39#35#-735281#155;CRISISLEX_C07_SAFETY#739##4#Anadolu, Turkey (General), Turkey#TU#TU00#39#35#-735281#155;ARREST#765##4#Anadolu, Turkey (General), Turkey#TU#TU00#39#35#-735281#205;CRISISLEX_C07_SAFETY#765##4#Anadolu, Turkey (General), Turkey#TU#TU00#39#35#-735281#205;KILL#300##1#Turkey#TU#TU#39.059012#34.911546#TU#1014;</item>
+      </line>
+      <line>
+        <item>WOUND#15##1#France#FR#FR#46#2#FR#966;CRISISLEX_CRISISLEXREC#15##1#France#FR#FR#46#2#FR#966;CRISISLEX_C03_WELLBEING_HEALTH#15##1#France#FR#FR#46#2#FR#966;CRISISLEX_T02_INJURED#15##1#France#FR#FR#46#2#FR#966;WOUND#9##1#France#FR#FR#46#2#FR#1845;CRISISLEX_CRISISLEXREC#9##1#France#FR#FR#46#2#FR#1845;CRISISLEX_C03_WELLBEING_HEALTH#9##1#France#FR#FR#46#2#FR#1845;CRISISLEX_T02_INJURED#9##1#France#FR#FR#46#2#FR#1845;</item>
+      </line>
+      <line>
+        <item>PROTEST#50#unique#3#San Francisco, California, United States#US#USCA#37.7749#-122.419#277593#1904;</item>
+      </line>
+      <line>
+        <item>KILL#2##1#United States#US#US#39.828175#-98.5795#US#1507;</item>
+      </line>
+      <line>
+        <item>SEIZE#15##1#Malawi#MI#MI#-13.5#34#MI#999;</item>
+      </line>
+      <line>
+        <item>AFFECT#189##2#New York, United States#US#USNY#42.1497#-74.9384#NY#1772;AFFECT#190##2#New York, United States#US#USNY#42.1497#-74.9384#NY#2004;AFFECT#191##2#New York, United States#US#USNY#42.1497#-74.9384#NY#3650;AFFECT#192##2#New York, United States#US#USNY#42.1497#-74.9384#NY#3882;KILL#1##1#Denmark#DA#DA#56#10#DA#5761;KILL#20##1#Denmark#DA#DA#56#10#DA#6566;KILL#1##2#Hawaii, United States#US#USHI#21.1098#-157.531#HI#7087;KILL#9##2#Hawaii, United States#US#USHI#21.1098#-157.531#HI#7184;</item>
+      </line>
+      <line>
+        <item>AFFECT#3##4#Mumbai, Maharashtra, India#IN#IN16#18.975#72.8258#-2092174#1512;</item>
+      </line>
+      <line>
+        <item>AFFECT#29##1#Canada#CA#CA#60#-96#CA#440;</item>
+      </line>
+      <line>
+        <item>KIDNAP#2##4#Paris, France (General), France#FR#FR00#48.8667#2.33333#-1456928#1392;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#leaders#1#Austria#AU#AU#47.333333#13.333333#AU#828;REFUGEES#2#leaders#1#Austria#AU#AU#47.333333#13.333333#AU#828;</item>
+      </line>
+      <line>
+        <item>AFFECT#150##3#Steubenville, Ohio, United States#US#USOH#40.3698#-80.634#1065383#168;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#leaders#1#Austria#AU#AU#47.333333#13.333333#AU#780;REFUGEES#2#leaders#1#Austria#AU#AU#47.333333#13.333333#AU#780;</item>
+      </line>
+      <line>
+        <item>AFFECT#3##1#Turkey#TU#TU#39.059012#34.911546#TU#0;REFUGEES#3##1#Turkey#TU#TU#39.059012#34.911546#TU#0;EPU_CATS_MIGRATION_FEAR_MIGRATION#3##1#Turkey#TU#TU#39.059012#34.911546#TU#0;AFFECT#646##1#Greece#GR#GR#39#22#GR#1933;REFUGEES#646##1#Greece#GR#GR#39#22#GR#1933;AFFECT#2000000#ther#4#Aegean Sea, Oceans (General), Oceans#OS#OS00#39#25#-813195#5698;REFUGEES#2000000#ther#4#Aegean Sea, Oceans (General), Oceans#OS#OS00#39#25#-813195#5698;AFFECT#531##1#Greece#GR#GR#39#22#GR#6998;REFUGEES#531##1#Greece#GR#GR#39#22#GR#6998;EPU_CATS_MIGRATION_FEAR_MIGRATION#531##1#Greece#GR#GR#39#22#GR#6998;REFUGEES#531##1#Greece#GR#GR#39#22#GR#6998;AFFECT#2013#advocates#1#Germany#GM#GM#51.5#10.5#GM#12030;REFUGEES#2013#advocates#1#Germany#GM#GM#51.5#10.5#GM#12030;EPU_CATS_MIGRATION_FEAR_MIGRATION#2013#advocates#1#Germany#GM#GM#51.5#10.5#GM#12030;AFFECT#2000000000##1#Afghanistan#AF#AF#33#66#AF#14287;REFUGEES#2000000000##1#Afghanistan#AF#AF#33#66#AF#14287;AFFECT#2013##1#Sweden#SW#SW#62#15#SW#15118;REFUGEES#2013##1#Sweden#SW#SW#62#15#SW#15118;KILL#2019#bodies washing#1#Libya#LY#LY#25#17#LY#17517;CRISISLEX_CRISISLEXREC#2019#bodies washing#1#Libya#LY#LY#25#17#LY#17517;CRISISLEX_T02_INJURED#2019#bodies washing#1#Libya#LY#LY#25#17#LY#17517;CRISISLEX_T03_DEAD#2019#bodies washing#1#Libya#LY#LY#25#17#LY#17517;CRISISLEX_T03_DEAD#2019#bodies washing#1#Libya#LY#LY#25#17#LY#17517;KILL#2019#washing#1#Libya#LY#LY#25#17#LY#17517;</item>
+      </line>
+      <line>
+        <item>KILL#12##2#Florida, United States#US#USFL#27.8333#-81.717#FL#7827;</item>
+      </line>
+      <line>
+        <item>KILL#2##1#Germany#GM#GM#51.5#10.5#GM#0;CRISISLEX_CRISISLEXREC#2##1#Germany#GM#GM#51.5#10.5#GM#0;CRISISLEX_T02_INJURED#2##1#Germany#GM#GM#51.5#10.5#GM#0;CRISISLEX_T03_DEAD#2##1#Germany#GM#GM#51.5#10.5#GM#0;CRISISLEX_T03_DEAD#2##1#Germany#GM#GM#51.5#10.5#GM#0;ARREST#46##1#Germany#GM#GM#51.5#10.5#GM#92;CRISISLEX_C07_SAFETY#46##1#Germany#GM#GM#51.5#10.5#GM#92;KILL#2#infants#1#Germany#GM#GM#51.5#10.5#GM#92;CRISISLEX_CRISISLEXREC#2#infants#1#Germany#GM#GM#51.5#10.5#GM#92;CRISISLEX_T02_INJURED#2#infants#1#Germany#GM#GM#51.5#10.5#GM#92;CRISISLEX_T03_DEAD#2#infants#1#Germany#GM#GM#51.5#10.5#GM#92;CRISISLEX_T03_DEAD#2#infants#1#Germany#GM#GM#51.5#10.5#GM#92;KILL#2#infants#1#Germany#GM#GM#51.5#10.5#GM#92;CRISISLEX_T03_DEAD#2#infants#1#Germany#GM#GM#51.5#10.5#GM#92;</item>
+      </line>
+      <line>
+        <item>KILL#20000##4#Constantinople, Istanbul, Turkey#TU#TU34#41.0186#28.9647#-755070#6435;CRISISLEX_T03_DEAD#20000##4#Constantinople, Istanbul, Turkey#TU#TU34#41.0186#28.9647#-755070#6435;KILL#90##4#Constantinople, Istanbul, Turkey#TU#TU34#41.0186#28.9647#-755070#6880;KILL#90##4#Constantinople, Istanbul, Turkey#TU#TU34#41.0186#28.9647#-755070#6880;KILL#90##4#Constantinople, Istanbul, Turkey#TU#TU34#41.0186#28.9647#-755070#6880;CRISISLEX_CRISISLEXREC#90##4#Constantinople, Istanbul, Turkey#TU#TU34#41.0186#28.9647#-755070#6880;CRISISLEX_T01_CAUTION_ADVICE#90##4#Constantinople, Istanbul, Turkey#TU#TU34#41.0186#28.9647#-755070#6880;CRISISLEX_T03_DEAD#90##4#Constantinople, Istanbul, Turkey#TU#TU34#41.0186#28.9647#-755070#6880;CRISISLEX_T03_DEAD#90##4#Constantinople, Istanbul, Turkey#TU#TU34#41.0186#28.9647#-755070#6880;KILL#5##1#Ethiopia#ET#ET#8#38#ET#7476;CRISISLEX_T03_DEAD#5##1#Ethiopia#ET#ET#8#38#ET#7476;</item>
+      </line>
+      <line>
+        <item>KILL#8##2#California, United States#US#USCA#36.17#-119.746#CA#493;</item>
+      </line>
+      <line>
+        <item>KILL#90##3#Salt Lake City, Utah, United States#US#USUT#40.7608#-111.891#1454997#53;CRISISLEX_CRISISLEXREC#90##3#Salt Lake City, Utah, United States#US#USUT#40.7608#-111.891#1454997#53;CRISISLEX_T02_INJURED#90##3#Salt Lake City, Utah, United States#US#USUT#40.7608#-111.891#1454997#53;CRISISLEX_T03_DEAD#90##3#Salt Lake City, Utah, United States#US#USUT#40.7608#-111.891#1454997#53;CRISISLEX_T03_DEAD#90##3#Salt Lake City, Utah, United States#US#USUT#40.7608#-111.891#1454997#53;KILL#97##3#Salt Lake City, Utah, United States#US#USUT#40.7608#-111.891#1454997#2542;CRISISLEX_T03_DEAD#97##3#Salt Lake City, Utah, United States#US#USUT#40.7608#-111.891#1454997#2542;</item>
+      </line>
+      <line>
+        <item>KILL#4#Joshua McKinney#3#Baytown, Texas, United States#US#USTX#29.7355#-94.9774#1380966#218;CRISISLEX_T03_DEAD#4#Joshua McKinney#3#Baytown, Texas, United States#US#USTX#29.7355#-94.9774#1380966#218;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>WOUND#4##3#Douglas County, Colorado, United States#US#USCO#39.3333#-104.951#198133#816;CRISISLEX_T02_INJURED#4##3#Douglas County, Colorado, United States#US#USCO#39.3333#-104.951#198133#816;WOUND#2##3#Denver, Colorado, United States#US#USCO#39.7392#-104.985#201738#2441;CRISISLEX_T02_INJURED#2##3#Denver, Colorado, United States#US#USCO#39.7392#-104.985#201738#2441;WOUND#2#videos#3#Denver, Colorado, United States#US#USCO#39.7392#-104.985#201738#2907;</item>
+      </line>
+      <line>
+        <item>KILL#2#Utah residents#2#Utah, United States#US#USUT#40.1135#-111.854#UT#0;CRISISLEX_T03_DEAD#2#Utah residents#2#Utah, United States#US#USUT#40.1135#-111.854#UT#0;</item>
+      </line>
+      <line>
+        <item>KILL#12##2#Florida, United States#US#USFL#27.8333#-81.717#FL#7827;</item>
+      </line>
+      <line>
+        <item>KILL#20##1#Canada#CA#CA#60#-96#CA#2461;CRISISLEX_T03_DEAD#20##1#Canada#CA#CA#60#-96#CA#2461;ARREST#450##1#Canada#CA#CA#60#-96#CA#2517;SOC_GENERALCRIME#450##1#Canada#CA#CA#60#-96#CA#2517;CRISISLEX_C07_SAFETY#450##1#Canada#CA#CA#60#-96#CA#2517;KILL#11#coldrelated#1#Pakistan#PK#PK#30#70#PK#3306;WOUND#40#stitches#1#Sweden#SW#SW#62#15#SW#4813;CRISISLEX_CRISISLEXREC#40#stitches#1#Sweden#SW#SW#62#15#SW#4813;CRISISLEX_C03_WELLBEING_HEALTH#40#stitches#1#Sweden#SW#SW#62#15#SW#4813;CRISISLEX_T02_INJURED#40#stitches#1#Sweden#SW#SW#62#15#SW#4813;</item>
+      </line>
+      <line>
+        <item>KILL#69##1#Norway#NO#NO#62#10#NO#898;CRISISLEX_T03_DEAD#69##1#Norway#NO#NO#62#10#NO#898;WOUND#33##1#Norway#NO#NO#62#10#NO#917;CRISISLEX_T02_INJURED#33##1#Norway#NO#NO#62#10#NO#917;AFFECT#358##1#Norway#NO#NO#62#10#NO#938;CRISISLEX_T02_INJURED#358##1#Norway#NO#NO#62#10#NO#938;AFFECT#213##1#Norway#NO#NO#62#10#NO#1261;CRISISLEX_T02_INJURED#213##1#Norway#NO#NO#62#10#NO#1261;AFFECT#20##1#Norway#NO#NO#62#10#NO#1442;CRISISLEX_T02_INJURED#20##1#Norway#NO#NO#62#10#NO#1442;AFFECT#3##1#Norway#NO#NO#62#10#NO#1618;CRISISLEX_T02_INJURED#3##1#Norway#NO#NO#62#10#NO#1618;</item>
+      </line>
+      <line>
+        <item>KILL#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#0;CRISISLEX_T03_DEAD#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#0;AFFECT#6##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#804;CRISISLEX_T02_INJURED#6##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#804;KILL#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#902;CRISISLEX_CRISISLEXREC#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#902;CRISISLEX_T02_INJURED#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#902;CRISISLEX_T03_DEAD#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#902;CRISISLEX_T03_DEAD#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#902;AFFECT#3##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#902;KILL#600##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#1339;CRISISLEX_T03_DEAD#600##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#1339;KILL#12##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#1364;CRISISLEX_T03_DEAD#12##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#1364;KILL#20##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#1454;CRISISLEX_T03_DEAD#20##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#1454;</item>
+      </line>
+      <line>
+        <item>KILL#2##0#######35;CRISISLEX_T03_DEAD#2##0#######35;</item>
+      </line>
+      <line>
+        <item>KILL#48##1#Peru#PE#PE#-10#-76#PE#0;KILL#48##1#Peru#PE#PE#-10#-76#PE#0;KILL#48##1#Peru#PE#PE#-10#-76#PE#0;CRISISLEX_CRISISLEXREC#48##1#Peru#PE#PE#-10#-76#PE#0;CRISISLEX_T01_CAUTION_ADVICE#48##1#Peru#PE#PE#-10#-76#PE#0;CRISISLEX_T03_DEAD#48##1#Peru#PE#PE#-10#-76#PE#0;CRISISLEX_T03_DEAD#48##1#Peru#PE#PE#-10#-76#PE#0;KILL#48##1#Peru#PE#PE#-10#-76#PE#45;CRISISLEX_T03_DEAD#48##1#Peru#PE#PE#-10#-76#PE#45;KILL#48##1#Peru#PE#PE#-10#-76#PE#383;KILL#48##1#Peru#PE#PE#-10#-76#PE#383;KILL#48##1#Peru#PE#PE#-10#-76#PE#383;CRISISLEX_CRISISLEXREC#48##1#Peru#PE#PE#-10#-76#PE#383;CRISISLEX_T01_CAUTION_ADVICE#48##1#Peru#PE#PE#-10#-76#PE#383;CRISISLEX_T03_DEAD#48##1#Peru#PE#PE#-10#-76#PE#383;CRISISLEX_T03_DEAD#48##1#Peru#PE#PE#-10#-76#PE#383;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>KILL#13##1#North Korea#KN#KN#40#127#KN#869;KILL#6##4#Sydney, New South Wales, Australia#AS#AS02#-33.8833#151.217#-1603135#1311;</item>
+      </line>
+      <line>
+        <item>KILL#2#reckoning xE#1#Australia#AS#AS#-25#135#AS#3919;CRISISLEX_CRISISLEXREC#2#reckoning xE#1#Australia#AS#AS#-25#135#AS#3919;CRISISLEX_T02_INJURED#2#reckoning xE#1#Australia#AS#AS#-25#135#AS#3919;CRISISLEX_T03_DEAD#2#reckoning xE#1#Australia#AS#AS#-25#135#AS#3919;CRISISLEX_T03_DEAD#2#reckoning xE#1#Australia#AS#AS#-25#135#AS#3919;AFFECT#2#aircraft xE#1#Australia#AS#AS#-25#135#AS#5441;</item>
+      </line>
+      <line>
+        <item>PROTEST#2##5#Karnataka, India#IN#IN19#13.5#76#-2099860#3325;MOVEMENT_GENERAL#2##5#Karnataka, India#IN#IN19#13.5#76#-2099860#3325;TAX_FNCACT_ACTIVIST#2##5#Karnataka, India#IN#IN19#13.5#76#-2099860#3325;</item>
+      </line>
+      <line>
+        <item>KILL#12##1#Canada#CA#CA#60#-96#CA#3900;</item>
+      </line>
+      <line>
+        <item>AFFECT#2019#hero x#4#Manchester, Manchester, United Kingdom#UK#UKI2#53.5#-2.21667#-2602512#370;POVERTY#2019#hero x#4#Manchester, Manchester, United Kingdom#UK#UKI2#53.5#-2.21667#-2602512#370;CRISISLEX_C05_NEED_OF_SHELTERS#2019#hero x#4#Manchester, Manchester, United Kingdom#UK#UKI2#53.5#-2.21667#-2602512#370;</item>
+      </line>
+      <line>
+        <item>KILL#22#Intolerance#1#China#CH#CH#35#105#CH#1423;CRISISLEX_CRISISLEXREC#22#Intolerance#1#China#CH#CH#35#105#CH#1423;CRISISLEX_T02_INJURED#22#Intolerance#1#China#CH#CH#35#105#CH#1423;CRISISLEX_T03_DEAD#22#Intolerance#1#China#CH#CH#35#105#CH#1423;CRISISLEX_T03_DEAD#22#Intolerance#1#China#CH#CH#35#105#CH#1423;</item>
+      </line>
+      <line>
+        <item>KILL#21##1#United States#US#US#39.828175#-98.5795#US#1223;CRISISLEX_T03_DEAD#21##1#United States#US#US#39.828175#-98.5795#US#1223;PROTEST#2000000##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#3315;</item>
+      </line>
+      <line>
+        <item>PROTEST#16#Mr Monk Gets#1#Russia#RS#RS#60#100#RS#162;MOVEMENT_GENERAL#16#Mr Monk Gets#1#Russia#RS#RS#60#100#RS#162;TAX_FNCACT_ACTIVIST#16#Mr Monk Gets#1#Russia#RS#RS#60#100#RS#162;KILL#16#Mr Monk Gets#1#Russia#RS#RS#60#100#RS#162;KILL#24##4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#2279;KILL#24##4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#2279;KILL#21#Trading#1#United States#US#US#39.828175#-98.5795#US#7273;</item>
+      </line>
+      <line>
+        <item>AFFECT#3#health#1#Australia#AS#AS#-25#135#AS#850;KILL#1##1#Australia#AS#AS#-25#135#AS#964;CRISISLEX_T03_DEAD#1##1#Australia#AS#AS#-25#135#AS#964;</item>
+      </line>
+      <line>
+        <item>KILL#7##2#Indiana, United States#US#USIN#39.8647#-86.2604#IN#1401;CRISISLEX_T03_DEAD#7##2#Indiana, United States#US#USIN#39.8647#-86.2604#IN#1401;</item>
+      </line>
+      <line>
+        <item>ARREST#25##3#Miami, Florida, United States#US#USFL#25.7743#-80.1937#295004#301;SOC_GENERALCRIME#25##3#Miami, Florida, United States#US#USFL#25.7743#-80.1937#295004#301;CRISISLEX_C07_SAFETY#25##3#Miami, Florida, United States#US#USFL#25.7743#-80.1937#295004#301;AFFECT#2#victims#3#Miami, Florida, United States#US#USFL#25.7743#-80.1937#295004#568;</item>
+      </line>
+      <line>
+        <item>KILL#21##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#2665;ARREST#200##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#2704;CRISISLEX_C07_SAFETY#200##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#2704;</item>
+      </line>
+      <line>
+        <item>SEIZE#50##1#Canada#CA#CA#60#-96#CA#64;</item>
+      </line>
+      <line>
+        <item>KILL#26#Lynnea Gran#1#United States#US#US#39.828175#-98.5795#US#1008;ARREST#3##1#United States#US#US#39.828175#-98.5795#US#1387;KILL#7##1#United States#US#US#39.828175#-98.5795#US#2397;CRISISLEX_T03_DEAD#7##1#United States#US#US#39.828175#-98.5795#US#2397;KILL#7#Category Factual Crime Rating#3#Dallas, Texas, United States#US#USTX#32.7831#-96.8067#1380944#5255;KILL#20#Mommie Dearest Forbidden#3#Dallas, Texas, United States#US#USTX#32.7831#-96.8067#1380944#5539;KILL#2#girls#3#Dallas, Texas, United States#US#USTX#32.7831#-96.8067#1380944#5903;CRISISLEX_T03_DEAD#2#girls#3#Dallas, Texas, United States#US#USTX#32.7831#-96.8067#1380944#5903;</item>
+      </line>
+      <line>
+        <item>PROTEST#2##1#India#IN#IN#20#77#IN#2447;</item>
+      </line>
+      <line>
+        <item>KILL#2000000##4#Newport, Newport, United Kingdom#UK#UKY6#51.5833#-2.98333#-2604041#95;CRISISLEX_T03_DEAD#2000000##4#Newport, Newport, United Kingdom#UK#UKY6#51.5833#-2.98333#-2604041#95;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#leaders#1#Austria#AU#AU#47.333333#13.333333#AU#828;REFUGEES#2#leaders#1#Austria#AU#AU#47.333333#13.333333#AU#828;</item>
+      </line>
+      <line>
+        <item>KIDNAP#12##1#Canada#CA#CA#60#-96#CA#46;</item>
+      </line>
+      <line>
+        <item>PROTEST#2019##4#Koregaon-bhima, Maharashtra, India#IN#IN16#18.65#74.0833#-2101448#335;AFFECT#200#incoming passengers#4#Dahisar, Maharashtra, India#IN#IN16#19.5167#72.85#-2093826#1659;CRISISLEX_C04_LOGISTICS_TRANSPORT#200#incoming passengers#4#Dahisar, Maharashtra, India#IN#IN16#19.5167#72.85#-2093826#1659;</item>
+      </line>
+      <line>
+        <item>KILL#11##1#Nigeria#NI#NI#10#8#NI#16;CRISISLEX_T03_DEAD#11##1#Nigeria#NI#NI#10#8#NI#16;</item>
+      </line>
+      <line>
+        <item>KILL#20##1#Canada#CA#CA#60#-96#CA#2461;CRISISLEX_T03_DEAD#20##1#Canada#CA#CA#60#-96#CA#2461;ARREST#450##1#Canada#CA#CA#60#-96#CA#2517;SOC_GENERALCRIME#450##1#Canada#CA#CA#60#-96#CA#2517;CRISISLEX_C07_SAFETY#450##1#Canada#CA#CA#60#-96#CA#2517;KILL#11#coldrelated#1#Pakistan#PK#PK#30#70#PK#3306;WOUND#40#stitches#1#Sweden#SW#SW#62#15#SW#4813;CRISISLEX_CRISISLEXREC#40#stitches#1#Sweden#SW#SW#62#15#SW#4813;CRISISLEX_C03_WELLBEING_HEALTH#40#stitches#1#Sweden#SW#SW#62#15#SW#4813;CRISISLEX_T02_INJURED#40#stitches#1#Sweden#SW#SW#62#15#SW#4813;</item>
+      </line>
+      <line>
+        <item>AFFECT#62#outages#1#United Kingdom#UK#UK#54#-4#UK#2313;</item>
+      </line>
+      <line>
+        <item>KILL#12##2#Florida, United States#US#USFL#27.8333#-81.717#FL#7827;</item>
+      </line>
+      <line>
+        <item>PROTEST#2019##2#Texas, United States#US#USTX#31.106#-97.6475#TX#3356;MOVEMENT_GENERAL#2019##2#Texas, United States#US#USTX#31.106#-97.6475#TX#3356;TAX_FNCACT_ACTIVIST#2019##2#Texas, United States#US#USTX#31.106#-97.6475#TX#3356;</item>
+      </line>
+      <line>
+        <item>KILL#30##2#Minnesota, United States#US#USMN#45.7326#-93.9196#MN#40;CRISISLEX_T03_DEAD#30##2#Minnesota, United States#US#USMN#45.7326#-93.9196#MN#40;</item>
+      </line>
+      <line>
+        <item>AFFECT#47#rifle#0#######747;</item>
+      </line>
+      <line>
+        <item>WOUND#10##0#######160;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#331;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2105;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2105;KILL#9##1#Iran#IR#IR#32#53#IR#3842;CRISISLEX_T03_DEAD#9##1#Iran#IR#IR#32#53#IR#3842;KILL#21##1#Iran#IR#IR#32#53#IR#3977;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3977;</item>
+      </line>
+      <line>
+        <item>PROTEST#2#Durability#1#United States#US#US#39.828175#-98.5795#US#0;AFFECT#14000000#American men aged#1#United States#US#US#39.828175#-98.5795#US#2574;</item>
+      </line>
+      <line>
+        <item>KILL#4##3#Honolulu, Hawaii, United States#US#USHI#21.3069#-157.858#366212#34;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#staff#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#977;</item>
+      </line>
+      <line>
+        <item>ARREST#715#Sterling#3#Benton County, Washington, United States#US#USWA#46.2665#-119.484#1513302#155;SOC_GENERALCRIME#715#Sterling#3#Benton County, Washington, United States#US#USWA#46.2665#-119.484#1513302#155;CRISISLEX_C07_SAFETY#715#Sterling#3#Benton County, Washington, United States#US#USWA#46.2665#-119.484#1513302#155;</item>
+      </line>
+      <line>
+        <item>KILL#2000000#unlucky#2#Iowa, United States#US#USIA#42.0046#-93.214#IA#177;CRISISLEX_T03_DEAD#2000000#unlucky#2#Iowa, United States#US#USIA#42.0046#-93.214#IA#177;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#staff#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#977;</item>
+      </line>
+      <line>
+        <item>KILL#21##3#Columbus, Ohio, United States#US#USOH#39.9612#-82.9988#1080996#73;CRISISLEX_T03_DEAD#21##3#Columbus, Ohio, United States#US#USOH#39.9612#-82.9988#1080996#73;</item>
+      </line>
+      <line>
+        <item>KILL#2##2#Ohio, United States#US#USOH#40.3736#-82.7755#OH#231;CRISISLEX_CRISISLEXREC#2##2#Ohio, United States#US#USOH#40.3736#-82.7755#OH#231;CRISISLEX_T02_INJURED#2##2#Ohio, United States#US#USOH#40.3736#-82.7755#OH#231;CRISISLEX_T03_DEAD#2##2#Ohio, United States#US#USOH#40.3736#-82.7755#OH#231;CRISISLEX_T03_DEAD#2##2#Ohio, United States#US#USOH#40.3736#-82.7755#OH#231;KILL#2019#inside#2#Arizona, United States#US#USAZ#33.7712#-111.388#AZ#584;CRISISLEX_CRISISLEXREC#2019#inside#2#Arizona, United States#US#USAZ#33.7712#-111.388#AZ#584;CRISISLEX_T02_INJURED#2019#inside#2#Arizona, United States#US#USAZ#33.7712#-111.388#AZ#584;CRISISLEX_T03_DEAD#2019#inside#2#Arizona, United States#US#USAZ#33.7712#-111.388#AZ#584;CRISISLEX_T03_DEAD#2019#inside#2#Arizona, United States#US#USAZ#33.7712#-111.388#AZ#584;WOUND#10##2#Minnesota, United States#US#USMN#45.7326#-93.9196#MN#861;KILL#400#Americans#1#United States#US#US#39.828175#-98.5795#US#1285;CRISISLEX_T03_DEAD#400#Americans#1#United States#US#US#39.828175#-98.5795#US#1285;CRISISLEX_T03_DEAD#400#Americans#1#United States#US#US#39.828175#-98.5795#US#1285;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>KILL#12##2#Florida, United States#US#USFL#27.8333#-81.717#FL#3615;</item>
+      </line>
+      <line>
+        <item>AFFECT#9#Chinese crew men#1#China#CH#CH#35#105#CH#0;KILL#2##4#Barangay, Pangasinan, Philippines#RP#RP51#16.17#120.78#10998159#2417;</item>
+      </line>
+      <line>
+        <item>KILL#4##3#Honolulu, Hawaii, United States#US#USHI#21.3069#-157.858#366212#34;</item>
+      </line>
+      <line>
+        <item>WOUND#45#firefighters#0#######34;CRISISLEX_CRISISLEXREC#45#firefighters#0#######34;CRISISLEX_C03_WELLBEING_HEALTH#45#firefighters#0#######34;CRISISLEX_T02_INJURED#45#firefighters#0#######34;WOUND#8#children#0#######247;CRISISLEX_CRISISLEXREC#8#children#0#######247;CRISISLEX_C03_WELLBEING_HEALTH#8#children#0#######247;CRISISLEX_T02_INJURED#8#children#0#######247;</item>
+      </line>
+      <line>
+        <item>WOUND#200##4#Mugla, Mugla, Turkey#TU#TU48#37.2181#28.3665#-765549#1938;CRISISLEX_CRISISLEXREC#200##4#Mugla, Mugla, Turkey#TU#TU48#37.2181#28.3665#-765549#1938;CRISISLEX_C03_WELLBEING_HEALTH#200##4#Mugla, Mugla, Turkey#TU#TU48#37.2181#28.3665#-765549#1938;CRISISLEX_T02_INJURED#200##4#Mugla, Mugla, Turkey#TU#TU48#37.2181#28.3665#-765549#1938;</item>
+      </line>
+      <line>
+        <item>AFFECT#200#fewer#0#######2080;</item>
+      </line>
+      <line>
+        <item>KILL#38##1#Philippines#RP#RP#13#122#RP#238;CRISISLEX_T03_DEAD#38##1#Philippines#RP#RP#13#122#RP#238;</item>
+      </line>
+      <line>
+        <item>ARREST#2#deputies following#2#New Mexico, United States#US#USNM#34.8375#-106.237#NM#27;CRISISLEX_C07_SAFETY#2#deputies following#2#New Mexico, United States#US#USNM#34.8375#-106.237#NM#27;ARREST#2##2#New Mexico, United States#US#USNM#34.8375#-106.237#NM#271;SOC_GENERALCRIME#2##2#New Mexico, United States#US#USNM#34.8375#-106.237#NM#271;CRISISLEX_C07_SAFETY#2##2#New Mexico, United States#US#USNM#34.8375#-106.237#NM#271;</item>
+      </line>
+      <line>
+        <item>KILL#20##1#Nigeria#NI#NI#10#8#NI#158;CRISISLEX_T03_DEAD#20##1#Nigeria#NI#NI#10#8#NI#158;</item>
+      </line>
+      <line>
+        <item>PROTEST#80##1#Canada#CA#CA#60#-96#CA#694;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#women#1#India#IN#IN#20#77#IN#116;</item>
+      </line>
+      <line>
+        <item>KILL#22##4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#127;</item>
+      </line>
+      <line>
+        <item>AFFECT#2000#just#3#Philadelphia, Pennsylvania, United States#US#USPA#39.9523#-75.1638#1209052#1021;</item>
+      </line>
+      <line>
+        <item>KILL#200##4#Kasese, Kasese, Uganda#UG#UG40#0.23#29.9883#-1729253#92;KILL#193##4#Kirinya, Wakiso, Uganda#UG#UG96#0.333333#32.6667#-1730210#441;CRISISLEX_T03_DEAD#193##4#Kirinya, Wakiso, Uganda#UG#UG96#0.333333#32.6667#-1730210#441;ARREST#193##4#Kasese, Kasese, Uganda#UG#UG40#0.23#29.9883#-1729253#5939;SOC_GENERALCRIME#193##4#Kasese, Kasese, Uganda#UG#UG40#0.23#29.9883#-1729253#5939;CRISISLEX_C07_SAFETY#193##4#Kasese, Kasese, Uganda#UG#UG40#0.23#29.9883#-1729253#5939;KILL#2##4#Kasese, Kasese, Uganda#UG#UG40#0.23#29.9883#-1729253#6204;</item>
+      </line>
+      <line>
+        <item>PROTEST#30##1#West Bank#WE#WE#31.666667#35.25#WE#277;KILL#12#Palestinians#1#West Bank#WE#WE#31.666667#35.25#WE#701;CRISISLEX_T03_DEAD#12#Palestinians#1#West Bank#WE#WE#31.666667#35.25#WE#701;PROTEST#2000#Palestinians#4#Jerusalem, Israel (General), Israel#IS#IS00#31.7667#35.2333#-797092#798;</item>
+      </line>
+      <line>
+        <item>KIDNAP#2##4#Kampala, Kampala, Uganda#UG#UG37#0.315556#32.5656#-1728891#742;ARREST#24##1#Rwanda#RW#RW#-2#30#RW#1580;CRISISLEX_C07_SAFETY#24##1#Rwanda#RW#RW#-2#30#RW#1580;ARREST#6#Rwandans#1#Uganda#UG#UG#2#33#UG#2178;CRISISLEX_C07_SAFETY#6#Rwandans#1#Uganda#UG#UG#2#33#UG#2178;</item>
+      </line>
+      <line>
+        <item>KILL#2##2#Ohio, United States#US#USOH#40.3736#-82.7755#OH#249;CRISISLEX_CRISISLEXREC#2##2#Ohio, United States#US#USOH#40.3736#-82.7755#OH#249;CRISISLEX_T02_INJURED#2##2#Ohio, United States#US#USOH#40.3736#-82.7755#OH#249;CRISISLEX_T03_DEAD#2##2#Ohio, United States#US#USOH#40.3736#-82.7755#OH#249;CRISISLEX_T03_DEAD#2##2#Ohio, United States#US#USOH#40.3736#-82.7755#OH#249;KILL#2019#inside#2#Arizona, United States#US#USAZ#33.7712#-111.388#AZ#602;CRISISLEX_CRISISLEXREC#2019#inside#2#Arizona, United States#US#USAZ#33.7712#-111.388#AZ#602;CRISISLEX_T02_INJURED#2019#inside#2#Arizona, United States#US#USAZ#33.7712#-111.388#AZ#602;CRISISLEX_T03_DEAD#2019#inside#2#Arizona, United States#US#USAZ#33.7712#-111.388#AZ#602;CRISISLEX_T03_DEAD#2019#inside#2#Arizona, United States#US#USAZ#33.7712#-111.388#AZ#602;WOUND#10##2#Minnesota, United States#US#USMN#45.7326#-93.9196#MN#879;KILL#400#Americans#1#United States#US#US#39.828175#-98.5795#US#1303;CRISISLEX_T03_DEAD#400#Americans#1#United States#US#US#39.828175#-98.5795#US#1303;CRISISLEX_T03_DEAD#400#Americans#1#United States#US#US#39.828175#-98.5795#US#1303;</item>
+      </line>
+      <line>
+        <item>AFFECT#92##5#Niedersachsen, Germany#GM#GM06#52#10#-1833951#419;REFUGEES#92##5#Niedersachsen, Germany#GM#GM06#52#10#-1833951#419;EPU_CATS_MIGRATION_FEAR_MIGRATION#92##5#Niedersachsen, Germany#GM#GM06#52#10#-1833951#419;</item>
+      </line>
+      <line>
+        <item>ARREST#6#men#3#Strasburg, Virginia, United States#US#USVA#38.9887#-78.3586#1487663#195;SOC_POINTSOFINTEREST_JAIL#6#men#3#Strasburg, Virginia, United States#US#USVA#38.9887#-78.3586#1487663#195;</item>
+      </line>
+      <line>
+        <item>KILL#36##0#######291;CRISISLEX_T03_DEAD#36##0#######291;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#staff#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#1117;</item>
+      </line>
+      <line>
+        <item>ARREST#30##1#Cameroon#CM#CM#6#12#CM#265;SOC_GENERALCRIME#30##1#Cameroon#CM#CM#6#12#CM#265;CRISISLEX_C07_SAFETY#30##1#Cameroon#CM#CM#6#12#CM#265;</item>
+      </line>
+      <line>
+        <item>KILL#5##3#Muscle Shoals, Alabama, United States#US#USAL#34.7448#-87.6675#152574#625;CRISISLEX_T03_DEAD#5##3#Muscle Shoals, Alabama, United States#US#USAL#34.7448#-87.6675#152574#625;</item>
+      </line>
+      <line>
+        <item>WOUND#4##3#Douglas County, Colorado, United States#US#USCO#39.3333#-104.951#198133#816;CRISISLEX_T02_INJURED#4##3#Douglas County, Colorado, United States#US#USCO#39.3333#-104.951#198133#816;WOUND#2##3#Denver, Colorado, United States#US#USCO#39.7392#-104.985#201738#2441;CRISISLEX_T02_INJURED#2##3#Denver, Colorado, United States#US#USCO#39.7392#-104.985#201738#2441;WOUND#2#videos#3#Denver, Colorado, United States#US#USCO#39.7392#-104.985#201738#2907;</item>
+      </line>
+      <line>
+        <item>AFFECT#3#brothers#1#Israel#IS#IS#31.5#34.75#IS#1537;REFUGEES#3#brothers#1#Israel#IS#IS#31.5#34.75#IS#1537;EPU_CATS_MIGRATION_FEAR_MIGRATION#3#brothers#1#Israel#IS#IS#31.5#34.75#IS#1537;</item>
+      </line>
+      <line>
+        <item>KILL#22##4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#127;</item>
+      </line>
+      <line>
+        <item>AFFECT#2000#just#3#Philadelphia, Pennsylvania, United States#US#USPA#39.9523#-75.1638#1209052#1021;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>KILL#8#puppies#0#######0;KILL#8##0#######81;</item>
+      </line>
+      <line>
+        <item>KILL#12##2#Florida, United States#US#USFL#27.8333#-81.717#FL#2781;</item>
+      </line>
+      <line>
+        <item>KILL#16##2#New Jersey, United States#US#USNJ#40.314#-74.5089#NJ#65;CRISISLEX_T03_DEAD#16##2#New Jersey, United States#US#USNJ#40.314#-74.5089#NJ#65;KILL#4#family members#3#Long Branch, New Jersey, United States#US#USNJ#40.3043#-73.9924#882496#266;CRISISLEX_T03_DEAD#4#family members#3#Long Branch, New Jersey, United States#US#USNJ#40.3043#-73.9924#882496#266;KILL#2014##3#Asbury Park, New Jersey, United States#US#USNJ#40.2204#-74.0121#874396#787;TERROR#2014##3#Asbury Park, New Jersey, United States#US#USNJ#40.2204#-74.0121#874396#787;ARMEDCONFLICT#2014##3#Asbury Park, New Jersey, United States#US#USNJ#40.2204#-74.0121#874396#787;KILL#2014##2#New Jersey, United States#US#USNJ#40.314#-74.5089#NJ#1336;CRISISLEX_T03_DEAD#2014##2#New Jersey, United States#US#USNJ#40.314#-74.5089#NJ#1336;</item>
+      </line>
+      <line>
+        <item>KILL#20##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#86;KILL#20##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#86;KILL#20##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#86;CRISISLEX_CRISISLEXREC#20##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#86;CRISISLEX_T01_CAUTION_ADVICE#20##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#86;CRISISLEX_T03_DEAD#20##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#86;CRISISLEX_T03_DEAD#20##4#Tehran, Tehran, Iran#IR#IR26#35.75#51.5148#10074674#86;WOUND#3##4#Najafabad, Esfahan, Iran#IR#IR28#31.6424#51.4128#223938#331;CRISISLEX_T02_INJURED#3##4#Najafabad, Esfahan, Iran#IR#IR28#31.6424#51.4128#223938#331;KILL#13##4#Najafabad, Esfahan, Iran#IR#IR28#31.6424#51.4128#223938#401;KILL#13##4#Najafabad, Esfahan, Iran#IR#IR28#31.6424#51.4128#223938#401;CRISISLEX_T03_DEAD#13##4#Najafabad, Esfahan, Iran#IR#IR28#31.6424#51.4128#223938#401;KILL#2##4#Izeh, Khuzestan, Iran#IR#IR15#31.8341#49.8672#-3067328#1836;CRISISLEX_CRISISLEXREC#2##4#Izeh, Khuzestan, Iran#IR#IR15#31.8341#49.8672#-3067328#1836;CRISISLEX_T02_INJURED#2##4#Izeh, Khuzestan, Iran#IR#IR15#31.8341#49.8672#-3067328#1836;CRISISLEX_T03_DEAD#2##4#Izeh, Khuzestan, Iran#IR#IR15#31.8341#49.8672#-3067328#1836;CRISISLEX_T03_DEAD#2##4#Izeh, Khuzestan, Iran#IR#IR15#31.8341#49.8672#-3067328#1836;ARREST#200##4#Izeh, Khuzestan, Iran#IR#IR15#31.8341#49.8672#-3067328#2387;SOC_GENERALCRIME#200##4#Izeh, Khuzestan, Iran#IR#IR15#31.8341#49.8672#-3067328#2387;CRISISLEX_C07_SAFETY#200##4#Izeh, Khuzestan, Iran#IR#IR15#31.8341#49.8672#-3067328#2387;PROTEST#2##4#Izeh, Khuzestan, Iran#IR#IR15#31.8341#49.8672#-3067328#2684;TAX_FNCACT_DEMONSTRATORS#2##4#Izeh, Khuzestan, Iran#IR#IR15#31.8341#49.8672#-3067328#2684;PROTEST#90##1#Iran#IR#IR#32#53#IR#3643;</item>
+      </line>
+      <line>
+        <item>AFFECT#100000000##1#United Kingdom#UK#UK#54#-4#UK#1121;</item>
+      </line>
+      <line>
+        <item>ARREST#13#insurgents#1#Afghanistan#AF#AF#33#66#AF#172;SOC_GENERALCRIME#13#insurgents#1#Afghanistan#AF#AF#33#66#AF#172;CRISISLEX_C07_SAFETY#13#insurgents#1#Afghanistan#AF#AF#33#66#AF#172;KILL#40#innocent#4#Kabul, Kabol, Afghanistan#AF#AF13#34.5167#69.1833#-3378435#846;</item>
+      </line>
+      <line>
+        <item>KILL#20##1#Iran#IR#IR#32#53#IR#357;CRISISLEX_T03_DEAD#20##1#Iran#IR#IR#32#53#IR#357;</item>
+      </line>
+      <line>
+        <item>AFFECT#06##1#United States#US#US#39.828175#-98.5795#US#84;</item>
+      </line>
+      <line>
+        <item>KILL#100##3#Washington, District Of Columbia, United States#US#USDC#38.8951#-77.0364#531871#3387;</item>
+      </line>
+      <line>
+        <item>AFFECT#200000##3#Jacksonville, Florida, United States#US#USFL#30.3322#-81.6556#295003#407;REFUGEES#200000##3#Jacksonville, Florida, United States#US#USFL#30.3322#-81.6556#295003#407;AFFECT#100#storm#2#Florida, United States#US#USFL#27.8333#-81.717#FL#1404;REFUGEES#100#storm#2#Florida, United States#US#USFL#27.8333#-81.717#FL#1404;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#staff#4#London, London, City Of, United Kingdom#UK#UKH9#51.5#-0.116667#-2601889#977;</item>
+      </line>
+      <line>
+        <item>KILL#22##4#Manchester, Manchester, United Kingdom#UK#UKI2#53.5#-2.21667#-2602512#286;</item>
+      </line>
+      <line>
+        <item>KILL#3##1#Israel#IS#IS#31.5#34.75#IS#814;CRISISLEX_T03_DEAD#3##1#Israel#IS#IS#31.5#34.75#IS#814;</item>
+      </line>
+      <line>
+        <item>AFFECT#33#customers#3#Smith County, Texas, United States#US#USTX#32.3668#-95.2336#1383997#847;</item>
+      </line>
+      <line>
+        <item>KILL#2##1#Zimbabwe#ZI#ZI#-19#29#ZI#606;CRISISLEX_T03_DEAD#2##1#Zimbabwe#ZI#ZI#-19#29#ZI#606;</item>
+      </line>
+      <line>
+        <item>WOUND#4##3#Douglas County, Colorado, United States#US#USCO#39.3333#-104.951#198133#816;CRISISLEX_T02_INJURED#4##3#Douglas County, Colorado, United States#US#USCO#39.3333#-104.951#198133#816;WOUND#2##3#Denver, Colorado, United States#US#USCO#39.7392#-104.985#201738#2441;CRISISLEX_T02_INJURED#2##3#Denver, Colorado, United States#US#USCO#39.7392#-104.985#201738#2441;WOUND#2#videos#3#Denver, Colorado, United States#US#USCO#39.7392#-104.985#201738#2907;</item>
+      </line>
+      <line>
+        <item>AFFECT#2000#just#3#Philadelphia, Pennsylvania, United States#US#USPA#39.9523#-75.1638#1209052#1021;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>AFFECT#2000#just#3#Philadelphia, Pennsylvania, United States#US#USPA#39.9523#-75.1638#1209052#1011;</item>
+      </line>
+      <line>
+        <item>KILL#6##3#University Of Louisville Hospital, Kentucky, United States#US#USKY#38.2481#-85.7445#2460221#813;CRISISLEX_CRISISLEXREC#6##3#University Of Louisville Hospital, Kentucky, United States#US#USKY#38.2481#-85.7445#2460221#813;CRISISLEX_T02_INJURED#6##3#University Of Louisville Hospital, Kentucky, United States#US#USKY#38.2481#-85.7445#2460221#813;CRISISLEX_T03_DEAD#6##3#University Of Louisville Hospital, Kentucky, United States#US#USKY#38.2481#-85.7445#2460221#813;CRISISLEX_T03_DEAD#6##3#University Of Louisville Hospital, Kentucky, United States#US#USKY#38.2481#-85.7445#2460221#813;</item>
+      </line>
+      <line>
+        <item>KILL#21##1#Iran#IR#IR#32#53#IR#286;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#286;</item>
+      </line>
+      <line>
+        <item>AFFECT#16000000#rural populations#3#Lehigh University, Pennsylvania, United States#US#USPA#40.6065#-75.3802#1179159#1989;</item>
+      </line>
+      <line>
+        <item>KILL#16##4#Snapper Point, Victoria, Australia#AS#AS07#-38.2167#145.033#-1599657#1893;CRISISLEX_T03_DEAD#16##4#Snapper Point, Victoria, Australia#AS#AS07#-38.2167#145.033#-1599657#1893;</item>
+      </line>
+      <line>
+        <item>KILL#200##1#Ethiopia#ET#ET#8#38#ET#2059;ARREST#20000##1#Ethiopia#ET#ET#8#38#ET#2088;CRISISLEX_C07_SAFETY#20000##1#Ethiopia#ET#ET#8#38#ET#2088;</item>
+      </line>
+      <line>
+        <item>KILL#90##3#Salt Lake, Utah, United States#US#USUT#39.1559#-112.691#1436291#196;CRISISLEX_T03_DEAD#90##3#Salt Lake, Utah, United States#US#USUT#39.1559#-112.691#1436291#196;KILL#10##3#Salt Lake, Utah, United States#US#USUT#39.1559#-112.691#1436291#250;CRISISLEX_T03_DEAD#10##3#Salt Lake, Utah, United States#US#USUT#39.1559#-112.691#1436291#250;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>WOUND#2#women#0#######9;CRISISLEX_CRISISLEXREC#2#women#0#######9;CRISISLEX_C03_WELLBEING_HEALTH#2#women#0#######9;CRISISLEX_T02_INJURED#2#women#0#######9;</item>
+      </line>
+      <line>
+        <item>ARREST#4#former PRI governors#2#New York, United States#US#USNY#42.1497#-74.9384#NY#2065;SOC_GENERALCRIME#4#former PRI governors#2#New York, United States#US#USNY#42.1497#-74.9384#NY#2065;CRISISLEX_C07_SAFETY#4#former PRI governors#2#New York, United States#US#USNY#42.1497#-74.9384#NY#2065;</item>
+      </line>
+      <line>
+        <item>PROTEST#80000000##1#Germany#GM#GM#51.5#10.5#GM#241;KILL#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;CRISISLEX_T03_DEAD#21##1#Turkey#TU#TU#39.059012#34.911546#TU#2015;KILL#21##1#Iran#IR#IR#32#53#IR#3682;CRISISLEX_T03_DEAD#21##1#Iran#IR#IR#32#53#IR#3682;</item>
+      </line>
+      <line>
+        <item>KILL#21##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2178;CRISISLEX_T03_DEAD#21##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2178;ARREST#200##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2227;SOC_GENERALCRIME#200##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2227;CRISISLEX_C07_SAFETY#200##4#Mashhad, (Ir30), Iran#IR#IR30#36.297#59.6062#-3074261#2227;</item>
+      </line>
+      <line>
+        <item>AFFECT#3#brothers#1#Israel#IS#IS#31.5#34.75#IS#1537;REFUGEES#3#brothers#1#Israel#IS#IS#31.5#34.75#IS#1537;EPU_CATS_MIGRATION_FEAR_MIGRATION#3#brothers#1#Israel#IS#IS#31.5#34.75#IS#1537;</item>
+      </line>
+      <line>
+        <item>KILL#2##1#Germany#GM#GM#51.5#10.5#GM#0;CRISISLEX_CRISISLEXREC#2##1#Germany#GM#GM#51.5#10.5#GM#0;CRISISLEX_T02_INJURED#2##1#Germany#GM#GM#51.5#10.5#GM#0;CRISISLEX_T03_DEAD#2##1#Germany#GM#GM#51.5#10.5#GM#0;CRISISLEX_T03_DEAD#2##1#Germany#GM#GM#51.5#10.5#GM#0;ARREST#46##1#Germany#GM#GM#51.5#10.5#GM#90;CRISISLEX_C07_SAFETY#46##1#Germany#GM#GM#51.5#10.5#GM#90;KILL#2##1#Germany#GM#GM#51.5#10.5#GM#90;CRISISLEX_CRISISLEXREC#2##1#Germany#GM#GM#51.5#10.5#GM#90;CRISISLEX_T02_INJURED#2##1#Germany#GM#GM#51.5#10.5#GM#90;CRISISLEX_T03_DEAD#2##1#Germany#GM#GM#51.5#10.5#GM#90;CRISISLEX_T03_DEAD#2##1#Germany#GM#GM#51.5#10.5#GM#90;KILL#2#infants#1#Germany#GM#GM#51.5#10.5#GM#220;CRISISLEX_T03_DEAD#2#infants#1#Germany#GM#GM#51.5#10.5#GM#220;</item>
+      </line>
+      <line>
+        <item>AFFECT#200000##1#Germany#GM#GM#51.5#10.5#GM#6745;REFUGEES#200000##1#Germany#GM#GM#51.5#10.5#GM#6745;</item>
+      </line>
+      <line>
+        <item>KILL#45##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#671;CRISISLEX_CRISISLEXREC#45##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#671;CRISISLEX_T03_DEAD#45##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#671;CRISISLEX_T03_DEAD#45##2#Georgia, United States#US#USGA#32.9866#-83.6487#GA#671;</item>
+      </line>
+      <line>
+        <item>KILL#2019##2#Colorado, United States#US#USCO#39.0646#-105.327#CO#0;CRISISLEX_T03_DEAD#2019##2#Colorado, United States#US#USCO#39.0646#-105.327#CO#0;KILL#2019##2#Colorado, United States#US#USCO#39.0646#-105.327#CO#0;CRISISLEX_T03_DEAD#2019##2#Colorado, United States#US#USCO#39.0646#-105.327#CO#0;</item>
+      </line>
+      <line>
+        <item>ARREST#2#women convicted#0#######26;SOC_POINTSOFINTEREST_JAIL#2#women convicted#0#######26;SEIZE#700#restitution#0#######393;SEIZE#18#goats#0#######599;</item>
+      </line>
+      <line>
+        <item>KILL#20##4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#261;CRISISLEX_T03_DEAD#20##4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#261;WOUND#30##4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#317;CRISISLEX_CRISISLEXREC#30##4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#317;CRISISLEX_C03_WELLBEING_HEALTH#30##4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#317;CRISISLEX_T02_INJURED#30##4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#317;KILL#17##4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#795;CRISISLEX_T03_DEAD#17##4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#795;ARREST#8#herdsmen suspected#4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#859;SOC_GENERALCRIME#8#herdsmen suspected#4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#859;CRISISLEX_C07_SAFETY#8#herdsmen suspected#4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#859;KILL#20##4#Benue, Nigeria (General), Nigeria#NI#NI00#8.31667#8.51667#-2002531#1623;</item>
+      </line>
+      <line>
+        <item>PROTEST#25#staff#1#Iceland#IC#IC#65#-18#IC#384;</item>
+      </line>
+      <line>
+        <item>AFFECT#2#leaders#1#Austria#AU#AU#47.333333#13.333333#AU#828;REFUGEES#2#leaders#1#Austria#AU#AU#47.333333#13.333333#AU#828;</item>
+      </line>
+      <line>
+        <item>KILL#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#5;CRISISLEX_T03_DEAD#48##4#Lima, Lima, Peru#PE#PE15#-12.05#-77.05#-352647#5;KILL#48##1#Peru#PE#PE#-10#-76#PE#339;KILL#48##1#Peru#PE#PE#-10#-76#PE#339;KILL#48##1#Peru#PE#PE#-10#-76#PE#339;CRISISLEX_CRISISLEXREC#48##1#Peru#PE#PE#-10#-76#PE#339;CRISISLEX_T01_CAUTION_ADVICE#48##1#Peru#PE#PE#-10#-76#PE#339;CRISISLEX_T03_DEAD#48##1#Peru#PE#PE#-10#-76#PE#339;CRISISLEX_T03_DEAD#48##1#Peru#PE#PE#-10#-76#PE#339;</item>
+      </line>
+      <line>
+        <item>ARREST#32##0#######488;SOC_POINTSOFINTEREST_JAIL#32##0#######488;</item>
+      </line>
+      <line>
+        <item>KILL#2##1#Australia#AS#AS#-25#135#AS#936;</item>
+      </line>
+      <line>
+        <item>ARREST#2019##2#New Hampshire, United States#US#USNH#43.4108#-71.5653#NH#236;SOC_GENERALCRIME#2019##2#New Hampshire, United States#US#USNH#43.4108#-71.5653#NH#236;CRISISLEX_C07_SAFETY#2019##2#New Hampshire, United States#US#USNH#43.4108#-71.5653#NH#236;</item>
+      </line>
+      <line>
+        <item>KILL#200##1#United Kingdom#UK#UK#54#-4#UK#2111;ARREST#20000##1#United Kingdom#UK#UK#54#-4#UK#2140;CRISISLEX_C07_SAFETY#20000##1#United Kingdom#UK#UK#54#-4#UK#2140;</item>
+      </line>
+      <line>
+        <item>KILL#2000##1#Libya#LY#LY#25#17#LY#654;CRISISLEX_CRISISLEXREC#2000##1#Libya#LY#LY#25#17#LY#654;CRISISLEX_T02_INJURED#2000##1#Libya#LY#LY#25#17#LY#654;CRISISLEX_T03_DEAD#2000##1#Libya#LY#LY#25#17#LY#654;CRISISLEX_T03_DEAD#2000##1#Libya#LY#LY#25#17#LY#654;WOUND#500##1#Libya#LY#LY#25#17#LY#2030;CRISISLEX_T02_INJURED#500##1#Libya#LY#LY#25#17#LY#2030;</item>
+      </line>
+      <line>
+        <item>PROTEST#100##4#Soweto, Gauteng, South Africa#SF#SF06#-26.2667#27.8667#-1285576#319;KILL#2##4#Lenasia, Gauteng, South Africa#SF#SF06#-26.3205#27.8356#-1252777#605;CRISISLEX_CRISISLEXREC#2##4#Lenasia, Gauteng, South Africa#SF#SF06#-26.3205#27.8356#-1252777#605;CRISISLEX_T02_INJURED#2##4#Lenasia, Gauteng, South Africa#SF#SF06#-26.3205#27.8356#-1252777#605;CRISISLEX_T03_DEAD#2##4#Lenasia, Gauteng, South Africa#SF#SF06#-26.3205#27.8356#-1252777#605;CRISISLEX_T03_DEAD#2##4#Lenasia, Gauteng, South Africa#SF#SF06#-26.3205#27.8356#-1252777#605;</item>
+      </line>
+      <line>
+        <item>AFFECT#3##4#New Malden, Kingston Upon Thames, United Kingdom#UK#UKG7#51.4046#-0.250766#-2604022#0;EVACUATION#3##4#New Malden, Kingston Upon Thames, United Kingdom#UK#UKG7#51.4046#-0.250766#-2604022#0;CRISISLEX_CRISISLEXREC#3##4#New Malden, Kingston Upon Thames, United Kingdom#UK#UKG7#51.4046#-0.250766#-2604022#0;CRISISLEX_T09_DISPLACEDRELOCATEDEVACUATED#3##4#New Malden, Kingston Upon Thames, United Kingdom#UK#UKG7#51.4046#-0.250766#-2604022#0;</item>
+      </line>
+      <line>
+        <item>SOC_GENERALCRIME#2000000000#aire#1#Sri Lanka#CE#CE#7#81#CE#717;</item>
+      </line>
+      <line>
+        <item>AFFECT#2000000##1#Germany#GM#GM#51.5#10.5#GM#1021;REFUGEES#2000000##1#Germany#GM#GM#51.5#10.5#GM#1021;EPU_CATS_MIGRATION_FEAR_MIGRATION#2000000##1#Germany#GM#GM#51.5#10.5#GM#1021;REFUGEES#2000000##1#Germany#GM#GM#51.5#10.5#GM#1021;</item>
+      </line>
+      <line>
+        <item>KILL#6##0#######93;</item>
+      </line>
+      <line>
+        <item>KILL#10##4#Pune, Maharashtra, India#IN#IN16#18.5333#73.8667#-2108361#2775;</item>
+      </line>
+      <line>
+        <item>AFFECT#10##0#######237;POVERTY#10##0#######237;CRISISLEX_C05_NEED_OF_SHELTERS#10##0#######237;</item>
+      </line>
+      <line>
+        <item>AFFECT#92##5#Niedersachsen, Germany#GM#GM06#52#10#-1833951#409;REFUGEES#92##5#Niedersachsen, Germany#GM#GM06#52#10#-1833951#409;EPU_CATS_MIGRATION_FEAR_MIGRATION#92##5#Niedersachsen, Germany#GM#GM06#52#10#-1833951#409;</item>
+      </line>
+    </data>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>224</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Dummy (do nothing)</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>640</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>JSON Output</name>
+    <type>JsonOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <outputValue>outputValue</outputValue>
+    <jsonBloc>V2.1COUNTS</jsonBloc>
+    <nrRowsInBloc>1</nrRowsInBloc>
+    <operation_type>outputvalue</operation_type>
+    <compatibility_mode>N</compatibility_mode>
+    <encoding>UTF-8</encoding>
+    <addtoresult>N</addtoresult>
+    <file>
+      <name/>
+      <extention>js</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <create_parent_folder>N</create_parent_folder>
+      <DoNotOpenNewFileInit>N</DoNotOpenNewFileInit>
+      <servlet_output>N</servlet_output>
+    </file>
+    <fields>
+      <field>
+        <name>COUNT_TYPE</name>
+        <element>COUNT_TYPE</element>
+      </field>
+      <field>
+        <name>COUNT</name>
+        <element>COUNT</element>
+      </field>
+      <field>
+        <name>OBJ_TYPE</name>
+        <element>OBJ_TYPE</element>
+      </field>
+      <field>
+        <name>LOC_TYPE</name>
+        <element>LOC_TYPE</element>
+      </field>
+      <field>
+        <name>LOC_FULL_NAME</name>
+        <element>LOC_FULL_NAME</element>
+      </field>
+      <field>
+        <name>LOC_COUNTRY_CODE</name>
+        <element>LOC_COUNTRY_CODE</element>
+      </field>
+      <field>
+        <name>LOC_ADM1_CODE</name>
+        <element>LOC_ADM1_CODE</element>
+      </field>
+      <field>
+        <name>LOC_LAT</name>
+        <element>LOC_LAT</element>
+      </field>
+      <field>
+        <name>LOC_LONG</name>
+        <element>LOC_LONG</element>
+      </field>
+      <field>
+        <name>LOC_FEAT_ID</name>
+        <element>LOC_FEAT_ID</element>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>1088</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Java Filter</name>
+    <type>JavaFilter</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <send_true_to>split subdata</send_true_to>
+    <send_false_to>Dummy (do nothing)</send_false_to>
+    <condition>sub_data.length() > 0</condition>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>640</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>Split field to rows</name>
+    <type>SplitFieldToRows3</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <splitfield>data</splitfield>
+    <delimiter>;</delimiter>
+    <newfield>sub_data</newfield>
+    <rownum>N</rownum>
+    <rownum_field/>
+    <resetrownumber>N</resetrownumber>
+    <delimiter_is_regex>N</delimiter_is_regex>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>368</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>select_subdata</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <fields>
+      <field>
+        <name>sub_data</name>
+      </field>
+      <select_unspecified>N</select_unspecified>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>512</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step>
+    <name>split subdata</name>
+    <type>FieldSplitter</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <splitfield>sub_data</splitfield>
+    <delimiter>#</delimiter>
+    <enclosure/>
+    <fields>
+      <field>
+        <name>COUNT_TYPE</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>COUNT</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>OBJ_TYPE</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>LOC_TYPE</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>LOC_FULL_NAME</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>LOC_COUNTRY_CODE</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>LOC_ADM1_CODE</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>LOC_LAT</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>LOC_LONG</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+      <field>
+        <name>LOC_FEAT_ID</name>
+        <id/>
+        <idrem>N</idrem>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <currency/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+    </fields>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>752</xloc>
+      <yloc>192</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+  <attributes>
+    <group>
+      <name>explorerState</name>
+    </group>
+  </attributes>
+</transformation>

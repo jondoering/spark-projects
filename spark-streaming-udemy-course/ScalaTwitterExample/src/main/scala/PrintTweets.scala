@@ -4,8 +4,8 @@ package com.jonathandoering.twitterexample
 
 import com.jonathandoering.twitterexample.Utilities._
 import org.apache.spark.streaming.twitter._
-import org.apache.spark._
 import org.apache.spark.streaming._
+
 
 /** Simple application to listen to a stream of Tweets and print them out */
 object PrintTweets {
@@ -21,7 +21,7 @@ object PrintTweets {
     val ssc = new StreamingContext("local[*]", "PrintTweets", Seconds(1))
 
     // Get rid of log spam (should be called after the context is set up)
-    setupLogging()
+    //setupLogging()
 
     // Create a DStream from Twitter using our streaming context
     val tweets = TwitterUtils.createStream(ssc, None)

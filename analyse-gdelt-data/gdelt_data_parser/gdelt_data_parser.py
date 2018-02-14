@@ -1,8 +1,52 @@
 #defines parser for gdelt data
 
-def parse_gkg_data( line):
+
+def parse_gkg_subsection(gkg_data, delim1, delim2, field_names):
     '''
-    parser for GDELT data, based on http://data.gdeltproject.org/documentation/GDELT-Global_Knowledge_Graph_Codebook-V2.1.pdf
+    parses subsection in gkg data
+    :param field:
+    :param delim1:
+    :param delim2:
+    :param field_names:
+    :return:
+    '''
+    ret_list = []
+    data_lines = gkg_data.split(delim1)
+    for data in data_lines:
+        if(len(data) > 0):
+            ret_list.append(dict(zip(field_names, data.split(delim2))))
+        # @TODO ; Count for multiple notion of same entity
+        #  e.g. 'Instagram,1856;Champions League,134;Champions League,269'
+
+    return ret_list
+
+def parse_gkg_GCAM(gcam_data):
+    '''
+    Parses GCAM section in gkg data
+    :param gcam_data:
+    :return:
+    '''
+    if(len(gcam_data) >0):
+        return dict(map(lambda x: x.split(':'), gcam_data.split(',')))
+    else:
+        return []
+
+
+def parse_gkg_THEMES(themes_data):
+    '''
+    Parses GCAM section in gkg data
+    :param gcam_data:
+    :return:
+    '''
+    if(len(themes_data) >0):
+        return dict(map(lambda x: x.split(','), filter(lambda x: len(x) > 0, themes_data.split(';'))))
+    else:
+        return []
+
+def parse_gkg_data(line):
+    '''
+    parser for GDELT data,
+    based on http://data.gdeltproject.org/documentation/GDELT-Global_Knowledge_Graph_Codebook-V2.1.pdf
 
     :param line:
     :return:
@@ -31,12 +75,34 @@ def parse_gkg_data( line):
                  'V2.1SOCIALVIDEOEMBEDS', #(semicolon-delimited list of URLs). News websites are increasingly embedding videos inline in their articles to illustrate them with realtime reaction or citizen reporting from the ground
                  'V2.1QUOTATIONS', #(pound-delimited (“#”) blocks, with pipe-delimited (“|”) fields). News coverage frequently features excerpted statements from participants in an event and/or those affected by it and these quotations can offer critical insights into differing perspectives and emotions surrounding that event
                  'V2.1ALLNAMES', #(semicolon-delimited blocks, with comma-delimited fields) This field contains a list of all proper names referenced in the document, along with the character offsets of approximately where in the document they were found
+                 'V2.1AMOUNTS',# (semicolon-delimited blocks, with comma-delimited fields) This field contains a list of all precise numeric amounts referenced in the document, along with the character  offsets of approximately where in the document they were found.
                  'V2.1TRANSLATIONINFO', #(semicolon-delimited fields) This field is used to record provenance information for machine translated documents indicating the original source language and the citation of the translation system used to translate the document for processing
                  'V2EXTRASXML' # (special XML formatted) This field is reserved to hold special non-standard data applicable to special subsets of the GDELT collection
                  ]
-
+    #Parse the whole line
     fields = line.split('\t')
-    return dict(zip(field_ids, fields))
+    gkg_dict = dict(zip(field_ids, fields))
+
+    #parse parts
+    V21COUNTS_fields = ['COUNT_TYPE', 'COUNT', 'OBJ_TYPE', 'LOC_TYPE', 'LOC_FULL_NAME',
+                        'LOC_COUNTRY_CODE', 'LOC_ADM1_CODE', 'LOC_LAT', 'LOC_LONG', 'LOC_FEAT_ID']
+    gkg_dict['V2.1COUNTS'] = parse_gkg_subsection(gkg_dict['V2.1COUNTS'], ';', '#', V21COUNTS_fields)
+
+    gkg_dict['V2ENHANCEDPERSONS'] = parse_gkg_subsection(gkg_dict['V2ENHANCEDPERSONS'], ';', ',', ['PERSON', 'CHAR_OFFSET'])
+    gkg_dict['V2ENHANCEDORGANIZATIONS'] = parse_gkg_subsection(gkg_dict['V2ENHANCEDORGANIZATIONS'], ';', ',', ['ORGANISATION', 'CHAR_OFFSET'])
+    gkg_dict['V1.5TONE'] = parse_gkg_subsection(gkg_dict['V1.5TONE'], ';', ',',
+                     ['TONE', 'POS_SCORE', 'NEG_SCORE', 'POLARITY', 'ACT_REF_DENS', 'SELF_REF_DENS', 'WORD_COUNT'])
+
+    gkg_dict['V2.1ENHANCEDDATES'] = parse_gkg_subsection(gkg_dict['V2.1ENHANCEDDATES'], ';', '#', ['DATE_RES', 'MONTH', 'DAY', 'YEAR', 'OFFSET'])
+    gkg_dict['V2GCAM'] = parse_gkg_GCAM(gkg_dict['V2GCAM'])
+    gkg_dict['V2.1RELATEDIMAGES'] = parse_gkg_subsection(gkg_dict['V2.1RELATEDIMAGES'], ';', ' ', 'URL')
+    gkg_dict['V2.1QUOTATIONS'] = parse_gkg_subsection(gkg_dict['V2.1QUOTATIONS'], ';', ' ', 'URL')
+    gkg_dict['V2.1ALLNAMES'] = parse_gkg_subsection(gkg_dict['V2.1ALLNAMES'], ';', ',', ['NAME', 'OFFSET'])
+    gkg_dict['V2.1AMOUNTS'] = parse_gkg_subsection(gkg_dict['V2.1AMOUNTS'], ';', ',', ['AMOUNT', 'OBJECT', 'OFFSET'])
+
+    gkg_dict['V2ENHANCEDTHEMES'] = parse_gkg_THEMES(gkg_dict['V2ENHANCEDTHEMES'])
+    #give dict back
+    return gkg_dict
 
 def parse_export_data(line):
     '''
