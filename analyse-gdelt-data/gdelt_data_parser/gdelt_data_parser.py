@@ -1,3 +1,4 @@
+#coding: utf-8
 #defines parser for gdelt data
 
 
