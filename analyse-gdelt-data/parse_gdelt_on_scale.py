@@ -68,7 +68,7 @@ conf = SparkConf()
 sc = SparkContext(conf = conf)
 
 #read all export.CSV data into a single RDD
-lines = sc.textFile("hdfs://user/jdoering/gdelt/gkf_sub/*.csv", 100)
+lines = sc.textFile("hdfs:///user/jdoering/gdelt/gkf_sub/*.csv", 100)
 
 #parse data
 parsed_data = lines.map(cust_parse_gkg_data).collect()
