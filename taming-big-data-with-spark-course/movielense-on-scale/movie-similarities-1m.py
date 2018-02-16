@@ -9,7 +9,7 @@ from math import sqrt
 
 def loadMovieNames():
     movieNames = {}
-    with open("movies.dat") as f:
+    with open("./ml-1m/movies.dat") as f:
         for line in f:
             fields = line.split("::")
             movieNames[int(fields[0])] = fields[1].decode('ascii', 'ignore')
@@ -50,7 +50,7 @@ sc = SparkContext(conf = conf)
 print("\nLoading movie names...")
 nameDict = loadMovieNames()
 
-data = sc.textFile("s3n://sundog-spark/ml-1m/ratings.dat")
+data = sc.textFile("./ml-1m/ratings.dat")
 
 # Map ratings to key / value pairs: user ID => movie ID, rating
 ratings = data.map(lambda l: l.split("::")).map(lambda l: (int(l[0]), (int(l[1]), float(l[2]))))
@@ -66,7 +66,7 @@ joinedRatings = ratingsPartitioned.join(ratingsPartitioned)
 uniqueJoinedRatings = joinedRatings.filter(filterDuplicates)
 
 # Now key by (movie1, movie2) pairs.
-moviePairs = uniqueJoinedRatings.map(makePairs).partitionBy(100)
+moviePairs = uniqueJoinedRatings.map(makePairs).partitionBy(200)
 
 # We now have (movie1, movie2) => (rating1, rating2)
 # Now collect all ratings for each movie pair and compute similarity
@@ -78,7 +78,7 @@ moviePairSimilarities = moviePairRatings.mapValues(computeCosineSimilarity).pers
 
 # Save the results if desired
 moviePairSimilarities.sortByKey()
-moviePairSimilarities.saveAsTextFile("movie-sims")
+#moviePairSimilarities.saveAsTextFile("movie-sims")
 
 # Extract similarities for the movie we care about that are "good".
 if (len(sys.argv) > 1):
@@ -95,7 +95,7 @@ if (len(sys.argv) > 1):
         and sim[0] > scoreThreshold and sim[1] > coOccurenceThreshold)
 
     # Sort by quality score.
-    results = filteredResults.map(lambda((pair,sim)): (sim, pair)).sortByKey(ascending = False).take(10)
+    results = filteredResults.map(lambda ((pair,sim)): (sim, pair)).sortByKey(ascending = False).take(10)
 
     print("Top 10 similar movies for " + nameDict[movieID])
     for result in results:

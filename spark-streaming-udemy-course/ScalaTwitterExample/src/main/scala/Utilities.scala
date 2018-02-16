@@ -1,12 +1,14 @@
 package com.jonathandoering.twitterexample
 
 import java.util.regex.Pattern
+import org.apache.log4j.Logger
+import org.apache.log4j.Level
 
 object Utilities {
   /** Makes sure only ERROR messages get logged to avoid log spam. */
   def setupLogging() = {
-    //val rootLogger = Logger.getRootLogger()
-    //rootLogger.setLevel(Level.ERROR)
+    val rootLogger = Logger.getRootLogger()
+    rootLogger.setLevel(Level.ERROR)
   }
 
   /** Configures Twitter service credentials using twiter.txt in the main workspace directory */
