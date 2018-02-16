@@ -71,7 +71,7 @@ sc = SparkContext(conf = conf)
 lines = sc.textFile("hdfs://user/jdoering/gdelt/gkf_sub/*.csv", 100)
 
 #parse data
-parsed_data = lines.map(gdp.parse_gkg_data).collect()
+parsed_data = lines.map(cust_parse_gkg_data).collect()
 
 for l in parsed_data[1:10]:
     print(l)
