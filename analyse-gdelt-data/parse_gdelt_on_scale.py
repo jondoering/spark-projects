@@ -52,8 +52,8 @@ def cust_parse_gkg_data(line):
                      ['TONE', 'POS_SCORE', 'NEG_SCORE', 'POLARITY', 'ACT_REF_DENS', 'SELF_REF_DENS', 'WORD_COUNT'])
 
     #parse URL
-    pattern = '^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/\n]+)'
-    gkg_dict['V2DOCUMENTIDENTIFIER'] = re.match(pattern, gkg_dict['V2DOCUMENTIDENTIFIER'])[0]
+    #pattern = '^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/\n]+)'
+    #gkg_dict['V2DOCUMENTIDENTIFIER'] = re.match(pattern, gkg_dict['V2DOCUMENTIDENTIFIER'])[0]
 
     #cut date
     gkg_dict['V2.1DATE'] = gkg_dict['V2.1DATE'][0:8]
@@ -68,7 +68,7 @@ conf = SparkConf()
 sc = SparkContext(conf = conf)
 
 #read all export.CSV data into a single RDD
-lines = sc.textFile("hdfs:///user/jdoering/gdelt/gkf_sub/*.csv", 100)
+lines = sc.textFile("hdfs:///user/jdoering/gdelt/gkg_sub/*.csv", 100)
 
 #parse data
 parsed_data = lines.map(cust_parse_gkg_data).collect()
