@@ -54,13 +54,12 @@ def cust_parse_gkg_data(line):
     #parse URL
     #pattern = '^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/\n]+)'
     #gkg_dict['V2DOCUMENTIDENTIFIER'] = re.match(pattern, gkg_dict['V2DOCUMENTIDENTIFIER'])[0]
-    gkg_dict['V2DOCUMENTIDENTIFIER']  = gkg_dict['V2DOCUMENTIDENTIFIER'].split('/')[1]
+    gkg_dict['V2DOCUMENTIDENTIFIER']  = gkg_dict['V2DOCUMENTIDENTIFIER'].split('/')[2]
     #cut date
     gkg_dict['V2.1DATE'] = gkg_dict['V2.1DATE'][0:8]
 
     ret_list = {k:gkg_dict[k] for k in ('GKGRECORDID','V2ENHANCEDPERSONS','V1.5TONE','V2DOCUMENTIDENTIFIER','V2.1DATE') if k in gkg_dict}
     return ret_list
-
 
 
 from pyspark import SparkConf, SparkContext
