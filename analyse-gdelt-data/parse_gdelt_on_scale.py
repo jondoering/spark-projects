@@ -1,4 +1,5 @@
-#parses
+#coding utf-8
+#
 from gdelt_data_parser import gdelt_data_parser as gdp
 import re
 
