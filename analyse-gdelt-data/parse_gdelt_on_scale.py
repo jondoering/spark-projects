@@ -4,7 +4,7 @@ from gdelt_data_parser import gdelt_data_parser as gdp
 import re
 import subprocess
 
-def cust_parse_gkg_data(line):
+def cust_parse_gkg_data(file_path):
     '''
     parser for GDELT data,
     based on http://data.gdeltproject.org/documentation/GDELT-Global_Knowledge_Graph_Codebook-V2.1.pdf
@@ -51,22 +51,29 @@ def cust_parse_gkg_data(line):
         gkg_dict = dict(zip(field_ids, fields))
 
         #parse parts
-
-        gkg_dict['V2ENHANCEDPERSONS'] = gdp.parse_gkg_subsection(gkg_dict['V2ENHANCEDPERSONS'], ';', ',', ['PERSON', 'CHAR_OFFSET'])
-
-        gkg_dict['V1.5TONE'] = gdp.parse_gkg_subsection(gkg_dict['V1.5TONE'], ';', ',',
-                         ['TONE', 'POS_SCORE', 'NEG_SCORE', 'POLARITY', 'ACT_REF_DENS', 'SELF_REF_DENS', 'WORD_COUNT'])
+        if('V2ENHANCEDPERSONS' in gkg_dict.keys()):
+	        gkg_dict['V2ENHANCEDPERSONS'] = gdp.parse_gkg_subsection(gkg_dict['V2ENHANCEDPERSONS'], ';', ',', ['PERSON', 'CHAR_OFFSET'])
+	
+	if('V1.5TONE' in gkg_dict.keys()):
+	        gkg_dict['V1.5TONE'] = gdp.parse_gkg_subsection(gkg_dict['V1.5TONE'], ';', ',',
+        	                 ['TONE', 'POS_SCORE', 'NEG_SCORE', 'POLARITY', 'ACT_REF_DENS', 'SELF_REF_DENS', 'WORD_COUNT'])
 
         #parse URL
-        pattern = '^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/\n]+)'
-        gkg_dict['V2DOCUMENTIDENTIFIER'] = re.match(pattern, gkg_dict['V2DOCUMENTIDENTIFIER'])[0]
+        #pattern = '^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/\n]+)'
+        #gkg_dict['V2DOCUMENTIDENTIFIER'] = re.match(pattern, gkg_dict['V2DOCUMENTIDENTIFIER'])[0]
 
         # parse URL
         # pattern = '^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/\n]+)'
         # gkg_dict['V2DOCUMENTIDENTIFIER'] = re.match(pattern, gkg_dict['V2DOCUMENTIDENTIFIER'])[0]
-        gkg_dict['V2DOCUMENTIDENTIFIER'] = gkg_dict['V2DOCUMENTIDENTIFIER'].split('/')[2]
-        # cut date
-        gkg_dict['V2.1DATE'] = gkg_dict['V2.1DATE'][0:8]
+	
+        if('V2DOCUMENTIDENTIFIER' in gkg_dict.keys()):
+		docid = gkg_dict['V2DOCUMENTIDENTIFIER'].split('/')
+		if(len(docid) >= 2):
+			gkg_dict['V2DOCUMENTIDENTIFIER'] = gkg_dict['V2DOCUMENTIDENTIFIER'].split('/')[2]
+	        
+	# cut date
+        if('V2.1DATE' in gkg_dict.keys()):
+	 gkg_dict['V2.1DATE'] = gkg_dict['V2.1DATE'][0:8]
 
         ret_list.append({k:gkg_dict[k] for k in ('GKGRECORDID','V2ENHANCEDPERSONS','V1.5TONE','V2DOCUMENTIDENTIFIER','V2.1DATE') if k in gkg_dict})
 
@@ -78,7 +85,7 @@ conf = SparkConf()
 sc = SparkContext(conf = conf)
 
 #read all export.CSV data into a single RDD
-directory = "/user/jdoering/gdelt/gkg_sub/"
+directory = "/user/jdoering/gdelt/gkg/"
 #get file list
 cat = subprocess.Popen(["hadoop", "fs", "-stat", "%n", directory + "*"], stdout=subprocess.PIPE)
 files = []
