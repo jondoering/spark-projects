@@ -1,6 +1,6 @@
 #coding: utf-8
 #defines parser for gdelt data
-
+import subprocess
 
 def parse_gkg_subsection(gkg_data, delim1, delim2, field_names):
     '''
@@ -188,11 +188,11 @@ def cust_parse_gkg_data(file_path):
 
         # parse parts
         if ('V2ENHANCEDPERSONS' in gkg_dict.keys()):
-            gkg_dict['V2ENHANCEDPERSONS'] = gdp.parse_gkg_subsection(gkg_dict['V2ENHANCEDPERSONS'], ';', ',',
+            gkg_dict['V2ENHANCEDPERSONS'] = parse_gkg_subsection(gkg_dict['V2ENHANCEDPERSONS'], ';', ',',
                                                                      ['PERSON', 'CHAR_OFFSET'])
 
         if ('V1.5TONE' in gkg_dict.keys()):
-            gkg_dict['V1.5TONE'] = gdp.parse_gkg_subsection(gkg_dict['V1.5TONE'], ';', ',',
+            gkg_dict['V1.5TONE'] = parse_gkg_subsection(gkg_dict['V1.5TONE'], ';', ',',
                                                             ['TONE', 'POS_SCORE', 'NEG_SCORE', 'POLARITY',
                                                              'ACT_REF_DENS', 'SELF_REF_DENS', 'WORD_COUNT'])
 
@@ -205,9 +205,12 @@ def cust_parse_gkg_data(file_path):
         # gkg_dict['V2DOCUMENTIDENTIFIER'] = re.match(pattern, gkg_dict['V2DOCUMENTIDENTIFIER'])[0]
 
         if ('V2DOCUMENTIDENTIFIER' in gkg_dict.keys()):
-            docid = gkg_dict['V2DOCUMENTIDENTIFIER'].split('/')
-        if (len(docid) >= 2):
-            gkg_dict['V2DOCUMENTIDENTIFIER'] = gkg_dict['V2DOCUMENTIDENTIFIER'].split('/')[2]
+            try:
+		    docid = gkg_dict['V2DOCUMENTIDENTIFIER'].split('/')
+	            if (len(docid) >= 2):
+        	    	gkg_dict['V2DOCUMENTIDENTIFIER'] = gkg_dict['V2DOCUMENTIDENTIFIER'].split('/')[2]
+	    except:
+		pass
 
         # cut date
         if ('V2.1DATE' in gkg_dict.keys()):
