@@ -2,7 +2,7 @@
 from gdelt_data_parser import gdelt_data_parser as gdp
 import re
 
-def cust_parse_gkg_data(line):
+def cust_parse_gkg_data(file_path):
     '''
     parser for GDELT data,
     based on http://data.gdeltproject.org/documentation/GDELT-Global_Knowledge_Graph_Codebook-V2.1.pdf
@@ -10,6 +10,7 @@ def cust_parse_gkg_data(line):
     :param line:
     :return:
     '''
+
     field_ids = ['GKGRECORDID', #(string) Each GKG record is assigned a globally unique identifier
                  'V2.1DATE', #(integer) This is the date in YYYYMMDDHHMMSS format on which the news media used to construct this GKG file was published.
                  'V2SOURCECOLLECTIONIDENTIFIER',#(integer) This is a numeric identifier that refers to the source collection the document came from and is used to interpret the DocumentIdentifier in the next column
@@ -38,26 +39,37 @@ def cust_parse_gkg_data(line):
                  'V2.1TRANSLATIONINFO', #(semicolon-delimited fields) This field is used to record provenance information for machine translated documents indicating the original source language and the citation of the translation system used to translate the document for processing
                  'V2EXTRASXML' # (special XML formatted) This field is reserved to hold special non-standard data applicable to special subsets of the GDELT collection
                  ]
+    ret_list = []
 
-    #Parse the whole line
-    fields = line.split('\t')
-    gkg_dict = dict(zip(field_ids, fields))
+    #Parse the whole file
+    #cat = subprocess.Popen(["hadoop", "fs", "-cat", file_path], stdout=subprocess.PIPE)
+    #for line in cat.stdout:
+    file = open(file_path, 'r')
+    for line in file:
 
-    #parse parts
+        fields = line.split('\t')
+        gkg_dict = dict(zip(field_ids, fields))
 
-    gkg_dict['V2ENHANCEDPERSONS'] = gdp.parse_gkg_subsection(gkg_dict['V2ENHANCEDPERSONS'], ';', ',', ['PERSON', 'CHAR_OFFSET'])
+        #parse parts
 
-    gkg_dict['V1.5TONE'] = gdp.parse_gkg_subsection(gkg_dict['V1.5TONE'], ';', ',',
-                     ['TONE', 'POS_SCORE', 'NEG_SCORE', 'POLARITY', 'ACT_REF_DENS', 'SELF_REF_DENS', 'WORD_COUNT'])
+        gkg_dict['V2ENHANCEDPERSONS'] = gdp.parse_gkg_subsection(gkg_dict['V2ENHANCEDPERSONS'], ';', ',', ['PERSON', 'CHAR_OFFSET'])
 
-    #parse URL
-    pattern = '^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/\n]+)'
-    gkg_dict['V2DOCUMENTIDENTIFIER'] = re.match(pattern, gkg_dict['V2DOCUMENTIDENTIFIER'])[0]
+        gkg_dict['V1.5TONE'] = gdp.parse_gkg_subsection(gkg_dict['V1.5TONE'], ';', ',',
+                         ['TONE', 'POS_SCORE', 'NEG_SCORE', 'POLARITY', 'ACT_REF_DENS', 'SELF_REF_DENS', 'WORD_COUNT'])
 
-    #cut date
-    gkg_dict['V2.1DATE'] = gkg_dict['V2.1DATE'][0:8]
+        #parse URL
+        pattern = '^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/\n]+)'
+        gkg_dict['V2DOCUMENTIDENTIFIER'] = re.match(pattern, gkg_dict['V2DOCUMENTIDENTIFIER'])[0]
 
-    ret_list = {k:gkg_dict[k] for k in ('GKGRECORDID','V2ENHANCEDPERSONS','V1.5TONE','V2DOCUMENTIDENTIFIER','V2.1DATE') if k in gkg_dict}
+        # parse URL
+        # pattern = '^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/\n]+)'
+        # gkg_dict['V2DOCUMENTIDENTIFIER'] = re.match(pattern, gkg_dict['V2DOCUMENTIDENTIFIER'])[0]
+        gkg_dict['V2DOCUMENTIDENTIFIER'] = gkg_dict['V2DOCUMENTIDENTIFIER'].split('/')[2]
+        # cut date
+        gkg_dict['V2.1DATE'] = gkg_dict['V2.1DATE'][0:8]
+
+        ret_list.append({k:gkg_dict[k] for k in ('GKGRECORDID','V2ENHANCEDPERSONS','V1.5TONE','V2DOCUMENTIDENTIFIER','V2.1DATE') if k in gkg_dict})
+
     return ret_list
 
 
@@ -66,8 +78,17 @@ from pyspark import SparkConf, SparkContext
 conf = SparkConf().setMaster("local").setAppName("Parse GKG")
 sc = SparkContext(conf = conf)
 
+#get file list
+from os import listdir
+from os.path import isfile, join
+directory = '/home/pentaho/PycharmProjects/spark-projects/analyse-gdelt-data/data'
+#creates a list of pathes of all csv files in the folder
+onlyfiles = map(lambda x: directory + '/' + x, list(filter(lambda x: x.find('.csv') != -1, [f for f in listdir(directory) if isfile(join(directory, f))])))
+
+#read list into rdds
+
 #read all export.CSV data into a single RDD
-lines = sc.textFile("./data/*.gkg.csv")
+lines = sc.parallelize(onlyfiles)
 parsed_data = lines.map(cust_parse_gkg_data).collect()
 
 for l in parsed_data[1:10]:
