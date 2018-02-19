@@ -45,17 +45,16 @@ def cust_parse_gkg_data(line):
     gkg_dict = dict(zip(field_ids, fields))
 
     #parse parts
-
+	
     gkg_dict['V2ENHANCEDPERSONS'] = gdp.parse_gkg_subsection(gkg_dict['V2ENHANCEDPERSONS'], ';', ',', ['PERSON', 'CHAR_OFFSET'])
 
-    gkg_dict['V1.5TONE'] = gdp.parse_gkg_subsection(gkg_dict['V1.5TONE'], ';', ',',
-                     ['TONE', 'POS_SCORE', 'NEG_SCORE', 'POLARITY', 'ACT_REF_DENS', 'SELF_REF_DENS', 'WORD_COUNT'])
+    gkg_dict['V1.5TONE'] = gdp.parse_gkg_subsection(gkg_dict['V1.5TONE'], ';', ',', ['TONE', 'POS_SCORE', 'NEG_SCORE', 'POLARITY', 'ACT_REF_DENS', 'SELF_REF_DENS', 'WORD_COUNT'])
 
-    #parse URL
-    #pattern = '^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/\n]+)'
-    #gkg_dict['V2DOCUMENTIDENTIFIER'] = re.match(pattern, gkg_dict['V2DOCUMENTIDENTIFIER'])[0]
+	    #parse URL
+	    #pattern = '^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/\n]+)'
+	    #gkg_dict['V2DOCUMENTIDENTIFIER'] = re.match(pattern, gkg_dict['V2DOCUMENTIDENTIFIER'])[0]
     gkg_dict['V2DOCUMENTIDENTIFIER']  = gkg_dict['V2DOCUMENTIDENTIFIER'].split('/')[2]
-    #cut date
+	    #cut date
     gkg_dict['V2.1DATE'] = gkg_dict['V2.1DATE'][0:8]
 
     ret_list = {k:gkg_dict[k] for k in ('GKGRECORDID','V2ENHANCEDPERSONS','V1.5TONE','V2DOCUMENTIDENTIFIER','V2.1DATE') if k in gkg_dict}
@@ -67,10 +66,10 @@ conf = SparkConf()
 sc = SparkContext(conf = conf)
 
 #read all export.CSV data into a single RDD
-lines = sc.textFile("hdfs:///user/jdoering/gdelt/gkg_sub/*.csv", 100)
+lines = sc.textFile("hdfs:///user/jdoering/gdelt/gkg/*.csv", 800).collect()
 
 #parse data
-parsed_data = lines.map(cust_parse_gkg_data).collect()
+#parsed_data = lines.map(cust_parse_gkg_data).collect()
 
-for l in parsed_data[1:10]:
-    print(l)
+#for l in parsed_data[1:10]:
+#    print(l)
