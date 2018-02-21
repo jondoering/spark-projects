@@ -220,4 +220,8 @@ def cust_parse_gkg_data(file_path):
                          ('GKGRECORDID', 'V2ENHANCEDPERSONS', 'V1.5TONE', 'V2DOCUMENTIDENTIFIER', 'V2.1DATE') if
                          k in gkg_dict})
 
-    return ret_list
+    #print(ret_list)
+    try:
+	    return ret_list[0]
+    except:
+	return []

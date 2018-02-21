@@ -5,11 +5,6 @@ import re
 import subprocess
 
 
-
-from pyspark import SparkConf, SparkContext
-conf = SparkConf()
-sc = SparkContext(conf = conf)
-
 #read all export.CSV data into a single RDD
 directory = "/user/jdoering/gdelt/gkg/"
 #get file list
@@ -19,10 +14,13 @@ for line in cat.stdout:
     if (line.find('.gkg.csv') != -1):
         files.append(directory + line.replace('\n',''))
 
-#read all export.CSV data into a single RDD
-print(len(files))
-lines = sc.parallelize(files)
-parsed_data = lines.map(gdp.cust_parse_gkg_data).collect()
 
-#for l in parsed_data[1:10]:
-#    print(l)
+parsed_data = sc.parallelize(files, 6000).map(gdp.cust_parse_gkg_data).collect()
+
+
+for l in parsed_data[:10]:
+    print(l)
+
+#lines = sc.parallelize(files[100], 10)
+#parsed_data = lines.map(gdp.cust_parse_gkg_data).collect()
+

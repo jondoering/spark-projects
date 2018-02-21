@@ -1,0 +1,1616 @@
+18/02/19 18:19:27 INFO spark.SparkContext: Running Spark version 1.6.0
+18/02/19 18:19:28 INFO spark.SecurityManager: Changing view acls to: jdoering
+18/02/19 18:19:28 INFO spark.SecurityManager: Changing modify acls to: jdoering
+18/02/19 18:19:28 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(jdoering); users with modify permissions: Set(jdoering)
+18/02/19 18:19:28 INFO util.Utils: Successfully started service 'sparkDriver' on port 34911.
+18/02/19 18:19:28 INFO slf4j.Slf4jLogger: Slf4jLogger started
+18/02/19 18:19:28 INFO Remoting: Starting remoting
+18/02/19 18:19:28 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriverActorSystem@192.168.78.101:37339]
+18/02/19 18:19:28 INFO Remoting: Remoting now listens on addresses: [akka.tcp://sparkDriverActorSystem@192.168.78.101:37339]
+18/02/19 18:19:28 INFO util.Utils: Successfully started service 'sparkDriverActorSystem' on port 37339.
+18/02/19 18:19:28 INFO spark.SparkEnv: Registering MapOutputTracker
+18/02/19 18:19:28 INFO spark.SparkEnv: Registering BlockManagerMaster
+18/02/19 18:19:28 INFO storage.DiskBlockManager: Created local directory at /tmp/blockmgr-8f7bdcff-4623-456d-b15b-8ba6239218e9
+18/02/19 18:19:28 INFO storage.MemoryStore: MemoryStore started with capacity 530.0 MB
+18/02/19 18:19:28 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+18/02/19 18:19:29 INFO util.Utils: Successfully started service 'SparkUI' on port 4040.
+18/02/19 18:19:29 INFO ui.SparkUI: Started SparkUI at http://192.168.78.101:4040
+18/02/19 18:19:29 INFO client.RMProxy: Connecting to ResourceManager at cdhn01.edc.local/192.168.78.101:8032
+18/02/19 18:19:29 INFO yarn.Client: Requesting a new application from cluster with 7 NodeManagers
+18/02/19 18:19:29 INFO yarn.Client: Verifying our application has not requested more than the maximum memory capability of the cluster (310000 MB per container)
+18/02/19 18:19:29 INFO yarn.Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+18/02/19 18:19:29 INFO yarn.Client: Setting up container launch context for our AM
+18/02/19 18:19:29 INFO yarn.Client: Setting up the launch environment for our AM container
+18/02/19 18:19:29 INFO yarn.Client: Preparing resources for our AM container
+18/02/19 18:19:29 INFO yarn.Client: Uploading resource file:/home/jdoering/spark-projects/analyse-gdelt-data/gdelt_data_parser.zip -> hdfs://cdhn01.edc.local:8020/user/jdoering/.sparkStaging/application_1518728508040_0095/gdelt_data_parser.zip
+18/02/19 18:19:30 INFO yarn.Client: Uploading resource file:/tmp/spark-34bb3e28-ce25-4f92-aa59-b0363e218965/__spark_conf__2788230795644798827.zip -> hdfs://cdhn01.edc.local:8020/user/jdoering/.sparkStaging/application_1518728508040_0095/__spark_conf__2788230795644798827.zip
+18/02/19 18:19:30 INFO spark.SecurityManager: Changing view acls to: jdoering
+18/02/19 18:19:30 INFO spark.SecurityManager: Changing modify acls to: jdoering
+18/02/19 18:19:30 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(jdoering); users with modify permissions: Set(jdoering)
+18/02/19 18:19:30 INFO yarn.Client: Submitting application 95 to ResourceManager
+18/02/19 18:19:30 INFO impl.YarnClientImpl: Submitted application application_1518728508040_0095
+18/02/19 18:19:31 INFO yarn.Client: Application report for application_1518728508040_0095 (state: ACCEPTED)
+18/02/19 18:19:31 INFO yarn.Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: root.users.jdoering
+	 start time: 1519060770260
+	 final status: UNDEFINED
+	 tracking URL: http://cdhn01.edc.local:8088/proxy/application_1518728508040_0095/
+	 user: jdoering
+18/02/19 18:19:32 INFO yarn.Client: Application report for application_1518728508040_0095 (state: ACCEPTED)
+18/02/19 18:19:32 INFO cluster.YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(null)
+18/02/19 18:19:32 INFO cluster.YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> cdhn01.edc.local, PROXY_URI_BASES -> http://cdhn01.edc.local:8088/proxy/application_1518728508040_0095), /proxy/application_1518728508040_0095
+18/02/19 18:19:32 INFO ui.JettyUtils: Adding filter: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+18/02/19 18:19:33 INFO yarn.Client: Application report for application_1518728508040_0095 (state: RUNNING)
+18/02/19 18:19:33 INFO yarn.Client: 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: 192.168.78.104
+	 ApplicationMaster RPC port: 0
+	 queue: root.users.jdoering
+	 start time: 1519060770260
+	 final status: UNDEFINED
+	 tracking URL: http://cdhn01.edc.local:8088/proxy/application_1518728508040_0095/
+	 user: jdoering
+18/02/19 18:19:33 INFO cluster.YarnClientSchedulerBackend: Application application_1518728508040_0095 has started running.
+18/02/19 18:19:33 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 52222.
+18/02/19 18:19:33 INFO netty.NettyBlockTransferService: Server created on 52222
+18/02/19 18:19:33 INFO storage.BlockManager: external shuffle service port = 7337
+18/02/19 18:19:33 INFO storage.BlockManagerMaster: Trying to register BlockManager
+18/02/19 18:19:33 INFO storage.BlockManagerMasterEndpoint: Registering block manager 192.168.78.101:52222 with 530.0 MB RAM, BlockManagerId(driver, 192.168.78.101, 52222)
+18/02/19 18:19:33 INFO storage.BlockManagerMaster: Registered BlockManager
+18/02/19 18:19:33 INFO scheduler.EventLoggingListener: Logging events to hdfs://cdhn01.edc.local:8020/user/spark/applicationHistory/application_1518728508040_0095
+18/02/19 18:19:33 WARN spark.SparkContext: Dynamic Allocation and num executors both set, thus dynamic allocation disabled.
+18/02/19 18:19:33 INFO spark.SparkContext: Registered listener com.cloudera.spark.lineage.ClouderaNavigatorListener
+18/02/19 18:19:35 INFO cluster.YarnClientSchedulerBackend: Registered executor NettyRpcEndpointRef(null) (cdhn07.edc.local:60375) with ID 3
+18/02/19 18:19:36 INFO cluster.YarnClientSchedulerBackend: Registered executor NettyRpcEndpointRef(null) (cdhn06.edc.local:41154) with ID 1
+18/02/19 18:19:36 INFO storage.BlockManagerMasterEndpoint: Registering block manager cdhn07.edc.local:37411 with 129.4 GB RAM, BlockManagerId(3, cdhn07.edc.local, 37411)
+18/02/19 18:19:36 INFO cluster.YarnClientSchedulerBackend: Registered executor NettyRpcEndpointRef(null) (cdhn09.edc.local:42405) with ID 2
+18/02/19 18:19:36 INFO storage.BlockManagerMasterEndpoint: Registering block manager cdhn06.edc.local:44030 with 129.4 GB RAM, BlockManagerId(1, cdhn06.edc.local, 44030)
+18/02/19 18:19:36 INFO storage.BlockManagerMasterEndpoint: Registering block manager cdhn09.edc.local:36873 with 129.4 GB RAM, BlockManagerId(2, cdhn09.edc.local, 36873)
+18/02/19 18:19:36 INFO cluster.YarnClientSchedulerBackend: Registered executor NettyRpcEndpointRef(null) (cdhn08.edc.local:41498) with ID 4
+18/02/19 18:19:36 INFO storage.BlockManagerMasterEndpoint: Registering block manager cdhn08.edc.local:58242 with 129.4 GB RAM, BlockManagerId(4, cdhn08.edc.local, 58242)
+18/02/19 18:19:36 INFO cluster.YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+7969
+18/02/19 18:19:38 INFO spark.SparkContext: Starting job: collect at /home/jdoering/spark-projects/analyse-gdelt-data/parse_gdelt_on_scale.py:25
+18/02/19 18:19:38 INFO scheduler.DAGScheduler: Got job 0 (collect at /home/jdoering/spark-projects/analyse-gdelt-data/parse_gdelt_on_scale.py:25) with 64 output partitions
+18/02/19 18:19:38 INFO scheduler.DAGScheduler: Final stage: ResultStage 0 (collect at /home/jdoering/spark-projects/analyse-gdelt-data/parse_gdelt_on_scale.py:25)
+18/02/19 18:19:38 INFO scheduler.DAGScheduler: Parents of final stage: List()
+18/02/19 18:19:38 INFO scheduler.DAGScheduler: Missing parents: List()
+18/02/19 18:19:38 INFO scheduler.DAGScheduler: Submitting ResultStage 0 (PythonRDD[1] at collect at /home/jdoering/spark-projects/analyse-gdelt-data/parse_gdelt_on_scale.py:25), which has no missing parents
+18/02/19 18:19:38 INFO storage.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 3.3 KB, free 530.0 MB)
+18/02/19 18:19:38 INFO storage.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 2.2 KB, free 530.0 MB)
+18/02/19 18:19:38 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 192.168.78.101:52222 (size: 2.2 KB, free: 530.0 MB)
+18/02/19 18:19:38 INFO spark.SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:1004
+18/02/19 18:19:38 INFO scheduler.DAGScheduler: Submitting 64 missing tasks from ResultStage 0 (PythonRDD[1] at collect at /home/jdoering/spark-projects/analyse-gdelt-data/parse_gdelt_on_scale.py:25) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+18/02/19 18:19:38 INFO cluster.YarnScheduler: Adding task set 0.0 with 64 tasks
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, cdhn06.edc.local, executor 1, partition 0, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, cdhn07.edc.local, executor 3, partition 1, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, cdhn09.edc.local, executor 2, partition 2, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3, cdhn08.edc.local, executor 4, partition 3, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4, cdhn06.edc.local, executor 1, partition 4, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5, cdhn07.edc.local, executor 3, partition 5, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6, cdhn09.edc.local, executor 2, partition 6, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7, cdhn08.edc.local, executor 4, partition 7, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 8.0 in stage 0.0 (TID 8, cdhn06.edc.local, executor 1, partition 8, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 9.0 in stage 0.0 (TID 9, cdhn07.edc.local, executor 3, partition 9, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 10.0 in stage 0.0 (TID 10, cdhn09.edc.local, executor 2, partition 10, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 11.0 in stage 0.0 (TID 11, cdhn08.edc.local, executor 4, partition 11, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 12.0 in stage 0.0 (TID 12, cdhn06.edc.local, executor 1, partition 12, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 13.0 in stage 0.0 (TID 13, cdhn07.edc.local, executor 3, partition 13, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 14.0 in stage 0.0 (TID 14, cdhn09.edc.local, executor 2, partition 14, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 15.0 in stage 0.0 (TID 15, cdhn08.edc.local, executor 4, partition 15, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 16.0 in stage 0.0 (TID 16, cdhn06.edc.local, executor 1, partition 16, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 17.0 in stage 0.0 (TID 17, cdhn07.edc.local, executor 3, partition 17, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 18.0 in stage 0.0 (TID 18, cdhn09.edc.local, executor 2, partition 18, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 19.0 in stage 0.0 (TID 19, cdhn08.edc.local, executor 4, partition 19, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 20.0 in stage 0.0 (TID 20, cdhn06.edc.local, executor 1, partition 20, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 21.0 in stage 0.0 (TID 21, cdhn07.edc.local, executor 3, partition 21, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 22.0 in stage 0.0 (TID 22, cdhn09.edc.local, executor 2, partition 22, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 23.0 in stage 0.0 (TID 23, cdhn08.edc.local, executor 4, partition 23, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 24.0 in stage 0.0 (TID 24, cdhn06.edc.local, executor 1, partition 24, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 25.0 in stage 0.0 (TID 25, cdhn07.edc.local, executor 3, partition 25, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 26.0 in stage 0.0 (TID 26, cdhn09.edc.local, executor 2, partition 26, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 27.0 in stage 0.0 (TID 27, cdhn08.edc.local, executor 4, partition 27, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 28.0 in stage 0.0 (TID 28, cdhn06.edc.local, executor 1, partition 28, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 29.0 in stage 0.0 (TID 29, cdhn07.edc.local, executor 3, partition 29, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 30.0 in stage 0.0 (TID 30, cdhn09.edc.local, executor 2, partition 30, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 31.0 in stage 0.0 (TID 31, cdhn08.edc.local, executor 4, partition 31, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 32.0 in stage 0.0 (TID 32, cdhn06.edc.local, executor 1, partition 32, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 33.0 in stage 0.0 (TID 33, cdhn07.edc.local, executor 3, partition 33, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 34.0 in stage 0.0 (TID 34, cdhn09.edc.local, executor 2, partition 34, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 35.0 in stage 0.0 (TID 35, cdhn08.edc.local, executor 4, partition 35, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 36.0 in stage 0.0 (TID 36, cdhn06.edc.local, executor 1, partition 36, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 37.0 in stage 0.0 (TID 37, cdhn07.edc.local, executor 3, partition 37, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 38.0 in stage 0.0 (TID 38, cdhn09.edc.local, executor 2, partition 38, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 39.0 in stage 0.0 (TID 39, cdhn08.edc.local, executor 4, partition 39, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 40.0 in stage 0.0 (TID 40, cdhn06.edc.local, executor 1, partition 40, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 41.0 in stage 0.0 (TID 41, cdhn07.edc.local, executor 3, partition 41, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 42.0 in stage 0.0 (TID 42, cdhn09.edc.local, executor 2, partition 42, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 43.0 in stage 0.0 (TID 43, cdhn08.edc.local, executor 4, partition 43, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 44.0 in stage 0.0 (TID 44, cdhn06.edc.local, executor 1, partition 44, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 45.0 in stage 0.0 (TID 45, cdhn07.edc.local, executor 3, partition 45, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 46.0 in stage 0.0 (TID 46, cdhn09.edc.local, executor 2, partition 46, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 47.0 in stage 0.0 (TID 47, cdhn08.edc.local, executor 4, partition 47, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 48.0 in stage 0.0 (TID 48, cdhn06.edc.local, executor 1, partition 48, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 49.0 in stage 0.0 (TID 49, cdhn07.edc.local, executor 3, partition 49, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 50.0 in stage 0.0 (TID 50, cdhn09.edc.local, executor 2, partition 50, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 51.0 in stage 0.0 (TID 51, cdhn08.edc.local, executor 4, partition 51, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 52.0 in stage 0.0 (TID 52, cdhn06.edc.local, executor 1, partition 52, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 53.0 in stage 0.0 (TID 53, cdhn07.edc.local, executor 3, partition 53, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 54.0 in stage 0.0 (TID 54, cdhn09.edc.local, executor 2, partition 54, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 55.0 in stage 0.0 (TID 55, cdhn08.edc.local, executor 4, partition 55, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 56.0 in stage 0.0 (TID 56, cdhn06.edc.local, executor 1, partition 56, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 57.0 in stage 0.0 (TID 57, cdhn07.edc.local, executor 3, partition 57, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 58.0 in stage 0.0 (TID 58, cdhn09.edc.local, executor 2, partition 58, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 59.0 in stage 0.0 (TID 59, cdhn08.edc.local, executor 4, partition 59, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 60.0 in stage 0.0 (TID 60, cdhn06.edc.local, executor 1, partition 60, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 61.0 in stage 0.0 (TID 61, cdhn07.edc.local, executor 3, partition 61, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 62.0 in stage 0.0 (TID 62, cdhn09.edc.local, executor 2, partition 62, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:19:38 INFO scheduler.TaskSetManager: Starting task 63.0 in stage 0.0 (TID 63, cdhn08.edc.local, executor 4, partition 63, PROCESS_LOCAL, 10046 bytes)
+18/02/19 18:19:39 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on cdhn06.edc.local:44030 (size: 2.2 KB, free: 129.4 GB)
+18/02/19 18:19:39 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on cdhn08.edc.local:58242 (size: 2.2 KB, free: 129.4 GB)
+18/02/19 18:19:39 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on cdhn09.edc.local:36873 (size: 2.2 KB, free: 129.4 GB)
+18/02/19 18:19:39 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on cdhn07.edc.local:37411 (size: 2.2 KB, free: 129.4 GB)
+18/02/19 18:24:24 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 286259 ms on cdhn09.edc.local (executor 2) (1/64)
+18/02/19 18:24:26 INFO scheduler.TaskSetManager: Finished task 53.0 in stage 0.0 (TID 53) in 288138 ms on cdhn07.edc.local (executor 3) (2/64)
+18/02/19 18:24:27 WARN scheduler.TaskSetManager: Lost task 59.0 in stage 0.0 (TID 59, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 1750398. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:27 INFO scheduler.TaskSetManager: Starting task 59.1 in stage 0.0 (TID 64, cdhn07.edc.local, executor 3, partition 59, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:27 INFO scheduler.TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 288476 ms on cdhn08.edc.local (executor 4) (3/64)
+18/02/19 18:24:27 WARN scheduler.TaskSetManager: Lost task 21.0 in stage 0.0 (TID 21, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 191613. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:27 INFO scheduler.TaskSetManager: Starting task 21.1 in stage 0.0 (TID 65, cdhn09.edc.local, executor 2, partition 21, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:28 WARN scheduler.TaskSetManager: Lost task 16.0 in stage 0.0 (TID 16, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 174180. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:28 INFO scheduler.TaskSetManager: Starting task 16.1 in stage 0.0 (TID 66, cdhn07.edc.local, executor 3, partition 16, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:28 WARN scheduler.TaskSetManager: Lost task 58.0 in stage 0.0 (TID 58, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 633585. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:28 INFO scheduler.TaskSetManager: Starting task 58.1 in stage 0.0 (TID 67, cdhn06.edc.local, executor 1, partition 58, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:28 WARN scheduler.TaskSetManager: Lost task 8.0 in stage 0.0 (TID 8, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 481664. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:28 INFO scheduler.TaskSetManager: Starting task 8.1 in stage 0.0 (TID 68, cdhn08.edc.local, executor 4, partition 8, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:29 WARN scheduler.TaskSetManager: Lost task 54.0 in stage 0.0 (TID 54, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 891767. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:29 INFO scheduler.TaskSetManager: Starting task 54.1 in stage 0.0 (TID 69, cdhn06.edc.local, executor 1, partition 54, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:29 WARN scheduler.TaskSetManager: Lost task 39.0 in stage 0.0 (TID 39, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 677318. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:29 INFO scheduler.TaskSetManager: Starting task 39.1 in stage 0.0 (TID 70, cdhn09.edc.local, executor 2, partition 39, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:29 WARN scheduler.TaskSetManager: Lost task 27.0 in stage 0.0 (TID 27, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 474544. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:29 INFO scheduler.TaskSetManager: Starting task 27.1 in stage 0.0 (TID 71, cdhn08.edc.local, executor 4, partition 27, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:29 WARN scheduler.TaskSetManager: Lost task 33.0 in stage 0.0 (TID 33, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 420583. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:29 INFO scheduler.TaskSetManager: Starting task 33.1 in stage 0.0 (TID 72, cdhn09.edc.local, executor 2, partition 33, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:30 WARN scheduler.TaskSetManager: Lost task 34.0 in stage 0.0 (TID 34, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 321356. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:30 INFO scheduler.TaskSetManager: Starting task 34.1 in stage 0.0 (TID 73, cdhn08.edc.local, executor 4, partition 34, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:30 WARN scheduler.TaskSetManager: Lost task 50.0 in stage 0.0 (TID 50, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 378420. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:30 INFO scheduler.TaskSetManager: Starting task 50.1 in stage 0.0 (TID 74, cdhn09.edc.local, executor 2, partition 50, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:31 WARN scheduler.TaskSetManager: Lost task 45.0 in stage 0.0 (TID 45, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 34841. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:31 INFO scheduler.TaskSetManager: Starting task 45.1 in stage 0.0 (TID 75, cdhn09.edc.local, executor 2, partition 45, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:31 WARN scheduler.TaskSetManager: Lost task 28.0 in stage 0.0 (TID 28, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 803675. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:31 INFO scheduler.TaskSetManager: Starting task 28.1 in stage 0.0 (TID 76, cdhn06.edc.local, executor 1, partition 28, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:32 WARN scheduler.TaskSetManager: Lost task 51.0 in stage 0.0 (TID 51, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 8210. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:32 INFO scheduler.TaskSetManager: Starting task 51.1 in stage 0.0 (TID 77, cdhn07.edc.local, executor 3, partition 51, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:32 WARN scheduler.TaskSetManager: Lost task 22.0 in stage 0.0 (TID 22, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 451029. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:32 INFO scheduler.TaskSetManager: Starting task 22.1 in stage 0.0 (TID 78, cdhn09.edc.local, executor 2, partition 22, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:33 WARN scheduler.TaskSetManager: Lost task 1.0 in stage 0.0 (TID 1, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 143573. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:33 INFO scheduler.TaskSetManager: Starting task 1.1 in stage 0.0 (TID 79, cdhn07.edc.local, executor 3, partition 1, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:34 WARN scheduler.TaskSetManager: Lost task 62.0 in stage 0.0 (TID 62, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 596785. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:34 INFO scheduler.TaskSetManager: Starting task 62.1 in stage 0.0 (TID 80, cdhn09.edc.local, executor 2, partition 62, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:34 WARN scheduler.TaskSetManager: Lost task 3.0 in stage 0.0 (TID 3, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 109720. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:34 INFO scheduler.TaskSetManager: Starting task 3.1 in stage 0.0 (TID 81, cdhn07.edc.local, executor 3, partition 3, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:35 WARN scheduler.TaskSetManager: Lost task 56.0 in stage 0.0 (TID 56, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 196010. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:35 INFO scheduler.TaskSetManager: Starting task 56.1 in stage 0.0 (TID 82, cdhn06.edc.local, executor 1, partition 56, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:35 WARN scheduler.TaskSetManager: Lost task 15.0 in stage 0.0 (TID 15, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 23292. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:35 INFO scheduler.TaskSetManager: Starting task 15.1 in stage 0.0 (TID 83, cdhn08.edc.local, executor 4, partition 15, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:36 WARN scheduler.TaskSetManager: Lost task 6.0 in stage 0.0 (TID 6, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 684918. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:36 INFO scheduler.TaskSetManager: Starting task 6.1 in stage 0.0 (TID 84, cdhn08.edc.local, executor 4, partition 6, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:36 WARN scheduler.TaskSetManager: Lost task 11.0 in stage 0.0 (TID 11, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 216098. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:36 INFO scheduler.TaskSetManager: Starting task 11.1 in stage 0.0 (TID 85, cdhn08.edc.local, executor 4, partition 11, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:36 WARN scheduler.TaskSetManager: Lost task 60.0 in stage 0.0 (TID 60, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 819323. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:36 INFO scheduler.TaskSetManager: Starting task 60.1 in stage 0.0 (TID 86, cdhn09.edc.local, executor 2, partition 60, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:37 WARN scheduler.TaskSetManager: Lost task 0.0 in stage 0.0 (TID 0, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 1481225. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:37 INFO scheduler.TaskSetManager: Starting task 0.1 in stage 0.0 (TID 87, cdhn08.edc.local, executor 4, partition 0, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:37 WARN scheduler.TaskSetManager: Lost task 10.0 in stage 0.0 (TID 10, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 310306. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:37 INFO scheduler.TaskSetManager: Starting task 10.1 in stage 0.0 (TID 88, cdhn08.edc.local, executor 4, partition 10, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:37 WARN scheduler.TaskSetManager: Lost task 23.0 in stage 0.0 (TID 23, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 411279. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:37 INFO scheduler.TaskSetManager: Starting task 23.1 in stage 0.0 (TID 89, cdhn06.edc.local, executor 1, partition 23, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:37 WARN scheduler.TaskSetManager: Lost task 4.0 in stage 0.0 (TID 4, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 972174. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:37 INFO scheduler.TaskSetManager: Starting task 4.1 in stage 0.0 (TID 90, cdhn06.edc.local, executor 1, partition 4, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:37 WARN scheduler.TaskSetManager: Lost task 32.0 in stage 0.0 (TID 32, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 302053. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:37 INFO scheduler.TaskSetManager: Starting task 32.1 in stage 0.0 (TID 91, cdhn06.edc.local, executor 1, partition 32, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:37 WARN scheduler.TaskSetManager: Lost task 17.0 in stage 0.0 (TID 17, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 377696. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:37 INFO scheduler.TaskSetManager: Starting task 17.1 in stage 0.0 (TID 92, cdhn09.edc.local, executor 2, partition 17, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:38 WARN scheduler.TaskSetManager: Lost task 61.0 in stage 0.0 (TID 61, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 1433314. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:38 INFO scheduler.TaskSetManager: Starting task 61.1 in stage 0.0 (TID 93, cdhn07.edc.local, executor 3, partition 61, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:38 WARN scheduler.TaskSetManager: Lost task 57.0 in stage 0.0 (TID 57, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 522534. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:38 INFO scheduler.TaskSetManager: Starting task 57.1 in stage 0.0 (TID 94, cdhn08.edc.local, executor 4, partition 57, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:39 WARN scheduler.TaskSetManager: Lost task 20.0 in stage 0.0 (TID 20, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 497574. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:39 INFO scheduler.TaskSetManager: Starting task 20.1 in stage 0.0 (TID 95, cdhn07.edc.local, executor 3, partition 20, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:39 WARN scheduler.TaskSetManager: Lost task 5.0 in stage 0.0 (TID 5, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 596799. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:39 INFO scheduler.TaskSetManager: Starting task 5.1 in stage 0.0 (TID 96, cdhn07.edc.local, executor 3, partition 5, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:39 WARN scheduler.TaskSetManager: Lost task 55.0 in stage 0.0 (TID 55, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 683139. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:39 INFO scheduler.TaskSetManager: Starting task 55.1 in stage 0.0 (TID 97, cdhn08.edc.local, executor 4, partition 55, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:39 WARN scheduler.TaskSetManager: Lost task 9.0 in stage 0.0 (TID 9, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 778645. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:39 INFO scheduler.TaskSetManager: Starting task 9.1 in stage 0.0 (TID 98, cdhn07.edc.local, executor 3, partition 9, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:39 WARN scheduler.TaskSetManager: Lost task 12.0 in stage 0.0 (TID 12, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 206318. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:39 INFO scheduler.TaskSetManager: Starting task 12.1 in stage 0.0 (TID 99, cdhn06.edc.local, executor 1, partition 12, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:39 WARN scheduler.TaskSetManager: Lost task 14.0 in stage 0.0 (TID 14, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 336439. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:39 INFO scheduler.TaskSetManager: Starting task 14.1 in stage 0.0 (TID 100, cdhn07.edc.local, executor 3, partition 14, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:40 WARN scheduler.TaskSetManager: Lost task 18.0 in stage 0.0 (TID 18, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 358168. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:40 INFO scheduler.TaskSetManager: Starting task 18.1 in stage 0.0 (TID 101, cdhn09.edc.local, executor 2, partition 18, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:41 WARN scheduler.TaskSetManager: Lost task 24.0 in stage 0.0 (TID 24, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 577753. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:41 INFO scheduler.TaskSetManager: Starting task 24.1 in stage 0.0 (TID 102, cdhn06.edc.local, executor 1, partition 24, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:42 WARN scheduler.TaskSetManager: Lost task 13.0 in stage 0.0 (TID 13, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 1050189. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:42 INFO scheduler.TaskSetManager: Starting task 13.1 in stage 0.0 (TID 103, cdhn07.edc.local, executor 3, partition 13, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:42 WARN scheduler.TaskSetManager: Lost task 40.0 in stage 0.0 (TID 40, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 1228362. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:42 INFO scheduler.TaskSetManager: Starting task 40.1 in stage 0.0 (TID 104, cdhn06.edc.local, executor 1, partition 40, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:42 WARN scheduler.TaskSetManager: Lost task 31.0 in stage 0.0 (TID 31, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 706222. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:42 INFO scheduler.TaskSetManager: Starting task 31.1 in stage 0.0 (TID 105, cdhn06.edc.local, executor 1, partition 31, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:42 WARN scheduler.TaskSetManager: Lost task 30.0 in stage 0.0 (TID 30, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 496401. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:42 INFO scheduler.TaskSetManager: Starting task 30.1 in stage 0.0 (TID 106, cdhn08.edc.local, executor 4, partition 30, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:43 WARN scheduler.TaskSetManager: Lost task 26.0 in stage 0.0 (TID 26, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 637573. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:43 INFO scheduler.TaskSetManager: Starting task 26.1 in stage 0.0 (TID 107, cdhn06.edc.local, executor 1, partition 26, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:43 WARN scheduler.TaskSetManager: Lost task 19.0 in stage 0.0 (TID 19, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 441832. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:43 INFO scheduler.TaskSetManager: Starting task 19.1 in stage 0.0 (TID 108, cdhn09.edc.local, executor 2, partition 19, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:43 WARN scheduler.TaskSetManager: Lost task 44.0 in stage 0.0 (TID 44, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 243833. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:43 INFO scheduler.TaskSetManager: Starting task 44.1 in stage 0.0 (TID 109, cdhn09.edc.local, executor 2, partition 44, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:43 WARN scheduler.TaskSetManager: Lost task 38.0 in stage 0.0 (TID 38, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 1395456. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:43 INFO scheduler.TaskSetManager: Starting task 38.1 in stage 0.0 (TID 110, cdhn09.edc.local, executor 2, partition 38, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:44 WARN scheduler.TaskSetManager: Lost task 25.0 in stage 0.0 (TID 25, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 424618. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:44 INFO scheduler.TaskSetManager: Starting task 25.1 in stage 0.0 (TID 111, cdhn09.edc.local, executor 2, partition 25, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:44 WARN scheduler.TaskSetManager: Lost task 52.0 in stage 0.0 (TID 52, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 203791. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:44 INFO scheduler.TaskSetManager: Starting task 52.1 in stage 0.0 (TID 112, cdhn07.edc.local, executor 3, partition 52, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:45 WARN scheduler.TaskSetManager: Lost task 29.0 in stage 0.0 (TID 29, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 38429. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:45 INFO scheduler.TaskSetManager: Starting task 29.1 in stage 0.0 (TID 113, cdhn07.edc.local, executor 3, partition 29, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:45 WARN scheduler.TaskSetManager: Lost task 35.0 in stage 0.0 (TID 35, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 786401. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:45 INFO scheduler.TaskSetManager: Starting task 35.1 in stage 0.0 (TID 114, cdhn08.edc.local, executor 4, partition 35, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:45 WARN scheduler.TaskSetManager: Lost task 46.0 in stage 0.0 (TID 46, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 705514. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:45 INFO scheduler.TaskSetManager: Starting task 46.1 in stage 0.0 (TID 115, cdhn06.edc.local, executor 1, partition 46, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:47 WARN scheduler.TaskSetManager: Lost task 47.0 in stage 0.0 (TID 47, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 171367. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:47 INFO scheduler.TaskSetManager: Starting task 47.1 in stage 0.0 (TID 116, cdhn08.edc.local, executor 4, partition 47, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:49 WARN scheduler.TaskSetManager: Lost task 42.0 in stage 0.0 (TID 42, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 774921. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:49 INFO scheduler.TaskSetManager: Starting task 42.1 in stage 0.0 (TID 117, cdhn08.edc.local, executor 4, partition 42, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:49 WARN scheduler.TaskSetManager: Lost task 41.0 in stage 0.0 (TID 41, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 1132804. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:49 INFO scheduler.TaskSetManager: Starting task 41.1 in stage 0.0 (TID 118, cdhn09.edc.local, executor 2, partition 41, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:51 WARN scheduler.TaskSetManager: Lost task 36.0 in stage 0.0 (TID 36, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 996274. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:51 INFO scheduler.TaskSetManager: Starting task 36.1 in stage 0.0 (TID 119, cdhn09.edc.local, executor 2, partition 36, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:51 WARN scheduler.TaskSetManager: Lost task 37.0 in stage 0.0 (TID 37, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 208725. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:51 INFO scheduler.TaskSetManager: Starting task 37.1 in stage 0.0 (TID 120, cdhn07.edc.local, executor 3, partition 37, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:51 WARN scheduler.TaskSetManager: Lost task 48.0 in stage 0.0 (TID 48, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 2870. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:51 INFO scheduler.TaskSetManager: Starting task 48.1 in stage 0.0 (TID 121, cdhn06.edc.local, executor 1, partition 48, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:51 WARN scheduler.TaskSetManager: Lost task 49.0 in stage 0.0 (TID 49, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 823049. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:51 INFO scheduler.TaskSetManager: Starting task 49.1 in stage 0.0 (TID 122, cdhn07.edc.local, executor 3, partition 49, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:24:53 WARN scheduler.TaskSetManager: Lost task 43.0 in stage 0.0 (TID 43, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 135258. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:24:53 INFO scheduler.TaskSetManager: Starting task 43.1 in stage 0.0 (TID 123, cdhn08.edc.local, executor 4, partition 43, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:25:49 WARN scheduler.TaskSetManager: Lost task 63.0 in stage 0.0 (TID 63, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 116521. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:25:49 INFO scheduler.TaskSetManager: Starting task 63.1 in stage 0.0 (TID 124, cdhn08.edc.local, executor 4, partition 63, PROCESS_LOCAL, 10046 bytes)
+18/02/19 18:29:06 WARN scheduler.TaskSetManager: Lost task 58.1 in stage 0.0 (TID 67, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 633585. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:06 INFO scheduler.TaskSetManager: Starting task 58.2 in stage 0.0 (TID 125, cdhn06.edc.local, executor 1, partition 58, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:08 WARN scheduler.TaskSetManager: Lost task 54.1 in stage 0.0 (TID 69, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 891767. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:08 INFO scheduler.TaskSetManager: Starting task 54.2 in stage 0.0 (TID 126, cdhn07.edc.local, executor 3, partition 54, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:08 WARN scheduler.TaskSetManager: Lost task 59.1 in stage 0.0 (TID 64, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 1750398. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:08 INFO scheduler.TaskSetManager: Starting task 59.2 in stage 0.0 (TID 127, cdhn07.edc.local, executor 3, partition 59, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:10 WARN scheduler.TaskSetManager: Lost task 28.1 in stage 0.0 (TID 76, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 803675. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:10 INFO scheduler.TaskSetManager: Starting task 28.2 in stage 0.0 (TID 128, cdhn06.edc.local, executor 1, partition 28, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:12 WARN scheduler.TaskSetManager: Lost task 16.1 in stage 0.0 (TID 66, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 174180. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:12 INFO scheduler.TaskSetManager: Starting task 16.2 in stage 0.0 (TID 129, cdhn06.edc.local, executor 1, partition 16, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:15 WARN scheduler.TaskSetManager: Lost task 21.1 in stage 0.0 (TID 65, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 191613. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:15 INFO scheduler.TaskSetManager: Starting task 21.2 in stage 0.0 (TID 130, cdhn09.edc.local, executor 2, partition 21, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:18 WARN scheduler.TaskSetManager: Lost task 33.1 in stage 0.0 (TID 72, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 420583. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:18 INFO scheduler.TaskSetManager: Starting task 33.2 in stage 0.0 (TID 131, cdhn06.edc.local, executor 1, partition 33, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:18 WARN scheduler.TaskSetManager: Lost task 8.1 in stage 0.0 (TID 68, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 481664. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:18 INFO scheduler.TaskSetManager: Starting task 8.2 in stage 0.0 (TID 132, cdhn06.edc.local, executor 1, partition 8, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:18 WARN scheduler.TaskSetManager: Lost task 39.1 in stage 0.0 (TID 70, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 677318. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:18 INFO scheduler.TaskSetManager: Starting task 39.2 in stage 0.0 (TID 133, cdhn07.edc.local, executor 3, partition 39, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:19 WARN scheduler.TaskSetManager: Lost task 56.1 in stage 0.0 (TID 82, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 196010. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:19 INFO scheduler.TaskSetManager: Starting task 56.2 in stage 0.0 (TID 134, cdhn09.edc.local, executor 2, partition 56, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:20 WARN scheduler.TaskSetManager: Lost task 27.1 in stage 0.0 (TID 71, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 474544. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:20 INFO scheduler.TaskSetManager: Starting task 27.2 in stage 0.0 (TID 135, cdhn06.edc.local, executor 1, partition 27, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:20 WARN scheduler.TaskSetManager: Lost task 1.1 in stage 0.0 (TID 79, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 143573. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:20 INFO scheduler.TaskSetManager: Starting task 1.2 in stage 0.0 (TID 136, cdhn09.edc.local, executor 2, partition 1, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:21 WARN scheduler.TaskSetManager: Lost task 51.1 in stage 0.0 (TID 77, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 8210. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:21 INFO scheduler.TaskSetManager: Starting task 51.2 in stage 0.0 (TID 137, cdhn08.edc.local, executor 4, partition 51, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:22 WARN scheduler.TaskSetManager: Lost task 4.1 in stage 0.0 (TID 90, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 972174. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:22 INFO scheduler.TaskSetManager: Starting task 4.2 in stage 0.0 (TID 138, cdhn08.edc.local, executor 4, partition 4, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:22 WARN scheduler.TaskSetManager: Lost task 45.1 in stage 0.0 (TID 75, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 34841. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:22 INFO scheduler.TaskSetManager: Starting task 45.2 in stage 0.0 (TID 139, cdhn07.edc.local, executor 3, partition 45, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:22 WARN scheduler.TaskSetManager: Lost task 32.1 in stage 0.0 (TID 91, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 302053. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:22 INFO scheduler.TaskSetManager: Starting task 32.2 in stage 0.0 (TID 140, cdhn06.edc.local, executor 1, partition 32, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:23 WARN scheduler.TaskSetManager: Lost task 50.1 in stage 0.0 (TID 74, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 378420. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:23 INFO scheduler.TaskSetManager: Starting task 50.2 in stage 0.0 (TID 141, cdhn09.edc.local, executor 2, partition 50, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:23 WARN scheduler.TaskSetManager: Lost task 23.1 in stage 0.0 (TID 89, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 411279. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:23 INFO scheduler.TaskSetManager: Starting task 23.2 in stage 0.0 (TID 142, cdhn06.edc.local, executor 1, partition 23, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:23 WARN scheduler.TaskSetManager: Lost task 34.1 in stage 0.0 (TID 73, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 321356. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:23 INFO scheduler.TaskSetManager: Starting task 34.2 in stage 0.0 (TID 143, cdhn06.edc.local, executor 1, partition 34, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:24 WARN scheduler.TaskSetManager: Lost task 3.1 in stage 0.0 (TID 81, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 109720. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:24 INFO scheduler.TaskSetManager: Starting task 3.2 in stage 0.0 (TID 144, cdhn09.edc.local, executor 2, partition 3, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:25 WARN scheduler.TaskSetManager: Lost task 22.1 in stage 0.0 (TID 78, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 451029. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:25 INFO scheduler.TaskSetManager: Starting task 22.2 in stage 0.0 (TID 145, cdhn08.edc.local, executor 4, partition 22, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:27 WARN scheduler.TaskSetManager: Lost task 12.1 in stage 0.0 (TID 99, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 206318. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:27 INFO scheduler.TaskSetManager: Starting task 12.2 in stage 0.0 (TID 146, cdhn09.edc.local, executor 2, partition 12, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:28 WARN scheduler.TaskSetManager: Lost task 62.1 in stage 0.0 (TID 80, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 596785. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:28 INFO scheduler.TaskSetManager: Starting task 62.2 in stage 0.0 (TID 147, cdhn07.edc.local, executor 3, partition 62, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:29 WARN scheduler.TaskSetManager: Lost task 15.1 in stage 0.0 (TID 83, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 23292. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:29 INFO scheduler.TaskSetManager: Starting task 15.2 in stage 0.0 (TID 148, cdhn09.edc.local, executor 2, partition 15, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:30 WARN scheduler.TaskSetManager: Lost task 61.1 in stage 0.0 (TID 93, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 1433314. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:30 INFO scheduler.TaskSetManager: Starting task 61.2 in stage 0.0 (TID 149, cdhn06.edc.local, executor 1, partition 61, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:30 WARN scheduler.TaskSetManager: Lost task 24.1 in stage 0.0 (TID 102, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 577753. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:30 INFO scheduler.TaskSetManager: Starting task 24.2 in stage 0.0 (TID 150, cdhn07.edc.local, executor 3, partition 24, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:31 WARN scheduler.TaskSetManager: Lost task 20.1 in stage 0.0 (TID 95, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 497574. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:31 INFO scheduler.TaskSetManager: Starting task 20.2 in stage 0.0 (TID 151, cdhn07.edc.local, executor 3, partition 20, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:32 WARN scheduler.TaskSetManager: Lost task 40.1 in stage 0.0 (TID 104, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 1228362. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:32 INFO scheduler.TaskSetManager: Starting task 40.2 in stage 0.0 (TID 152, cdhn08.edc.local, executor 4, partition 40, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:32 WARN scheduler.TaskSetManager: Lost task 60.1 in stage 0.0 (TID 86, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 819323. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:32 INFO scheduler.TaskSetManager: Starting task 60.2 in stage 0.0 (TID 153, cdhn07.edc.local, executor 3, partition 60, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:32 WARN scheduler.TaskSetManager: Lost task 26.1 in stage 0.0 (TID 107, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 637573. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:32 INFO scheduler.TaskSetManager: Starting task 26.2 in stage 0.0 (TID 154, cdhn06.edc.local, executor 1, partition 26, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:32 WARN scheduler.TaskSetManager: Lost task 9.1 in stage 0.0 (TID 98, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 778645. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:32 INFO scheduler.TaskSetManager: Starting task 9.2 in stage 0.0 (TID 155, cdhn09.edc.local, executor 2, partition 9, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:32 WARN scheduler.TaskSetManager: Lost task 5.1 in stage 0.0 (TID 96, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 596799. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:32 INFO scheduler.TaskSetManager: Starting task 5.2 in stage 0.0 (TID 156, cdhn07.edc.local, executor 3, partition 5, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:33 WARN scheduler.TaskSetManager: Lost task 31.1 in stage 0.0 (TID 105, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 706222. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:33 INFO scheduler.TaskSetManager: Starting task 31.2 in stage 0.0 (TID 157, cdhn06.edc.local, executor 1, partition 31, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:33 WARN scheduler.TaskSetManager: Lost task 6.1 in stage 0.0 (TID 84, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 684918. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:33 INFO scheduler.TaskSetManager: Starting task 6.2 in stage 0.0 (TID 158, cdhn07.edc.local, executor 3, partition 6, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:33 WARN scheduler.TaskSetManager: Lost task 14.1 in stage 0.0 (TID 100, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 336439. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:33 INFO scheduler.TaskSetManager: Starting task 14.2 in stage 0.0 (TID 159, cdhn08.edc.local, executor 4, partition 14, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:33 WARN scheduler.TaskSetManager: Lost task 11.1 in stage 0.0 (TID 85, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 216098. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:33 INFO scheduler.TaskSetManager: Starting task 11.2 in stage 0.0 (TID 160, cdhn08.edc.local, executor 4, partition 11, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:34 WARN scheduler.TaskSetManager: Lost task 0.1 in stage 0.0 (TID 87, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 1481225. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:34 INFO scheduler.TaskSetManager: Starting task 0.2 in stage 0.0 (TID 161, cdhn07.edc.local, executor 3, partition 0, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:36 WARN scheduler.TaskSetManager: Lost task 10.1 in stage 0.0 (TID 88, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 310306. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:36 INFO scheduler.TaskSetManager: Starting task 10.2 in stage 0.0 (TID 162, cdhn08.edc.local, executor 4, partition 10, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:36 WARN scheduler.TaskSetManager: Lost task 17.1 in stage 0.0 (TID 92, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 377696. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:36 INFO scheduler.TaskSetManager: Starting task 17.2 in stage 0.0 (TID 163, cdhn09.edc.local, executor 2, partition 17, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:36 WARN scheduler.TaskSetManager: Lost task 13.1 in stage 0.0 (TID 103, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 1050189. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:36 INFO scheduler.TaskSetManager: Starting task 13.2 in stage 0.0 (TID 164, cdhn06.edc.local, executor 1, partition 13, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:37 WARN scheduler.TaskSetManager: Lost task 57.1 in stage 0.0 (TID 94, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 522534. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:37 INFO scheduler.TaskSetManager: Starting task 57.2 in stage 0.0 (TID 165, cdhn08.edc.local, executor 4, partition 57, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:37 WARN scheduler.TaskSetManager: Lost task 55.1 in stage 0.0 (TID 97, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 683139. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:37 INFO scheduler.TaskSetManager: Starting task 55.2 in stage 0.0 (TID 166, cdhn07.edc.local, executor 3, partition 55, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:39 WARN scheduler.TaskSetManager: Lost task 46.1 in stage 0.0 (TID 115, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 705514. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:39 INFO scheduler.TaskSetManager: Starting task 46.2 in stage 0.0 (TID 167, cdhn06.edc.local, executor 1, partition 46, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:41 WARN scheduler.TaskSetManager: Lost task 52.1 in stage 0.0 (TID 112, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 203791. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:41 INFO scheduler.TaskSetManager: Starting task 52.2 in stage 0.0 (TID 168, cdhn07.edc.local, executor 3, partition 52, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:42 WARN scheduler.TaskSetManager: Lost task 18.1 in stage 0.0 (TID 101, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 358168. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:42 INFO scheduler.TaskSetManager: Starting task 18.2 in stage 0.0 (TID 169, cdhn06.edc.local, executor 1, partition 18, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:42 WARN scheduler.TaskSetManager: Lost task 29.1 in stage 0.0 (TID 113, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 38429. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:42 INFO scheduler.TaskSetManager: Starting task 29.2 in stage 0.0 (TID 170, cdhn07.edc.local, executor 3, partition 29, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:46 WARN scheduler.TaskSetManager: Lost task 30.1 in stage 0.0 (TID 106, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 496401. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:46 INFO scheduler.TaskSetManager: Starting task 30.2 in stage 0.0 (TID 171, cdhn08.edc.local, executor 4, partition 30, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:46 WARN scheduler.TaskSetManager: Lost task 19.1 in stage 0.0 (TID 108, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 441832. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:46 INFO scheduler.TaskSetManager: Starting task 19.2 in stage 0.0 (TID 172, cdhn08.edc.local, executor 4, partition 19, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:47 WARN scheduler.TaskSetManager: Lost task 44.1 in stage 0.0 (TID 109, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 243833. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:47 INFO scheduler.TaskSetManager: Starting task 44.2 in stage 0.0 (TID 173, cdhn08.edc.local, executor 4, partition 44, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:47 WARN scheduler.TaskSetManager: Lost task 25.1 in stage 0.0 (TID 111, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 424618. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:47 INFO scheduler.TaskSetManager: Starting task 25.2 in stage 0.0 (TID 174, cdhn09.edc.local, executor 2, partition 25, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:47 WARN scheduler.TaskSetManager: Lost task 38.1 in stage 0.0 (TID 110, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 1395456. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:47 INFO scheduler.TaskSetManager: Starting task 38.2 in stage 0.0 (TID 175, cdhn09.edc.local, executor 2, partition 38, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:50 WARN scheduler.TaskSetManager: Lost task 48.1 in stage 0.0 (TID 121, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 2870. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:50 INFO scheduler.TaskSetManager: Starting task 48.2 in stage 0.0 (TID 176, cdhn06.edc.local, executor 1, partition 48, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:51 WARN scheduler.TaskSetManager: Lost task 35.1 in stage 0.0 (TID 114, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 786401. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:51 INFO scheduler.TaskSetManager: Starting task 35.2 in stage 0.0 (TID 177, cdhn09.edc.local, executor 2, partition 35, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:55 WARN scheduler.TaskSetManager: Lost task 37.1 in stage 0.0 (TID 120, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 208725. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:55 INFO scheduler.TaskSetManager: Starting task 37.2 in stage 0.0 (TID 178, cdhn09.edc.local, executor 2, partition 37, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:56 WARN scheduler.TaskSetManager: Lost task 49.1 in stage 0.0 (TID 122, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 823049. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:56 INFO scheduler.TaskSetManager: Starting task 49.2 in stage 0.0 (TID 179, cdhn07.edc.local, executor 3, partition 49, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:56 WARN scheduler.TaskSetManager: Lost task 47.1 in stage 0.0 (TID 116, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 171367. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:56 INFO scheduler.TaskSetManager: Starting task 47.2 in stage 0.0 (TID 180, cdhn07.edc.local, executor 3, partition 47, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:29:57 WARN scheduler.TaskSetManager: Lost task 41.1 in stage 0.0 (TID 118, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 1132804. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:29:57 INFO scheduler.TaskSetManager: Starting task 41.2 in stage 0.0 (TID 181, cdhn09.edc.local, executor 2, partition 41, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:30:00 WARN scheduler.TaskSetManager: Lost task 42.1 in stage 0.0 (TID 117, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 774921. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:30:00 INFO scheduler.TaskSetManager: Starting task 42.2 in stage 0.0 (TID 182, cdhn08.edc.local, executor 4, partition 42, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:30:01 WARN scheduler.TaskSetManager: Lost task 36.1 in stage 0.0 (TID 119, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 996274. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:30:01 INFO scheduler.TaskSetManager: Starting task 36.2 in stage 0.0 (TID 183, cdhn09.edc.local, executor 2, partition 36, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:30:06 WARN scheduler.TaskSetManager: Lost task 43.1 in stage 0.0 (TID 123, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 135258. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:30:06 INFO scheduler.TaskSetManager: Starting task 43.2 in stage 0.0 (TID 184, cdhn09.edc.local, executor 2, partition 43, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:31:50 WARN scheduler.TaskSetManager: Lost task 63.1 in stage 0.0 (TID 124, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 116521. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:31:50 INFO scheduler.TaskSetManager: Starting task 63.2 in stage 0.0 (TID 185, cdhn08.edc.local, executor 4, partition 63, PROCESS_LOCAL, 10046 bytes)
+18/02/19 18:33:54 WARN scheduler.TaskSetManager: Lost task 58.2 in stage 0.0 (TID 125, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 633585. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:33:54 INFO scheduler.TaskSetManager: Starting task 58.3 in stage 0.0 (TID 186, cdhn08.edc.local, executor 4, partition 58, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:33:56 WARN scheduler.TaskSetManager: Lost task 59.2 in stage 0.0 (TID 127, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 1750398. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:33:56 INFO scheduler.TaskSetManager: Starting task 59.3 in stage 0.0 (TID 187, cdhn08.edc.local, executor 4, partition 59, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:33:58 WARN scheduler.TaskSetManager: Lost task 51.2 in stage 0.0 (TID 137, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 8210. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:33:58 INFO scheduler.TaskSetManager: Starting task 51.3 in stage 0.0 (TID 188, cdhn08.edc.local, executor 4, partition 51, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:33:59 WARN scheduler.TaskSetManager: Lost task 16.2 in stage 0.0 (TID 129, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 174180. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:33:59 INFO scheduler.TaskSetManager: Starting task 16.3 in stage 0.0 (TID 189, cdhn06.edc.local, executor 1, partition 16, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:00 WARN scheduler.TaskSetManager: Lost task 28.2 in stage 0.0 (TID 128, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 803675. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:00 INFO scheduler.TaskSetManager: Starting task 28.3 in stage 0.0 (TID 190, cdhn06.edc.local, executor 1, partition 28, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:00 WARN scheduler.TaskSetManager: Lost task 54.2 in stage 0.0 (TID 126, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 891767. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:00 INFO scheduler.TaskSetManager: Starting task 54.3 in stage 0.0 (TID 191, cdhn06.edc.local, executor 1, partition 54, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:01 WARN scheduler.TaskSetManager: Lost task 22.2 in stage 0.0 (TID 145, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 451029. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:01 INFO scheduler.TaskSetManager: Starting task 22.3 in stage 0.0 (TID 192, cdhn07.edc.local, executor 3, partition 22, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:02 WARN scheduler.TaskSetManager: Lost task 21.2 in stage 0.0 (TID 130, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 191613. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:02 INFO scheduler.TaskSetManager: Starting task 21.3 in stage 0.0 (TID 193, cdhn07.edc.local, executor 3, partition 21, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:03 WARN scheduler.TaskSetManager: Lost task 4.2 in stage 0.0 (TID 138, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 972174. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:03 INFO scheduler.TaskSetManager: Starting task 4.3 in stage 0.0 (TID 194, cdhn08.edc.local, executor 4, partition 4, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:05 WARN scheduler.TaskSetManager: Lost task 8.2 in stage 0.0 (TID 132, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 481664. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:05 INFO scheduler.TaskSetManager: Starting task 8.3 in stage 0.0 (TID 195, cdhn09.edc.local, executor 2, partition 8, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:06 WARN scheduler.TaskSetManager: Lost task 33.2 in stage 0.0 (TID 131, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 420583. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:06 INFO scheduler.TaskSetManager: Starting task 33.3 in stage 0.0 (TID 196, cdhn08.edc.local, executor 4, partition 33, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:07 WARN scheduler.TaskSetManager: Lost task 27.2 in stage 0.0 (TID 135, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 474544. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:07 INFO scheduler.TaskSetManager: Starting task 27.3 in stage 0.0 (TID 197, cdhn06.edc.local, executor 1, partition 27, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:10 WARN scheduler.TaskSetManager: Lost task 39.2 in stage 0.0 (TID 133, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 677318. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:10 INFO scheduler.TaskSetManager: Starting task 39.3 in stage 0.0 (TID 198, cdhn06.edc.local, executor 1, partition 39, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:12 WARN scheduler.TaskSetManager: Lost task 34.2 in stage 0.0 (TID 143, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 321356. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:12 INFO scheduler.TaskSetManager: Starting task 34.3 in stage 0.0 (TID 199, cdhn08.edc.local, executor 4, partition 34, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:12 WARN scheduler.TaskSetManager: Lost task 1.2 in stage 0.0 (TID 136, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 143573. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:12 INFO scheduler.TaskSetManager: Starting task 1.3 in stage 0.0 (TID 200, cdhn07.edc.local, executor 3, partition 1, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:14 WARN scheduler.TaskSetManager: Lost task 45.2 in stage 0.0 (TID 139, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 34841. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:14 INFO scheduler.TaskSetManager: Starting task 45.3 in stage 0.0 (TID 201, cdhn07.edc.local, executor 3, partition 45, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:14 WARN scheduler.TaskSetManager: Lost task 11.2 in stage 0.0 (TID 160, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 216098. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:14 INFO scheduler.TaskSetManager: Starting task 11.3 in stage 0.0 (TID 202, cdhn08.edc.local, executor 4, partition 11, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:14 WARN scheduler.TaskSetManager: Lost task 50.2 in stage 0.0 (TID 141, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 378420. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:14 INFO scheduler.TaskSetManager: Starting task 50.3 in stage 0.0 (TID 203, cdhn06.edc.local, executor 1, partition 50, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:16 WARN scheduler.TaskSetManager: Lost task 56.2 in stage 0.0 (TID 134, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 196010. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:16 INFO scheduler.TaskSetManager: Starting task 56.3 in stage 0.0 (TID 204, cdhn06.edc.local, executor 1, partition 56, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:18 WARN scheduler.TaskSetManager: Lost task 10.2 in stage 0.0 (TID 162, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 310306. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:18 INFO scheduler.TaskSetManager: Starting task 10.3 in stage 0.0 (TID 205, cdhn09.edc.local, executor 2, partition 10, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:18 WARN scheduler.TaskSetManager: Lost task 32.2 in stage 0.0 (TID 140, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 302053. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:18 INFO scheduler.TaskSetManager: Starting task 32.3 in stage 0.0 (TID 206, cdhn06.edc.local, executor 1, partition 32, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:18 WARN scheduler.TaskSetManager: Lost task 14.2 in stage 0.0 (TID 159, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 336439. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:18 INFO scheduler.TaskSetManager: Starting task 14.3 in stage 0.0 (TID 207, cdhn09.edc.local, executor 2, partition 14, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:18 WARN scheduler.TaskSetManager: Lost task 40.2 in stage 0.0 (TID 152, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 1228362. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:18 INFO scheduler.TaskSetManager: Starting task 40.3 in stage 0.0 (TID 208, cdhn09.edc.local, executor 2, partition 40, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:19 WARN scheduler.TaskSetManager: Lost task 3.2 in stage 0.0 (TID 144, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 109720. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:19 INFO scheduler.TaskSetManager: Starting task 3.3 in stage 0.0 (TID 209, cdhn09.edc.local, executor 2, partition 3, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:19 WARN scheduler.TaskSetManager: Lost task 57.2 in stage 0.0 (TID 165, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 522534. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:19 INFO scheduler.TaskSetManager: Starting task 57.3 in stage 0.0 (TID 210, cdhn08.edc.local, executor 4, partition 57, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:20 WARN scheduler.TaskSetManager: Lost task 23.2 in stage 0.0 (TID 142, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 411279. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:20 INFO scheduler.TaskSetManager: Starting task 23.3 in stage 0.0 (TID 211, cdhn08.edc.local, executor 4, partition 23, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:23 WARN scheduler.TaskSetManager: Lost task 15.2 in stage 0.0 (TID 148, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 23292. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:23 INFO scheduler.TaskSetManager: Starting task 15.3 in stage 0.0 (TID 212, cdhn08.edc.local, executor 4, partition 15, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:24 WARN scheduler.TaskSetManager: Lost task 62.2 in stage 0.0 (TID 147, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 596785. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:24 INFO scheduler.TaskSetManager: Starting task 62.3 in stage 0.0 (TID 213, cdhn07.edc.local, executor 3, partition 62, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:26 WARN scheduler.TaskSetManager: Lost task 61.2 in stage 0.0 (TID 149, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 1433314. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:26 INFO scheduler.TaskSetManager: Starting task 61.3 in stage 0.0 (TID 214, cdhn08.edc.local, executor 4, partition 61, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:28 WARN scheduler.TaskSetManager: Lost task 12.2 in stage 0.0 (TID 146, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 206318. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:28 INFO scheduler.TaskSetManager: Starting task 12.3 in stage 0.0 (TID 215, cdhn09.edc.local, executor 2, partition 12, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:29 WARN scheduler.TaskSetManager: Lost task 60.2 in stage 0.0 (TID 153, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 819323. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:29 INFO scheduler.TaskSetManager: Starting task 60.3 in stage 0.0 (TID 216, cdhn07.edc.local, executor 3, partition 60, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:30 WARN scheduler.TaskSetManager: Lost task 20.2 in stage 0.0 (TID 151, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 497574. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:30 INFO scheduler.TaskSetManager: Starting task 20.3 in stage 0.0 (TID 217, cdhn06.edc.local, executor 1, partition 20, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:31 WARN scheduler.TaskSetManager: Lost task 5.2 in stage 0.0 (TID 156, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 596799. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:31 INFO scheduler.TaskSetManager: Starting task 5.3 in stage 0.0 (TID 218, cdhn07.edc.local, executor 3, partition 5, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:31 WARN scheduler.TaskSetManager: Lost task 6.2 in stage 0.0 (TID 158, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 684918. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:31 INFO scheduler.TaskSetManager: Starting task 6.3 in stage 0.0 (TID 219, cdhn07.edc.local, executor 3, partition 6, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:31 WARN scheduler.TaskSetManager: Lost task 9.2 in stage 0.0 (TID 155, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 778645. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:31 INFO scheduler.TaskSetManager: Starting task 9.3 in stage 0.0 (TID 220, cdhn07.edc.local, executor 3, partition 9, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:32 WARN scheduler.TaskSetManager: Lost task 30.2 in stage 0.0 (TID 171, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 496401. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:32 INFO scheduler.TaskSetManager: Starting task 30.3 in stage 0.0 (TID 221, cdhn08.edc.local, executor 4, partition 30, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:33 WARN scheduler.TaskSetManager: Lost task 0.2 in stage 0.0 (TID 161, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 1481225. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:33 INFO scheduler.TaskSetManager: Starting task 0.3 in stage 0.0 (TID 222, cdhn07.edc.local, executor 3, partition 0, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:33 WARN scheduler.TaskSetManager: Lost task 31.2 in stage 0.0 (TID 157, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 706222. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:33 INFO scheduler.TaskSetManager: Starting task 31.3 in stage 0.0 (TID 223, cdhn06.edc.local, executor 1, partition 31, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:33 WARN scheduler.TaskSetManager: Lost task 24.2 in stage 0.0 (TID 150, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 577753. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:33 INFO scheduler.TaskSetManager: Starting task 24.3 in stage 0.0 (TID 224, cdhn09.edc.local, executor 2, partition 24, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:34 WARN scheduler.TaskSetManager: Lost task 19.2 in stage 0.0 (TID 172, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 441832. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:34 INFO scheduler.TaskSetManager: Starting task 19.3 in stage 0.0 (TID 225, cdhn08.edc.local, executor 4, partition 19, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:34 WARN scheduler.TaskSetManager: Lost task 17.2 in stage 0.0 (TID 163, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 377696. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:34 INFO scheduler.TaskSetManager: Starting task 17.3 in stage 0.0 (TID 226, cdhn09.edc.local, executor 2, partition 17, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:34 WARN scheduler.TaskSetManager: Lost task 44.2 in stage 0.0 (TID 173, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 243833. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:34 INFO scheduler.TaskSetManager: Starting task 44.3 in stage 0.0 (TID 227, cdhn09.edc.local, executor 2, partition 44, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:34 WARN scheduler.TaskSetManager: Lost task 26.2 in stage 0.0 (TID 154, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 637573. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:34 INFO scheduler.TaskSetManager: Starting task 26.3 in stage 0.0 (TID 228, cdhn08.edc.local, executor 4, partition 26, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:37 WARN scheduler.TaskSetManager: Lost task 13.2 in stage 0.0 (TID 164, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 1050189. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:37 INFO scheduler.TaskSetManager: Starting task 13.3 in stage 0.0 (TID 229, cdhn06.edc.local, executor 1, partition 13, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:38 WARN scheduler.TaskSetManager: Lost task 55.2 in stage 0.0 (TID 166, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 683139. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:38 INFO scheduler.TaskSetManager: Starting task 55.3 in stage 0.0 (TID 230, cdhn07.edc.local, executor 3, partition 55, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:41 WARN scheduler.TaskSetManager: Lost task 18.2 in stage 0.0 (TID 169, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 358168. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:41 INFO scheduler.TaskSetManager: Starting task 18.3 in stage 0.0 (TID 231, cdhn06.edc.local, executor 1, partition 18, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:44 WARN scheduler.TaskSetManager: Lost task 46.2 in stage 0.0 (TID 167, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 705514. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:44 INFO scheduler.TaskSetManager: Starting task 46.3 in stage 0.0 (TID 232, cdhn07.edc.local, executor 3, partition 46, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:46 WARN scheduler.TaskSetManager: Lost task 52.2 in stage 0.0 (TID 168, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 203791. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:46 INFO scheduler.TaskSetManager: Starting task 52.3 in stage 0.0 (TID 233, cdhn06.edc.local, executor 1, partition 52, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:48 WARN scheduler.TaskSetManager: Lost task 29.2 in stage 0.0 (TID 170, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 38429. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:48 INFO scheduler.TaskSetManager: Starting task 29.3 in stage 0.0 (TID 234, cdhn06.edc.local, executor 1, partition 29, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:51 WARN scheduler.TaskSetManager: Lost task 25.2 in stage 0.0 (TID 174, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 424618. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:51 INFO scheduler.TaskSetManager: Starting task 25.3 in stage 0.0 (TID 235, cdhn06.edc.local, executor 1, partition 25, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:51 WARN scheduler.TaskSetManager: Lost task 38.2 in stage 0.0 (TID 175, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 1395456. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:51 INFO scheduler.TaskSetManager: Starting task 38.3 in stage 0.0 (TID 236, cdhn07.edc.local, executor 3, partition 38, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:55 WARN scheduler.TaskSetManager: Lost task 42.2 in stage 0.0 (TID 182, cdhn08.edc.local, executor 4): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 774921. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:55 INFO scheduler.TaskSetManager: Starting task 42.3 in stage 0.0 (TID 237, cdhn07.edc.local, executor 3, partition 42, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:57 WARN scheduler.TaskSetManager: Lost task 35.2 in stage 0.0 (TID 177, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 786401. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:57 INFO scheduler.TaskSetManager: Starting task 35.3 in stage 0.0 (TID 238, cdhn09.edc.local, executor 2, partition 35, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:34:59 WARN scheduler.TaskSetManager: Lost task 48.2 in stage 0.0 (TID 176, cdhn06.edc.local, executor 1): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 2870. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:34:59 INFO scheduler.TaskSetManager: Starting task 48.3 in stage 0.0 (TID 239, cdhn09.edc.local, executor 2, partition 48, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:35:05 WARN scheduler.TaskSetManager: Lost task 37.2 in stage 0.0 (TID 178, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 208725. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:35:05 INFO scheduler.TaskSetManager: Starting task 37.3 in stage 0.0 (TID 240, cdhn08.edc.local, executor 4, partition 37, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:35:05 WARN scheduler.TaskSetManager: Lost task 41.2 in stage 0.0 (TID 181, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 1132804. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:35:05 INFO scheduler.TaskSetManager: Starting task 41.3 in stage 0.0 (TID 241, cdhn09.edc.local, executor 2, partition 41, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:35:05 WARN scheduler.TaskSetManager: Lost task 47.2 in stage 0.0 (TID 180, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 171367. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:35:05 INFO scheduler.TaskSetManager: Starting task 47.3 in stage 0.0 (TID 242, cdhn09.edc.local, executor 2, partition 47, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:35:06 WARN scheduler.TaskSetManager: Lost task 49.2 in stage 0.0 (TID 179, cdhn07.edc.local, executor 3): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 823049. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:35:06 INFO scheduler.TaskSetManager: Starting task 49.3 in stage 0.0 (TID 243, cdhn06.edc.local, executor 1, partition 49, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:35:14 WARN scheduler.TaskSetManager: Lost task 36.2 in stage 0.0 (TID 183, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 996274. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:35:14 INFO scheduler.TaskSetManager: Starting task 36.3 in stage 0.0 (TID 244, cdhn09.edc.local, executor 2, partition 36, PROCESS_LOCAL, 8347 bytes)
+18/02/19 18:35:19 WARN scheduler.TaskSetManager: Lost task 43.2 in stage 0.0 (TID 184, cdhn09.edc.local, executor 2): org.apache.spark.SparkException: Kryo serialization failed: Buffer overflow. Available: 0, required: 135258. To avoid this, increase spark.kryoserializer.buffer.max value.
+	at org.apache.spark.serializer.KryoSerializerInstance.serialize(KryoSerializer.scala:299)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:280)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+18/02/19 18:35:19 INFO scheduler.TaskSetManager: Starting task 43.3 in stage 0.0 (TID 245, cdhn09.edc.local, executor 2, partition 43, PROCESS_LOCAL, 8347 bytes)
