@@ -15,7 +15,7 @@ for line in cat.stdout:
         files.append(directory + line.replace('\n',''))
 
 
-parsed_data = sc.parallelize(files, 6000).map(gdp.cust_parse_gkg_data_data_csv).collect()
+parsed_data = sc.parallelize(files[:10], 6000).map(gdp.cust_parse_gkg_data_csv).collect()
 
 
 for l in parsed_data[:10]:

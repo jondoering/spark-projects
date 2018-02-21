@@ -21,7 +21,7 @@ def parse_gkg_subsectionas_as_dict(gkg_data, delim1, delim2, field_names):
 
     return ret_list
 
-def parse_gkg_subsectionas_as_line(gkg_data, delim1, delim2, field_names, id):
+def parse_gkg_subsectionas_as_line(gkg_data, delim1, delim2, field_names, id, field):
     '''
     parses subsection in gkg data
     :param field:
@@ -34,7 +34,7 @@ def parse_gkg_subsectionas_as_line(gkg_data, delim1, delim2, field_names, id):
     data_lines = gkg_data.split(delim1)
     for data in data_lines:
         if(len(data) > 0):
-            ret_list.append(id + ':' + ';'.join(data.split(delim2)))
+            ret_list.append(field + ':' + id + ';' + ';'.join(data.split(delim2)))
         # @TODO ; Count for multiple notion of same entity
         #  e.g. 'Instagram,1856;Champions League,134;Champions League,269'
 
@@ -244,11 +244,11 @@ def cust_parse_gkg_data_csv(file_path):
         else:
             gkg_dict['V2.1DATE'] = ''
 
-        ret_list.append('{}:{};{}\n'.format(id, gkg_dict['V2DOCUMENTIDENTIFIER'], ['V2.1DATE'][0:8]))
+        ret_list.append('{}:{};{};{}'.format("GENERAL", id, gkg_dict['V2DOCUMENTIDENTIFIER'], ['V2.1DATE'][0:8]))
 
     #print(ret_list)
     try:
-	    return ret_list
+	    return '\n'.join(ret_list)
     except:
 	    return []
 
