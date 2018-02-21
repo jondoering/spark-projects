@@ -213,12 +213,12 @@ def cust_parse_gkg_data_csv(file_path):
         # parse parts
         if ('V2ENHANCEDPERSONS' in gkg_dict.keys()):
             ret_list.append(parse_gkg_subsectionas_as_line(gkg_dict['V2ENHANCEDPERSONS'], ';', ',',
-                                                                     ['PERSON', 'CHAR_OFFSET'], id))
+                                                                     ['PERSON', 'CHAR_OFFSET'], id, 'PERSONS'))
 
         if ('V1.5TONE' in gkg_dict.keys()):
             ret_list.append(parse_gkg_subsectionas_as_line(gkg_dict['V1.5TONE'], ';', ',',
                                                             ['TONE', 'POS_SCORE', 'NEG_SCORE', 'POLARITY',
-                                                             'ACT_REF_DENS', 'SELF_REF_DENS', 'WORD_COUNT'], id))
+                                                             'ACT_REF_DENS', 'SELF_REF_DENS', 'WORD_COUNT'], id, 'TONE'))
 
         # parse URL
         # pattern = '^(?:https?:\/\/)?(?:[^@\/\n]+@)?(?:www\.)?([^:\/\n]+)'
@@ -247,10 +247,10 @@ def cust_parse_gkg_data_csv(file_path):
         ret_list.append('{}:{};{};{}'.format("GENERAL", id, gkg_dict['V2DOCUMENTIDENTIFIER'], ['V2.1DATE'][0:8]))
 
     #print(ret_list)
-    try:
-	    return '\n'.join(ret_list)
-    except:
-	    return []
+    #try:
+    return '\n'.join(ret_list)
+    #except:
+#	    return []
 
 
 def cust_parse_gkg_data(file_path):
